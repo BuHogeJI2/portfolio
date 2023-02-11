@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/base/Layout';
 
 export default function InfoPage(): React.ReactElement {
   return (

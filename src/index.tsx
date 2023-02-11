@@ -15,7 +15,7 @@ import LightModeContextProvider, {
   useLightModeContext,
 } from './libs/context/LightModeContext';
 import { darkTheme, lightTheme } from './theme/theme';
-import SwitchLightMode from './components/SwitchLightMode';
+import SwitchLightMode from './components/base/SwitchLightMode';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

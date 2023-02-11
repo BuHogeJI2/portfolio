@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ELightMode,
   useLightModeContext,
-} from '../libs/context/LightModeContext';
+} from '../../libs/context/LightModeContext';
 
 export default function SwitchLightMode(): React.ReactElement {
   const { setLightMode } = useLightModeContext();
