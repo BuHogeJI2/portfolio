@@ -8,9 +8,14 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import HomePage from './pages';
-import theme from './theme/theme';
 import { ThemeProvider } from 'styled-components';
 import InfoPage from './pages/info';
+import LightModeContextProvider, {
+  ELightMode,
+  useLightModeContext,
+} from './libs/context/LightModeContext';
+import { darkTheme, lightTheme } from './theme/theme';
+import SwitchLightMode from './components/SwitchLightMode';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,8 +28,19 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <LightModeContextProvider>
+      <Initial />
+    </LightModeContextProvider>
   </React.StrictMode>
 );
+
+function Initial(): React.ReactElement {
+  const { mode } = useLightModeContext();
+
+  return (
+    <ThemeProvider theme={mode === ELightMode.LIGHT ? lightTheme : darkTheme}>
+      <SwitchLightMode />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
+}
