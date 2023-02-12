@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../base/Image';
 import styled from 'styled-components';
-import { fontSize } from '../../theme/theme';
+import { fontSize } from '../../libs/theme/theme';
 
 const HeroWrapper = styled.div({
   display: 'flex',
@@ -21,7 +21,7 @@ const PhotoImage = styled(Image)(({ theme }) => theme.photo);
 
 interface IHeroProps {
   title: string;
-  subTitle?: string;
+  subTitle?: string | null;
   image?: string;
   onClick?(): void;
 }

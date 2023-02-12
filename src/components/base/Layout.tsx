@@ -3,6 +3,7 @@ import Container from './Container';
 import styled from 'styled-components';
 import HeaderContent from '../header/HeaderContent';
 import ParticlesContainer from './Particles';
+import LanguageSwitcher from '../header/LanguageSwitcher';
 
 const Main = styled.main(({ theme }) => theme.main);
 const Header = styled.header(({ theme }) => theme.header);
@@ -14,6 +15,7 @@ export default function Layout({
     <Container>
       <Header>
         <HeaderContent />
+        <LanguageSwitcher />
       </Header>
       <Main>
         <ParticlesContainer />

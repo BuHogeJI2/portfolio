@@ -27,6 +27,7 @@ const unionStyles: TUnionStyles = {
     height: 'calc(100% - 160px)',
   },
   header: {
+    position: 'relative',
     width: '100%',
     padding: '10px 0px',
     display: 'flex',

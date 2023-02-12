@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Hero from './Hero';
-import { personalData } from '../../data/personal';
+import { personalData } from '../../libs/data/personal';
+import { useTranslation } from 'react-i18next';
 
 export default function HeaderContent(): React.ReactElement {
   const navigate = useNavigate();
+  const [t] = useTranslation();
 
   function handleOnHeroClick() {
     navigate('/');
@@ -13,8 +15,8 @@ export default function HeaderContent(): React.ReactElement {
   return (
     <>
       <Hero
-        title={personalData.name}
-        subTitle={personalData.jobTitle}
+        title={t('name')}
+        subTitle={t('job.title')}
         image={personalData.photo}
         onClick={handleOnHeroClick}
       />
