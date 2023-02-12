@@ -2,13 +2,13 @@ import React, { PropsWithChildren, useContext, useState } from 'react';
 import noop from 'lodash/noop';
 
 export enum ELightMode {
-  LIGHT,
-  DARK,
+  LIGHT = 'light',
+  DARK = 'dark',
 }
 
 type TLightModeContext = {
   mode: ELightMode;
-  setLightMode(nextMode: ELightMode): void;
+  setLightMode(nextMode: string): void;
 };
 
 const defaultContextValue: TLightModeContext = {
@@ -24,9 +24,22 @@ export default function LightModeContextProvider({
 }: PropsWithChildren): React.ReactElement {
   const [mode, setMode] = useState<ELightMode>(ELightMode.LIGHT);
 
+  function handleOnChange(value: string) {
+    switch (value) {
+      case 'light':
+        setMode(ELightMode.LIGHT);
+        return;
+      case 'dark':
+        setMode(ELightMode.DARK);
+        return;
+      default:
+        return;
+    }
+  }
+
   const ctx: TLightModeContext = {
     mode,
-    setLightMode: setMode,
+    setLightMode: handleOnChange,
   };
 
   return (

@@ -33,6 +33,12 @@ const unionStyles: TUnionStyles = {
       },
     },
   },
+  label: {
+    cursor: 'pointer',
+    'input[type=checkbox]': {
+      appearance: 'none',
+    },
+  },
 };
 
 export const lightTheme: DefaultTheme = {
@@ -55,6 +61,10 @@ export const lightTheme: DefaultTheme = {
     },
     unionStyles.header
   ),
+  label: {
+    color: colors.bgDark,
+    ...unionStyles.label,
+  },
 };
 export const darkTheme: DefaultTheme = {
   container: {
@@ -76,4 +86,8 @@ export const darkTheme: DefaultTheme = {
     },
     unionStyles.header
   ),
+  label: {
+    color: colors.bgLight,
+    ...unionStyles.label,
+  },
 };
