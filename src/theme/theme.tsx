@@ -4,11 +4,11 @@ import merge from 'lodash/merge';
 
 const colors = {
   bgDark: 'black',
-  bgLight: 'white',
+  bgLight: '#f0f0ff',
 };
 
-const fontSizes = [12, 16, 20, 24];
-const fontSize = {
+const fontSizes = [12, 16, 20, 30];
+export const fontSize = {
   text: fontSizes[0],
   middle: fontSizes[1],
   big: fontSizes[2],
@@ -24,14 +24,14 @@ const unionStyles: TUnionStyles = {
   },
   main: {
     border: '1px solid',
-    height: 'calc(100% - 100px)',
+    height: 'calc(100% - 160px)',
   },
   header: {
     width: '100%',
     padding: '10px 0px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     '.menu': {
       '.menu-link': {
         textDecoration: 'none',
@@ -57,6 +57,13 @@ const unionStyles: TUnionStyles = {
       fontSize: fontSize.big,
     },
   },
+  photo: {
+    width: '75px',
+    height: '75px',
+    borderRadius: '50%',
+    marginLeft: '20px',
+    border: '1px solid',
+  },
 };
 
 export const lightTheme: DefaultTheme = merge(
@@ -80,6 +87,9 @@ export const lightTheme: DefaultTheme = merge(
       'input[type="checkbox"]:after': {
         color: colors.bgDark,
       },
+    },
+    photo: {
+      borderColor: colors.bgDark,
     },
   },
   unionStyles
@@ -105,6 +115,9 @@ export const darkTheme: DefaultTheme = merge(
       'input[type="checkbox"]:after': {
         color: colors.bgLight,
       },
+    },
+    photo: {
+      borderColor: colors.bgLight,
     },
   },
   unionStyles
