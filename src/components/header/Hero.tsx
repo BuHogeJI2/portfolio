@@ -22,12 +22,14 @@ interface IHeroProps {
   title: string;
   subTitle?: string;
   image?: string;
+  onClick?(): void;
 }
 
 export default function Hero({
   title,
   subTitle,
   image,
+  onClick,
 }: IHeroProps): React.ReactElement {
   return (
     <HeroWrapper>
@@ -35,7 +37,7 @@ export default function Hero({
         <h1>{title}</h1>
         <h3>{subTitle}</h3>
       </div>
-      {image ? <PhotoImage src={image} /> : null}
+      {image ? <PhotoImage src={image} onClick={onClick} /> : null}
     </HeroWrapper>
   );
 }
