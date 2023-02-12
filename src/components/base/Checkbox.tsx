@@ -2,11 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CheckboxLabel = styled.label<{ checked?: boolean }>(
-  ({ theme }) => theme.label,
-  ({ checked }) => ({
-    textDecoration: checked ? 'underline' : 'unset',
-    textUnderlineOffset: '4px',
-  })
+  ({ theme }) => theme.label
 );
 
 const CheckboxInput = styled.input.attrs({

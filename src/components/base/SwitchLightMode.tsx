@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const SwitcherWrapper = styled.div({
   position: 'absolute',
   top: '180px',
-  left: '20px',
+  left: '30px',
   zIndex: 1,
   transformOrigin: 'left',
   transform: 'rotate(-90deg)',

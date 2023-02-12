@@ -7,6 +7,14 @@ const colors = {
   bgLight: 'white',
 };
 
+const fontSizes = [12, 16, 20, 24];
+const fontSize = {
+  text: fontSizes[0],
+  middle: fontSizes[1],
+  big: fontSizes[2],
+  xxl: fontSizes[3],
+};
+
 const unionStyles: TUnionStyles = {
   container: {
     position: 'fixed',
@@ -35,8 +43,18 @@ const unionStyles: TUnionStyles = {
   },
   label: {
     cursor: 'pointer',
+    fontSize: fontSize.text,
     'input[type=checkbox]': {
       appearance: 'none',
+      cursor: 'pointer',
+    },
+    'input[type="checkbox"]:after': {
+      content: '"□"',
+      fontSize: fontSize.big,
+    },
+    'input[type="checkbox"]:checked:after': {
+      content: '"■"',
+      fontSize: fontSize.big,
     },
   },
 };
@@ -59,6 +77,9 @@ export const lightTheme: DefaultTheme = merge(
     },
     label: {
       color: colors.bgDark,
+      'input[type="checkbox"]:after': {
+        color: colors.bgDark,
+      },
     },
   },
   unionStyles
@@ -81,6 +102,9 @@ export const darkTheme: DefaultTheme = merge(
     },
     label: {
       color: colors.bgLight,
+      'input[type="checkbox"]:after': {
+        color: colors.bgLight,
+      },
     },
   },
   unionStyles
