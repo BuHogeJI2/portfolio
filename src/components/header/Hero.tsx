@@ -8,10 +8,11 @@ const HeroWrapper = styled.div({
   alignItems: 'center',
   h1: {
     fontSize: fontSize.xxl,
+    textTransform: 'uppercase',
   },
   h3: {
     fontSize: fontSize.big,
-    letterSpacing: '6px',
+    letterSpacing: '4px',
     marginTop: '5px',
   },
 });
