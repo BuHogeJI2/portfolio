@@ -15,10 +15,10 @@ export default function Layout({
     <Container>
       <Header>
         <HeaderContent />
-        <LanguageSwitcher />
       </Header>
       <Main>
         <ParticlesContainer />
+        <LanguageSwitcher />
         {children}
       </Main>
       <footer>footer</footer>

@@ -7,11 +7,16 @@ import {
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
-export const SwitcherWrapper = styled.div({
+const SwitcherWrapper = styled.div({
   position: 'absolute',
-  bottom: 0,
-  right: 0,
+  top: '5px',
+  right: '5px',
+  '.active': {
+    textDecoration: 'underline',
+  },
 });
+
+const SwitchButton = styled.button(({ theme }) => theme.buttons.linkBtn);
 
 export default function LanguageSwitcher(): React.ReactElement {
   const [, i18n] = useTranslation();
@@ -32,12 +37,12 @@ export default function LanguageSwitcher(): React.ReactElement {
     <SwitcherWrapper>
       {languageList.map(lng => {
         return (
-          <button
+          <SwitchButton
             className={currentLanguage === lng ? 'active' : undefined}
             onClick={() => handleChangeLanguage(lng)}
           >
-            {lng}
-          </button>
+            {lng.toUpperCase()}
+          </SwitchButton>
         );
       })}
     </SwitcherWrapper>

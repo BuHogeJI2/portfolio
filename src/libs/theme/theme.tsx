@@ -23,11 +23,11 @@ const unionStyles: TUnionStyles = {
     padding: '0px 40px',
   },
   main: {
+    position: 'relative',
     border: '1px solid',
     height: 'calc(100% - 160px)',
   },
   header: {
-    position: 'relative',
     width: '100%',
     padding: '10px 0px',
     display: 'flex',
@@ -65,6 +65,18 @@ const unionStyles: TUnionStyles = {
     marginLeft: '20px',
     border: '1px solid',
   },
+  buttons: {
+    linkBtn: {
+      border: 'none',
+      backgroundColor: 'transparent',
+      cursor: 'pointer',
+      fontFamily: 'UbuntuMono',
+      fontSize: fontSize.middle,
+      '&:hover': {
+        fontWeight: 'bold',
+      },
+    },
+  },
 };
 
 export const lightTheme: DefaultTheme = merge(
@@ -91,6 +103,11 @@ export const lightTheme: DefaultTheme = merge(
     },
     photo: {
       borderColor: colors.bgDark,
+    },
+    buttons: {
+      linkBtn: {
+        color: colors.bgDark,
+      },
     },
   },
   unionStyles
@@ -119,6 +136,11 @@ export const darkTheme: DefaultTheme = merge(
     },
     photo: {
       borderColor: colors.bgLight,
+    },
+    buttons: {
+      linkBtn: {
+        color: colors.bgLight,
+      },
     },
   },
   unionStyles
