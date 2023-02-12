@@ -11,7 +11,7 @@ const CheckboxLabel = styled.label<{ checked?: boolean }>(
 
 const CheckboxInput = styled.input.attrs({
   type: 'checkbox' as string,
-})(({ theme }) => theme.checkbox);
+})({});
 
 export interface ICheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {

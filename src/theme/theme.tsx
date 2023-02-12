@@ -41,53 +41,47 @@ const unionStyles: TUnionStyles = {
   },
 };
 
-export const lightTheme: DefaultTheme = {
-  container: {
-    backgroundColor: colors.bgLight,
-    color: colors.bgDark,
-    ...unionStyles.container,
-  },
-  main: {
-    borderColor: colors.bgDark,
-    ...unionStyles.main,
-  },
-  header: merge(
-    {
+export const lightTheme: DefaultTheme = merge(
+  {
+    container: {
+      backgroundColor: colors.bgLight,
+      color: colors.bgDark,
+    },
+    main: {
+      borderColor: colors.bgDark,
+    },
+    header: {
       '.menu': {
         '.menu-link': {
           color: colors.bgDark,
         },
       },
     },
-    unionStyles.header
-  ),
-  label: {
-    color: colors.bgDark,
-    ...unionStyles.label,
+    label: {
+      color: colors.bgDark,
+    },
   },
-};
-export const darkTheme: DefaultTheme = {
-  container: {
-    backgroundColor: colors.bgDark,
-    color: colors.bgLight,
-    ...unionStyles.container,
-  },
-  main: {
-    borderColor: colors.bgLight,
-    ...unionStyles.main,
-  },
-  header: merge(
-    {
+  unionStyles
+);
+export const darkTheme: DefaultTheme = merge(
+  {
+    container: {
+      backgroundColor: colors.bgDark,
+      color: colors.bgLight,
+    },
+    main: {
+      borderColor: colors.bgLight,
+    },
+    header: {
       '.menu': {
         '.menu-link': {
           color: colors.bgLight,
         },
       },
     },
-    unionStyles.header
-  ),
-  label: {
-    color: colors.bgLight,
-    ...unionStyles.label,
+    label: {
+      color: colors.bgLight,
+    },
   },
-};
+  unionStyles
+);
