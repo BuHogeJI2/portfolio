@@ -27,7 +27,7 @@ const unionStyles: TUnionStyles = {
   main: {
     position: 'relative',
     border: '1px solid',
-    height: isMobile ? 'calc(100% - 100px)' : 'calc(100% - 160px)',
+    height: isMobile ? 'calc(100% - 100px)' : 'calc(100% - 150px)',
   },
   header: {
     width: '100%',
@@ -78,6 +78,12 @@ const unionStyles: TUnionStyles = {
         fontWeight: 'bold',
       },
     },
+  },
+  footer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: isMobile ? '7px' : '10px',
   },
 };
 
