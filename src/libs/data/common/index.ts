@@ -22,6 +22,8 @@ export const commonData = {
   menuIcons: {
     burgerLight: '/images/burger-light.png',
     burgerDark: '/images/burger-dark.png',
+    closeDark: '/images/close-dark.png',
+    closeLight: '/images/close-white.png',
   },
   menuLinks: [
     {

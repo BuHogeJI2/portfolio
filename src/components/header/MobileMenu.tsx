@@ -21,12 +21,22 @@ export default function MobileMenu(): React.ReactElement {
       ? commonData.menuIcons.burgerDark
       : commonData.menuIcons.burgerLight;
 
+  const closeIcon =
+    mode === ELightMode.LIGHT
+      ? commonData.menuIcons.closeDark
+      : commonData.menuIcons.closeLight;
+
   const [opened, setOpened] = useState<boolean>(false);
-  // const menuIcon = opened ? '' : burgerIcon
+  const menuIcon = opened ? closeIcon : burgerIcon;
 
   return (
     <MobileMenuWrapper>
-      <img className={'burger-button'} src={burgerIcon} alt="burger-button" />
+      <img
+        className={'burger-button'}
+        src={menuIcon}
+        alt="burger-button"
+        onClick={() => setOpened(!opened)}
+      />
     </MobileMenuWrapper>
   );
 }
