@@ -40,7 +40,6 @@ function Initial(): React.ReactElement {
 
   return (
     <ThemeProvider theme={mode === ELightMode.LIGHT ? lightTheme : darkTheme}>
-      <SwitchLightMode />
       <RouterProvider router={router} />
     </ThemeProvider>
   );

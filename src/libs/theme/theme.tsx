@@ -19,15 +19,18 @@ export const fontSize = {
 
 const unionStyles: TUnionStyles = {
   container: {
-    position: 'fixed',
-    width: isMobile ? 'calc(100% - 40px)' : 'calc(100% - 60px)',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '1218px',
+    height: '100vh',
+    margin: '0 auto',
     padding: isMobile ? '0px 20px' : '0px 30px',
-    height: '100%',
   },
   main: {
     position: 'relative',
     border: '1px solid',
-    height: isMobile ? 'calc(100% - 100px)' : 'calc(100% - 150px)',
+    height: '100%',
   },
   header: {
     width: '100%',
@@ -83,13 +86,14 @@ const unionStyles: TUnionStyles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: isMobile ? '7px' : '10px',
+    padding: isMobile ? '10px 0' : '15px 0',
+    marginTop: 'auto',
   },
 };
 
 export const lightTheme: DefaultTheme = merge(
   {
-    container: {
+    bg: {
       backgroundColor: colors.bgLight,
       color: colors.bgDark,
     },
@@ -122,7 +126,7 @@ export const lightTheme: DefaultTheme = merge(
 );
 export const darkTheme: DefaultTheme = merge(
   {
-    container: {
+    bg: {
       backgroundColor: colors.bgDark,
       color: colors.bgLight,
     },
