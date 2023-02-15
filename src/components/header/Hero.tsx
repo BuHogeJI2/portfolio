@@ -2,18 +2,22 @@ import React from 'react';
 import Image from '../base/Image';
 import styled from 'styled-components';
 import { fontSize } from '../../libs/theme/theme';
+import { isMobile } from 'react-device-detect';
 
 const HeroWrapper = styled.div({
   display: 'flex',
   alignItems: 'center',
-  h1: {
-    fontSize: fontSize.xxl,
-    textTransform: 'uppercase',
-  },
-  h3: {
-    fontSize: fontSize.big,
-    letterSpacing: '4px',
-    marginTop: '5px',
+  '.hero-text': {
+    '.title': {
+      fontSize: fontSize.xxl,
+      textTransform: 'uppercase',
+      whiteSpace: isMobile ? 'nowrap' : 'normal',
+    },
+    '.sub-title': {
+      fontSize: fontSize.big,
+      letterSpacing: '4px',
+      marginTop: '5px',
+    },
   },
 });
 
@@ -34,11 +38,11 @@ export default function Hero({
 }: IHeroProps): React.ReactElement {
   return (
     <HeroWrapper>
-      <div>
-        <h1>{title}</h1>
-        <h3>{subTitle}</h3>
+      <div className={'hero-text'}>
+        <h1 className={'title'}>{title}</h1>
+        {!isMobile ? <h3 className={'sub-title'}>{subTitle}</h3> : null}
       </div>
-      {image ? <PhotoImage src={image} onClick={onClick} /> : null}
+      {image && !isMobile ? <PhotoImage src={image} onClick={onClick} /> : null}
     </HeroWrapper>
   );
 }

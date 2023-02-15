@@ -1,31 +1,33 @@
 import { DefaultTheme } from 'styled-components';
 import { TUnionStyles } from './theme.types';
 import merge from 'lodash/merge';
+import { isMobile } from 'react-device-detect';
 
 const colors = {
   bgDark: 'black',
   bgLight: '#f0f0ff',
 };
 
-const fontSizes = [12, 16, 20, 30];
+const fontSizes = [12, 16, 18, 20, 30];
 export const fontSize = {
-  text: fontSizes[0],
-  middle: fontSizes[1],
-  big: fontSizes[2],
-  xxl: fontSizes[3],
+  text: `${fontSizes[0]}px`,
+  middle: `${fontSizes[1]}px`,
+  middle2: `${fontSizes[2]}px`,
+  big: `${fontSizes[3]}px`,
+  xxl: `${fontSizes[4]}px`,
 };
 
 const unionStyles: TUnionStyles = {
   container: {
     position: 'fixed',
-    width: 'calc(100% - 80px)',
+    width: isMobile ? 'calc(100% - 40px)' : 'calc(100% - 60px)',
+    padding: isMobile ? '0px 20px' : '0px 30px',
     height: '100%',
-    padding: '0px 40px',
   },
   main: {
     position: 'relative',
     border: '1px solid',
-    height: 'calc(100% - 160px)',
+    height: isMobile ? 'calc(100% - 100px)' : 'calc(100% - 160px)',
   },
   header: {
     width: '100%',
@@ -44,18 +46,18 @@ const unionStyles: TUnionStyles = {
   },
   label: {
     cursor: 'pointer',
-    fontSize: fontSize.text,
+    fontSize: isMobile ? fontSize.middle2 : fontSize.text,
     'input[type=checkbox]': {
       appearance: 'none',
       cursor: 'pointer',
     },
     'input[type="checkbox"]:after': {
       content: '"□"',
-      fontSize: fontSize.big,
+      fontSize: isMobile ? fontSize.xxl : fontSize.middle,
     },
     'input[type="checkbox"]:checked:after': {
       content: '"■"',
-      fontSize: fontSize.big,
+      fontSize: isMobile ? fontSize.xxl : fontSize.middle,
     },
   },
   photo: {
@@ -71,7 +73,7 @@ const unionStyles: TUnionStyles = {
       backgroundColor: 'transparent',
       cursor: 'pointer',
       fontFamily: 'UbuntuMono',
-      fontSize: fontSize.middle,
+      fontSize: isMobile ? fontSize.big : fontSize.middle,
       '&:hover': {
         fontWeight: 'bold',
       },

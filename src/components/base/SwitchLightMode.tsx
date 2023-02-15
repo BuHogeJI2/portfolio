@@ -5,11 +5,12 @@ import {
 } from '../../libs/context/LightModeContext';
 import Checkbox from './Checkbox';
 import styled from 'styled-components';
+import { isMobile } from 'react-device-detect';
 
 const SwitcherWrapper = styled.div({
   position: 'absolute',
-  top: '180px',
-  left: '30px',
+  top: isMobile ? '220px' : '200px',
+  left: isMobile ? '7px' : '20px',
   zIndex: 1,
   transformOrigin: 'left',
   transform: 'rotate(-90deg)',
