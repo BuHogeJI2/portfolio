@@ -19,6 +19,10 @@ export const commonData = {
       link: 'mailto:dzmitrydziamidovich@gmail.com',
     },
   ],
+  menuIcons: {
+    burgerLight: '/images/burger-light.png',
+    burgerDark: '/images/burger-dark.png',
+  },
   menuLinks: [
     {
       page: 'Home',
