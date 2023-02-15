@@ -38,14 +38,6 @@ const unionStyles: TUnionStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    '.menu': {
-      '.menu-link': {
-        textDecoration: 'none',
-        '&:not(:last-child)': {
-          marginRight: '15px',
-        },
-      },
-    },
   },
   label: {
     cursor: 'pointer',
@@ -100,13 +92,6 @@ export const lightTheme: DefaultTheme = merge(
     main: {
       borderColor: colors.bgDark,
     },
-    header: {
-      '.menu': {
-        '.menu-link': {
-          color: colors.bgDark,
-        },
-      },
-    },
     label: {
       color: colors.bgDark,
       'input[type="checkbox"]:after': {
@@ -118,6 +103,11 @@ export const lightTheme: DefaultTheme = merge(
     },
     buttons: {
       linkBtn: {
+        color: colors.bgDark,
+      },
+    },
+    menu: {
+      '.menu-link': {
         color: colors.bgDark,
       },
     },
@@ -133,13 +123,6 @@ export const darkTheme: DefaultTheme = merge(
     main: {
       borderColor: colors.bgLight,
     },
-    header: {
-      '.menu': {
-        '.menu-link': {
-          color: colors.bgLight,
-        },
-      },
-    },
     label: {
       color: colors.bgLight,
       'input[type="checkbox"]:after': {
@@ -151,6 +134,11 @@ export const darkTheme: DefaultTheme = merge(
     },
     buttons: {
       linkBtn: {
+        color: colors.bgLight,
+      },
+    },
+    menu: {
+      '.menu-link': {
         color: colors.bgLight,
       },
     },

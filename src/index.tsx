@@ -15,14 +15,15 @@ import LightModeContextProvider, {
   useLightModeContext,
 } from './libs/context/LightModeContext';
 import { darkTheme, lightTheme } from './libs/theme/theme';
-import SwitchLightMode from './components/base/SwitchLightMode';
 import './i18n';
+import ContactsPage from './pages/contacts';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<HomePage />} />
       <Route path="/info" element={<InfoPage />} />
+      <Route path="/contacts" element={<ContactsPage />} />
     </>
   )
 );

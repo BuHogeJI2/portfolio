@@ -19,4 +19,18 @@ export const commonData = {
       link: 'mailto:dzmitrydziamidovich@gmail.com',
     },
   ],
+  menuLinks: [
+    {
+      page: 'Home',
+      link: '/',
+    },
+    {
+      page: 'Info',
+      link: '/info',
+    },
+    {
+      page: 'Contacts',
+      link: '/contacts',
+    },
+  ],
 };

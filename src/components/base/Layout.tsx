@@ -1,12 +1,16 @@
 import React, { PropsWithChildren } from 'react';
 import Container from './Container';
 import styled from 'styled-components';
-import HeaderContent from '../header/HeaderContent';
 import ParticlesContainer from './Particles';
 import LanguageSwitcher from '../header/LanguageSwitcher';
 import Copyright from '../footer/Copyright';
 import SocialLinks from '../footer/SocialLinks';
 import SwitchLightMode from './SwitchLightMode';
+import { personalData } from '../../libs/data/personal';
+import Hero from '../header/Hero';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import HeaderMenu from '../header/HeaderMenu';
 
 const Bg = styled.div(({ theme }) => theme.bg);
 const Main = styled.main(({ theme }) => theme.main);
@@ -16,11 +20,24 @@ const Footer = styled.footer(({ theme }) => theme.footer);
 export default function Layout({
   children,
 }: PropsWithChildren): React.ReactElement {
+  const navigate = useNavigate();
+  const [t] = useTranslation();
+
+  function handleOnHeroClick() {
+    navigate('/');
+  }
+
   return (
     <Bg>
       <Container>
         <Header>
-          <HeaderContent />
+          <Hero
+            title={t('name')}
+            subTitle={t('job.title')}
+            image={personalData.photo}
+            onClick={handleOnHeroClick}
+          />
+          <HeaderMenu />
         </Header>
         <Main>
           <ParticlesContainer />
