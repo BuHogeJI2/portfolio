@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { commonData } from '../../libs/data/CommonData';
+import { useLightModeContext } from '../../libs/context/LightModeContext';
 
 const SocialLinksWrapper = styled.div({
   display: 'flex',
@@ -8,9 +9,11 @@ const SocialLinksWrapper = styled.div({
 });
 
 export default function SocialLinks(): React.ReactElement {
+  const { mode } = useLightModeContext();
+
   return (
     <SocialLinksWrapper>
-      {commonData.socialLinks.map(item => (
+      {commonData.socialLinks(mode).map(item => (
         <SocialItem {...item} />
       ))}
     </SocialLinksWrapper>

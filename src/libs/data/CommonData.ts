@@ -1,21 +1,31 @@
 import { isMobile } from 'react-device-detect';
+import { ELightMode } from '../context/LightModeContext';
 
 export const commonData = {
   copyright: `Copyright © 2023 ${isMobile ? '' : 'Dmitry Demidovich'}`,
-  socialLinks: [
-    {
-      name: 'Linkedin',
-      icon: '/images/svg/linkedin.svg',
-      link: 'https://www.linkedin.com/in/d-demidovich/',
-    },
+  socialLinks: (lightMode?: ELightMode) => [
     {
       name: 'Github',
-      icon: '/images/svg/github.svg',
+      icon:
+        lightMode === ELightMode.LIGHT
+          ? '/images/svg/github-light.svg'
+          : '/images/svg/github-dark.svg',
       link: 'https://github.com/BuHogeJI2',
     },
     {
+      name: 'Linkedin',
+      icon:
+        lightMode === ELightMode.LIGHT
+          ? '/images/svg/linkedin-light.svg'
+          : '/images/svg/linkedin-dark.svg',
+      link: 'https://www.linkedin.com/in/d-demidovich/',
+    },
+    {
       name: 'E-mail',
-      icon: '/images/svg/mail.svg',
+      icon:
+        lightMode === ELightMode.LIGHT
+          ? '/images/svg/mail-light.svg'
+          : '/images/svg/mail-dark.svg',
       link: 'mailto:dzmitrydziamidovich@gmail.com',
     },
   ],
