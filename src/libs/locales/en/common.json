@@ -1,4 +1,8 @@
 {
   "name": "Dmitry Demidovich",
-  "job.title": "Frontend developer"
+  "job.title": "Frontend developer",
+  "greeting": "Hi there!<br /> I'm a frontend developer with 2 years of experience. I have a keen eye for detail and love creating visually stunning user interfaces that provide a seamless user experience.",
+  "exp1": "During my work, I collaborated closely with designers and backend developers to deliver multiple web applications, all while keeping my code clean, efficient, and maintainable. I'm always eager to learn new technologies, so I'm constantly working to expand my skill set.",
+  "exp2": "I'm a real team player - I work well with others and I'm always looking for ways to improve communication and collaboration.",
+  "exp3": "I'm excited to continue my journey as a frontend developer and to create exceptional user experiences through the latest technologies and best practices. Feel free to explore my portfolio and get in touch if you have any questions!"
 }

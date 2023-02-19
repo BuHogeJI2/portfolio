@@ -9,20 +9,22 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages';
 import { ThemeProvider } from 'styled-components';
-import InfoPage from './pages/info';
+import SkillsPage from './pages/skills';
 import LightModeContextProvider, {
   ELightMode,
   useLightModeContext,
 } from './libs/context/LightModeContext';
 import { darkTheme, lightTheme } from './libs/theme/theme';
-import './i18n';
 import ContactsPage from './pages/contacts';
+import './i18n';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<HomePage />} />
-      <Route path="/info" element={<InfoPage />} />
+      <Route path="/skills" element={<SkillsPage />} />
       <Route path="/contacts" element={<ContactsPage />} />
     </>
   )

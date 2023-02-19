@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  languageCookieName,
-  languageList,
-} from '../../libs/data/common/Constants';
+import { languageCookieName, languageList } from '../../libs/data/Constants';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 

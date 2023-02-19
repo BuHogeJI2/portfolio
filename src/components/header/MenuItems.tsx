@@ -1,5 +1,5 @@
 import React from 'react';
-import { commonData } from '../../libs/data/common';
+import { commonData } from '../../libs/data/CommonData';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 

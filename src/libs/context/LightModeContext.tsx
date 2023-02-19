@@ -22,7 +22,7 @@ const LightModeContext =
 export default function LightModeContextProvider({
   children,
 }: PropsWithChildren): React.ReactElement {
-  const [mode, setMode] = useState<ELightMode>(ELightMode.LIGHT);
+  const [mode, setMode] = useState<ELightMode>(ELightMode.DARK);
 
   function handleOnChange(value: string) {
     switch (value) {

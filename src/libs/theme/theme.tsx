@@ -3,7 +3,7 @@ import { TUnionStyles } from './theme.types';
 import merge from 'lodash/merge';
 import { isMobile } from 'react-device-detect';
 
-const colors = {
+export const colors = {
   bgDark: 'black',
   bgLight: '#f0f0ff',
 };
@@ -42,18 +42,18 @@ const unionStyles: TUnionStyles = {
   },
   label: {
     cursor: 'pointer',
-    fontSize: isMobile ? fontSize.middle2 : fontSize.text,
+    fontSize: isMobile ? fontSize.middle2 : fontSize.middle,
     'input[type=checkbox]': {
       appearance: 'none',
       cursor: 'pointer',
     },
     'input[type="checkbox"]:after': {
       content: '"□"',
-      fontSize: isMobile ? fontSize.xxl : fontSize.middle,
+      fontSize: isMobile ? fontSize.xxl : fontSize.big,
     },
     'input[type="checkbox"]:checked:after': {
       content: '"■"',
-      fontSize: isMobile ? fontSize.xxl : fontSize.middle,
+      fontSize: isMobile ? fontSize.xxl : fontSize.big,
     },
   },
   photo: {

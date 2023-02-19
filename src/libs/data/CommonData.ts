@@ -27,12 +27,12 @@ export const commonData = {
   },
   menuLinks: [
     {
-      page: 'Home',
+      page: 'About',
       link: '/',
     },
     {
-      page: 'Info',
-      link: '/info',
+      page: 'Skills',
+      link: '/skills',
     },
     {
       page: 'Contacts',

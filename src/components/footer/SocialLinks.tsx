@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { commonData } from '../../libs/data/common';
+import { commonData } from '../../libs/data/CommonData';
 
 const SocialLinksWrapper = styled.div({
   display: 'flex',

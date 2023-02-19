@@ -6,7 +6,6 @@ import LanguageSwitcher from '../header/LanguageSwitcher';
 import Copyright from '../footer/Copyright';
 import SocialLinks from '../footer/SocialLinks';
 import SwitchLightMode from './SwitchLightMode';
-import { personalData } from '../../libs/data/personal';
 import Hero from '../header/Hero';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -34,7 +33,7 @@ export default function Layout({
           <Hero
             title={t('name')}
             subTitle={t('job.title')}
-            image={personalData.photo}
+            image={'/images/my_face.jpg'}
             onClick={handleOnHeroClick}
           />
           <HeaderMenu />

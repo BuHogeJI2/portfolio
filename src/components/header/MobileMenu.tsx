@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { commonData } from '../../libs/data/common';
+import { commonData } from '../../libs/data/CommonData';
 import {
   ELightMode,
   useLightModeContext,
@@ -17,7 +17,7 @@ const MobileMenuWrapper = styled.div({
 
 const MobileMenuOverlayWrapper = styled.div(
   ({ theme }) => theme.menu.mobileOverlay,
-  ({ theme: { colors } }) => ({
+  {
     position: 'absolute',
     top: 0,
     left: 0,
@@ -31,7 +31,7 @@ const MobileMenuOverlayWrapper = styled.div(
       width: '25px',
       height: '25px',
     },
-  })
+  }
 );
 
 export default function MobileMenu(): React.ReactElement {
