@@ -18,6 +18,7 @@ export const fontSize = {
 };
 
 const unionStyles: TUnionStyles = {
+  colors,
   container: {
     position: 'relative',
     display: 'flex',
@@ -80,6 +81,15 @@ const unionStyles: TUnionStyles = {
     alignItems: 'center',
     padding: isMobile ? '10px 0' : '15px 0',
     marginTop: 'auto',
+  },
+  menu: {
+    '.menu-link': {
+      textDecoration: 'none',
+      fontSize: isMobile ? fontSize.xxl : fontSize.middle,
+    },
+    '.active': {
+      textDecoration: 'underline',
+    },
   },
 };
 
