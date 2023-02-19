@@ -5,13 +5,19 @@ import {
   ELightMode,
   useLightModeContext,
 } from '../../libs/context/LightModeContext';
+import styled from 'styled-components';
+
+const ParticlesWrapper = styled(Particles)({
+  position: 'absolute',
+  zIndex: 2,
+});
 
 export default function ParticlesContainer(): React.ReactElement {
   const { mode } = useLightModeContext();
   const particleColor = mode === ELightMode.LIGHT ? '#000' : '#fff';
 
   return (
-    <Particles
+    <ParticlesWrapper
       id="particles-here"
       init={loadFull}
       options={{

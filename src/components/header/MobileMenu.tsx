@@ -6,6 +6,7 @@ import {
 } from '../../libs/context/LightModeContext';
 import styled from 'styled-components';
 import MenuItems from './MenuItems';
+import ParticlesContainer from '../base/Particles';
 
 const MobileMenuWrapper = styled.div({
   '.burger-button': {
@@ -22,7 +23,7 @@ const MobileMenuOverlayWrapper = styled.div(
     left: 0,
     width: '100%',
     height: '100%',
-    zIndex: 2,
+    zIndex: 1,
     '.burger-button': {
       position: 'absolute',
       right: '20px',
