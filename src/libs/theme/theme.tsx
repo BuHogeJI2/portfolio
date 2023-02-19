@@ -8,7 +8,7 @@ export const colors = {
   bgLight: '#f0f0ff',
 };
 
-const fontSizes = [12, 16, 18, 20, 30];
+const fontSizes = [12, 16, 18, 22, 30];
 export const fontSize = {
   text: `${fontSizes[0]}px`,
   middle: `${fontSizes[1]}px`,
@@ -89,6 +89,18 @@ const unionStyles: TUnionStyles = {
     },
     '.active': {
       textDecoration: 'underline',
+    },
+  },
+  slider: {
+    wrapper: {
+      padding: '10px',
+      border: '1px solid lightgrey',
+      borderRadius: '5px',
+      backgroundColor: 'rgba(255, 255, 255, 0.1)',
+      '.slide-text': {
+        fontSize: fontSize.xxl,
+        lineHeight: 1.5,
+      },
     },
   },
 };
