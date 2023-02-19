@@ -66,5 +66,6 @@ export const commonData = {
     'styled-components',
     'REST',
     'i18next',
+    'Bit',
   ],
 };

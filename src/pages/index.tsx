@@ -3,16 +3,12 @@ import Layout from '../components/base/Layout';
 import BaseSlider from '../components/base/BaseSlider';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { fontSize } from '../libs/theme/theme';
+import { isMobile } from 'react-device-detect';
 
 const BaseSliderWrapper = styled.div(
   ({ theme }) => theme.slider.wrapper,
   () => ({
-    maxWidth: '75%',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    maxWidth: isMobile ? '90%' : '75%',
   })
 );
 

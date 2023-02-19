@@ -18,7 +18,6 @@ export const fontSize = {
 };
 
 const unionStyles: TUnionStyles = {
-  colors,
   container: {
     position: 'relative',
     display: 'flex',
@@ -32,6 +31,9 @@ const unionStyles: TUnionStyles = {
     position: 'relative',
     border: '1px solid',
     height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     width: '100%',
@@ -99,7 +101,7 @@ const unionStyles: TUnionStyles = {
       backgroundColor: 'rgba(255, 255, 255, 0.1)',
       '.slide-text': {
         fontSize: fontSize.xxl,
-        lineHeight: 1.5,
+        lineHeight: isMobile ? 1.1 : 1.5,
       },
     },
   },
