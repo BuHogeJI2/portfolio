@@ -14,22 +14,24 @@ const MobileMenuWrapper = styled.div({
   },
 });
 
-const MobileMenuOverlayWrapper = styled.div(({ theme: { colors } }) => ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  backgroundColor: colors.bgLight,
-  zIndex: 2,
-  '.burger-button': {
+const MobileMenuOverlayWrapper = styled.div(
+  ({ theme }) => theme.menu.mobileOverlay,
+  ({ theme: { colors } }) => ({
     position: 'absolute',
-    right: '20px',
-    top: '10px',
-    width: '25px',
-    height: '25px',
-  },
-}));
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 2,
+    '.burger-button': {
+      position: 'absolute',
+      right: '20px',
+      top: '10px',
+      width: '25px',
+      height: '25px',
+    },
+  })
+);
 
 export default function MobileMenu(): React.ReactElement {
   const { mode } = useLightModeContext();

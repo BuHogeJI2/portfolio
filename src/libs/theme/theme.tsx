@@ -120,6 +120,9 @@ export const lightTheme: DefaultTheme = merge(
       '.menu-link': {
         color: colors.bgDark,
       },
+      mobileOverlay: {
+        backgroundColor: colors.bgLight,
+      },
     },
   },
   unionStyles
@@ -150,6 +153,9 @@ export const darkTheme: DefaultTheme = merge(
     menu: {
       '.menu-link': {
         color: colors.bgLight,
+      },
+      mobileOverlay: {
+        backgroundColor: colors.bgDark,
       },
     },
   },
