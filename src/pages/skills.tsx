@@ -28,13 +28,7 @@ const BaseSliderWrapper = styled.div(
     '.slide-text': {
       fontSize: fontSize.big,
     },
-  }),
-  () =>
-    !isMobile
-      ? {
-          borderLeft: 'none',
-        }
-      : null
+  })
 );
 
 export default function SkillsPage(): React.ReactElement {

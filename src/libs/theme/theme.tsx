@@ -64,6 +64,7 @@ const unionStyles: TUnionStyles = {
     borderRadius: '50%',
     marginLeft: '20px',
     border: '1px solid',
+    cursor: 'pointer',
   },
   buttons: {
     linkBtn: {

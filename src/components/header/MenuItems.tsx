@@ -1,5 +1,5 @@
 import React from 'react';
-import { commonData } from '../../libs/data/CommonData';
+import { useMenuItems } from '../../libs/data/CommonData';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -12,9 +12,11 @@ interface IMenuItemsProps {
 export default function MenuItems({
   className,
 }: IMenuItemsProps): React.ReactElement {
+  const menuItems = useMenuItems();
+
   return (
     <Menu className={className}>
-      {commonData.menuLinks.map(({ link, page }) => (
+      {menuItems.map(({ link, page }) => (
         <NavLink
           to={link}
           className={({ isActive }) => `menu-link ${isActive ? 'active' : ''}`}

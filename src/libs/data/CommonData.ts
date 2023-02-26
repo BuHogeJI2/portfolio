@@ -1,5 +1,6 @@
 import { isMobile } from 'react-device-detect';
 import { ELightMode } from '../context/LightModeContext';
+import { useTranslation } from 'react-i18next';
 
 export const commonData = {
   copyright: `Copyright © 2023 ${isMobile ? '' : 'Dmitry Demidovich'}`,
@@ -35,20 +36,6 @@ export const commonData = {
     closeDark: '/images/close-dark.png',
     closeLight: '/images/close-white.png',
   },
-  menuLinks: [
-    {
-      page: 'About',
-      link: '/',
-    },
-    {
-      page: 'Skills',
-      link: '/skills',
-    },
-    {
-      page: 'Contacts',
-      link: '/contacts',
-    },
-  ],
   skills: [
     'TypeScript',
     'React.js',
@@ -69,3 +56,27 @@ export const commonData = {
     'Bit',
   ],
 };
+
+type TMenuItem = {
+  page: string;
+  link: string;
+};
+
+export function useMenuItems(): Array<TMenuItem> {
+  const [t] = useTranslation();
+
+  return [
+    {
+      page: t('menu.about'),
+      link: '/',
+    },
+    {
+      page: t('menu.skills'),
+      link: '/skills',
+    },
+    {
+      page: t('menu.contacts'),
+      link: '/contacts',
+    },
+  ];
+}

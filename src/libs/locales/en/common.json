@@ -5,8 +5,13 @@
   "exp1": "During my work, I collaborated closely with designers and backend developers to deliver multiple web applications, all while keeping my code clean, efficient, and maintainable. I'm always eager to learn new technologies, so I'm constantly working to expand my skill set.",
   "exp2": "I'm a real team player - I work well with others and I'm always looking for ways to improve communication and collaboration.",
   "exp3": "I'm excited to continue my journey as a frontend developer and to create exceptional user experiences through the latest technologies and best practices. Feel free to explore my portfolio and get in touch if you have any questions!",
-  "skills1": "Over the past few years, my journey as a freelance developer has been an exciting one. Throughout this time, I've worked remotely on several websites, and collaborated with talented individuals to develop web products for business and consumer use.",
+  "skills1": "Over the past few years, my journey as a frontend developer has been an exciting one. Throughout this time, I've worked remotely on several websites, and collaborated with talented individuals to develop web products for business and consumer use.",
   "skills2": "My focus is on creating responsive websites that are not only fast and easy to use, but also built with industry best practices. With expertise in front-end development, including TypeScript, React.js, Next.js, Jest, ESLint, Apollo GraphQL, and GraphQ.",
   "skills3": "I am also proficient in Git, _lodash, HTML, CSS, npm, Webpack, styled-components, REST, and i18next.",
-  "skills4": "My development process is thorough and efficient, with a keen eye for detail and a commitment to delivering quality work. I am always learning and staying up-to-date with the latest technologies and trends in the industry, and I'm dedicated to delivering exceptional results for every project I work on."
+  "skills4": "My development process is thorough and efficient, with a keen eye for detail and a commitment to delivering quality work. I am always learning and staying up-to-date with the latest technologies and trends in the industry, and I'm dedicated to delivering exceptional results for every project I work on.",
+  "menu.about": "About",
+  "menu.skills": "Skills",
+  "menu.contacts": "Contacts",
+  "lightMode.light": "Light",
+  "lightMode.dark": "Dark"
 }
