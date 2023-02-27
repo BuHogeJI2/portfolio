@@ -35,6 +35,7 @@ const unionStyles: TUnionStyles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    overflowY: 'scroll',
   },
   header: {
     width: '100%',
@@ -60,6 +61,8 @@ const unionStyles: TUnionStyles = {
     },
   },
   photo: {
+    minWidth: '75px',
+    minHeight: '75px',
     width: '75px',
     height: '75px',
     borderRadius: '50%',

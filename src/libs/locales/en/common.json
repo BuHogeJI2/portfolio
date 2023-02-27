@@ -18,5 +18,10 @@
   "error.404.sorry": "I'm sorry, the page you are looking for could not be found.",
   "error.404.not.found": "Error 404: Page Not Found",
   "error.404.check": "The requested page on this website could not be found. It's possible that the page has been removed or the URL has been changed.",
-  "error.404.thank": "Thank you for visiting my portfolio website!"
+  "error.404.thank": "Thank you for visiting my portfolio website!",
+  "tools.title": "What tools were used to create this site?",
+  "tools.main": "Main tools:",
+  "tools.utils": "Utility libraries:",
+  "tools.code": "Code styling tools:",
+  "tools.manager": "Package manager:"
 }
