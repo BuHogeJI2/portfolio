@@ -75,8 +75,8 @@ export function useMenuItems(): Array<TMenuItem> {
       link: '/skills',
     },
     {
-      page: t('menu.contacts'),
-      link: '/contacts',
+      page: t('menu.tools'),
+      link: '/tools',
     },
   ];
 }

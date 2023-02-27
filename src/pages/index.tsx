@@ -5,6 +5,10 @@ import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 
+const AboutMe = styled.h1({
+  marginBottom: '30px',
+});
+
 const BaseSliderWrapper = styled.div(
   ({ theme }) => theme.slider.wrapper,
   () => ({
@@ -17,6 +21,7 @@ export default function HomePage(): React.ReactElement {
 
   return (
     <Layout>
+      <AboutMe>{t('about.me')}</AboutMe>
       <BaseSliderWrapper>
         <BaseSlider>
           <Trans>

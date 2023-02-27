@@ -32,6 +32,7 @@ const unionStyles: TUnionStyles = {
     border: '1px solid',
     height: '100%',
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -65,6 +66,7 @@ const unionStyles: TUnionStyles = {
     marginLeft: '20px',
     border: '1px solid',
     cursor: 'pointer',
+    objectFit: 'cover',
   },
   buttons: {
     linkBtn: {

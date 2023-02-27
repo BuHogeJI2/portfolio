@@ -11,7 +11,12 @@
   "skills4": "My development process is thorough and efficient, with a keen eye for detail and a commitment to delivering quality work. I am always learning and staying up-to-date with the latest technologies and trends in the industry, and I'm dedicated to delivering exceptional results for every project I work on.",
   "menu.about": "About",
   "menu.skills": "Skills",
-  "menu.contacts": "Contacts",
+  "menu.tools": "Tools",
   "lightMode.light": "Light",
-  "lightMode.dark": "Dark"
+  "lightMode.dark": "Dark",
+  "about.me": "Myself summary",
+  "error.404.sorry": "I'm sorry, the page you are looking for could not be found.",
+  "error.404.not.found": "Error 404: Page Not Found",
+  "error.404.check": "The requested page on this website could not be found. It's possible that the page has been removed or the URL has been changed.",
+  "error.404.thank": "Thank you for visiting my portfolio website!"
 }

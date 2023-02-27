@@ -33,7 +33,7 @@ export default function Layout({
           <Hero
             title={t('name')}
             subTitle={t('job.title')}
-            image={'/images/my_face.jpg'}
+            image={'/images/me.jpg'}
             onClick={handleOnHeroClick}
           />
           <HeaderMenu />

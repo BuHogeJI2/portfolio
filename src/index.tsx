@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages';
 import { ThemeProvider } from 'styled-components';
 import SkillsPage from './pages/skills';
@@ -15,20 +10,27 @@ import LightModeContextProvider, {
   useLightModeContext,
 } from './libs/context/LightModeContext';
 import { darkTheme, lightTheme } from './libs/theme/theme';
-import ContactsPage from './pages/contacts';
+import ToolsPage from './pages/tools';
 import './i18n';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Error404Page from './pages/404';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/skills" element={<SkillsPage />} />
-      <Route path="/contacts" element={<ContactsPage />} />
-    </>
-  )
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage />,
+    errorElement: <Error404Page />,
+  },
+  {
+    path: '/skills',
+    element: <SkillsPage />,
+  },
+  {
+    path: '/tools',
+    element: <ToolsPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
