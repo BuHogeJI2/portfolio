@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { commonData } from '../../libs/data/CommonData';
-import {
-  ELightMode,
-  useLightModeContext,
-} from '../../libs/context/LightModeContext';
+import { useLightModeContext } from '../../libs/context/LightModeContext';
 import styled from 'styled-components';
 import MenuItems from './MenuItems';
-import ParticlesContainer from '../base/Particles';
+import { ELightMode } from '../../libs/data/Constants';
 
 const MobileMenuWrapper = styled.div({
   '.burger-button': {

@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
-import { ELightMode } from '../context/LightModeContext';
 import { useTranslation } from 'react-i18next';
+import { ELightMode } from './Constants';
 
 export const commonData = {
   copyright: `Copyright © 2023 ${isMobile ? '' : 'Dmitry Demidovich'}`,

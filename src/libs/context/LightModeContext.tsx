@@ -1,10 +1,7 @@
 import React, { PropsWithChildren, useContext, useState } from 'react';
 import noop from 'lodash/noop';
-
-export enum ELightMode {
-  LIGHT = 'light',
-  DARK = 'dark',
-}
+import useCookies from '../hooks/useCookies';
+import { ELightMode, lightModeCookieName } from '../data/Constants';
 
 type TLightModeContext = {
   mode: ELightMode;
@@ -22,15 +19,29 @@ const LightModeContext =
 export default function LightModeContextProvider({
   children,
 }: PropsWithChildren): React.ReactElement {
-  const [mode, setMode] = useState<ELightMode>(ELightMode.DARK);
+  const { setCookie, getCookie } = useCookies();
+
+  const lightModeFromCookie = getCookie(lightModeCookieName);
+  const mappedLightModeFromCookie = lightModeFromCookie
+    ? JSON.parse(lightModeFromCookie)
+    : undefined;
+
+  const [mode, setMode] = useState<ELightMode>(
+    mappedLightModeFromCookie || ELightMode.DARK
+  );
+
+  function setLightMode(value: ELightMode) {
+    setMode(value);
+    setCookie(lightModeCookieName, JSON.stringify(value));
+  }
 
   function handleOnChange(value: string) {
     switch (value) {
       case 'light':
-        setMode(ELightMode.LIGHT);
+        setLightMode(ELightMode.LIGHT);
         return;
       case 'dark':
-        setMode(ELightMode.DARK);
+        setLightMode(ELightMode.DARK);
         return;
       default:
         return;

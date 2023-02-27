@@ -1,11 +1,9 @@
 import React from 'react';
 import { loadFull } from 'tsparticles';
 import Particles from 'react-tsparticles';
-import {
-  ELightMode,
-  useLightModeContext,
-} from '../../libs/context/LightModeContext';
+import { useLightModeContext } from '../../libs/context/LightModeContext';
 import styled from 'styled-components';
+import { ELightMode } from '../../libs/data/Constants';
 
 const ParticlesWrapper = styled(Particles)({
   position: 'absolute',
