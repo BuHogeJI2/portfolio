@@ -12,6 +12,8 @@ const HeroWrapper = styled.div({
       fontSize: fontSize.xxl,
       textTransform: 'uppercase',
       whiteSpace: isMobile ? 'nowrap' : 'normal',
+      userSelect: 'none',
+      cursor: 'pointer',
     },
     '.sub-title': {
       fontSize: fontSize.big,
@@ -39,7 +41,9 @@ export default function Hero({
   return (
     <HeroWrapper>
       <div className={'hero-text'}>
-        <h1 className={'title'}>{title}</h1>
+        <h1 className={'title'} onClick={onClick}>
+          {title}
+        </h1>
         {!isMobile ? <h3 className={'sub-title'}>{subTitle}</h3> : null}
       </div>
       {image && !isMobile ? <PhotoImage src={image} onClick={onClick} /> : null}

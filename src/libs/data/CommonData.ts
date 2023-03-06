@@ -9,32 +9,32 @@ export const commonData = {
       name: 'Github',
       icon:
         lightMode === ELightMode.LIGHT
-          ? '/images/svg/github-light.svg'
-          : '/images/svg/github-dark.svg',
+          ? '/portfolio/images/svg/github-light.svg'
+          : '/portfolio/images/svg/github-dark.svg',
       link: 'https://github.com/BuHogeJI2',
     },
     {
       name: 'Linkedin',
       icon:
         lightMode === ELightMode.LIGHT
-          ? '/images/svg/linkedin-light.svg'
-          : '/images/svg/linkedin-dark.svg',
+          ? '/portfolio/images/svg/linkedin-light.svg'
+          : '/portfolio/images/svg/linkedin-dark.svg',
       link: 'https://www.linkedin.com/in/d-demidovich/',
     },
     {
       name: 'E-mail',
       icon:
         lightMode === ELightMode.LIGHT
-          ? '/images/svg/mail-light.svg'
-          : '/images/svg/mail-dark.svg',
+          ? '/portfolio/images/svg/mail-light.svg'
+          : '/portfolio/images/svg/mail-dark.svg',
       link: 'mailto:dzmitrydziamidovich@gmail.com',
     },
   ],
   menuIcons: {
-    burgerLight: '/images/burger-light.png',
-    burgerDark: '/images/burger-dark.png',
-    closeDark: '/images/close-dark.png',
-    closeLight: '/images/close-white.png',
+    burgerLight: '/portfolio/images/burger-light.png',
+    burgerDark: '/portfolio/images/burger-dark.png',
+    closeDark: '/portfolio/images/close-dark.png',
+    closeLight: '/portfolio/images/close-white.png',
   },
   skills: [
     'TypeScript',
@@ -68,7 +68,7 @@ export function useMenuItems(): Array<TMenuItem> {
   return [
     {
       page: t('menu.about'),
-      link: '/',
+      link: '/portfolio',
     },
     {
       page: t('menu.skills'),
