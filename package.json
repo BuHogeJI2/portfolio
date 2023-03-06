@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://BuHogeJI2.github.io/portfolio",
   "dependencies": {
     "@frank-mayer/react-tag-cloud": "^1.1.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,6 +12,7 @@
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.10",
+    "gh-pages": "^5.0.0",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
     "js-cookie": "^3.0.1",
@@ -32,7 +34,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
