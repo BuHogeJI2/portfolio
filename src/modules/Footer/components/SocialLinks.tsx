@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { commonData } from '../../libs/data/CommonData';
-import { useLightModeContext } from '../../libs/context/LightModeContext';
+import { commonData } from '../../../libs/data/CommonData';
+import { useLightModeContext } from '../../../libs/context/LightModeContext';
 
 const SocialLinksWrapper = styled.div({
   display: 'flex',

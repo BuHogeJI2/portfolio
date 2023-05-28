@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from '../base/Image';
+import { Image } from '../../../components';
 import styled from 'styled-components';
-import { fontSize } from '../../libs/theme/theme';
+import { fontSize } from '../../../libs/theme/theme';
 import { isMobile } from 'react-device-detect';
 
 const HeroWrapper = styled.div({

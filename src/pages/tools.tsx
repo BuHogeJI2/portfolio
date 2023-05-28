@@ -1,7 +1,6 @@
 import React from 'react';
-import Layout from '../components/base/Layout';
+import { Layout, ListItems } from '../modules';
 import styled from 'styled-components';
-import ListItems from '../components/main/ListItems';
 import { fontSize } from '../libs/theme/theme';
 import { useTranslation } from 'react-i18next';
 import { isMobile } from 'react-device-detect';

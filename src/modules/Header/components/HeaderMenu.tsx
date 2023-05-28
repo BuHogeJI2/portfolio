@@ -1,8 +1,8 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
-import MobileMenu from './MobileMenu';
-import MenuItems from './MenuItems';
 import styled from 'styled-components';
+import MenuItems from './MenuItems';
+import MobileMenu from './MobileMenu';
 
 const DesktopMenuItems = styled(MenuItems)({
   '.menu-link': {

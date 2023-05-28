@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from 'react';
 import Slider, { Settings as SliderConfig } from 'react-slick';
-import styled from 'styled-components';
 
 interface IBaseSliderProps {
   config?: SliderConfig;

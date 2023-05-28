@@ -1,9 +1,8 @@
 import { TagCloud, TagCloudOptions } from '@frank-mayer/react-tag-cloud';
 import React from 'react';
-import Layout from '../components/base/Layout';
+import { Layout, Slider } from '../modules';
 import styled from 'styled-components';
 import { commonData } from '../libs/data/CommonData';
-import BaseSlider from '../components/base/BaseSlider';
 import { useTranslation } from 'react-i18next';
 import { fontSize } from '../libs/theme/theme';
 import { isMobile } from 'react-device-detect';
@@ -40,12 +39,12 @@ export default function SkillsPage(): React.ReactElement {
     <Layout>
       <SkillsContent>
         <BaseSliderWrapper>
-          <BaseSlider>
+          <Slider>
             <div className={'slide-text'}>{t('skills1')}</div>
             <div className={'slide-text'}>{t('skills2')}</div>
             <div className={'slide-text'}>{t('skills3')}</div>
             <div className={'slide-text'}>{t('skills4')}</div>
-          </BaseSlider>
+          </Slider>
         </BaseSliderWrapper>
         <TagCloud
           options={(w: Window & typeof globalThis): TagCloudOptions => ({
