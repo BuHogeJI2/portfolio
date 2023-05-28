@@ -3,6 +3,25 @@ import { TUnionStyles } from './theme.types';
 import merge from 'lodash/merge';
 import { isMobile } from 'react-device-detect';
 
+const MAX_MOBILE_WIDTH = 830;
+const MIN_TABLET_DEVICE_WIDTH = 831;
+const MIN_DESKTOP_DEVICE_WIDTH = 1024;
+
+const breakpoints = [
+  `${MIN_TABLET_DEVICE_WIDTH}px) and (min-device-width: ${MIN_TABLET_DEVICE_WIDTH}px`,
+  `${MIN_DESKTOP_DEVICE_WIDTH}px) and (min-device-width: ${MIN_DESKTOP_DEVICE_WIDTH}px`,
+];
+
+const MEDIA_MOBILE = `@media screen and (max-width: ${MAX_MOBILE_WIDTH}px)`;
+const MEDIA_TABLET = `@media screen and (min-width: ${breakpoints[0]})`;
+const MEDIA_DESKTOP = `@media screen and (min-width: ${breakpoints[1]})`;
+
+export const media = {
+  mobile: MEDIA_MOBILE,
+  tablet: MEDIA_TABLET,
+  desktop: MEDIA_DESKTOP,
+};
+
 export const colors = {
   bgDark: 'black',
   bgLight: '#f0f0ff',
@@ -33,7 +52,7 @@ const unionStyles: TUnionStyles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     overflowY: 'scroll',
   },
@@ -70,6 +89,20 @@ const unionStyles: TUnionStyles = {
     border: '1px solid',
     cursor: 'pointer',
     objectFit: 'cover',
+    aboutMe: {
+      width: '125px',
+      height: '125px',
+      border: '1px solid',
+      borderRadius: '50%',
+      objectFit: 'cover',
+      marginLeft: '0px',
+      float: 'left',
+      [media.tablet]: {
+        width: '250px',
+        height: '250px',
+        borderRadius: '0',
+      },
+    },
   },
   buttons: {
     linkBtn: {
@@ -130,6 +163,9 @@ export const lightTheme: DefaultTheme = merge(
     },
     photo: {
       borderColor: colors.bgDark,
+      aboutMe: {
+        borderColor: colors.bgDark,
+      },
     },
     buttons: {
       linkBtn: {
@@ -164,6 +200,9 @@ export const darkTheme: DefaultTheme = merge(
     },
     photo: {
       borderColor: colors.bgLight,
+      aboutMe: {
+        borderColor: colors.bgLight,
+      },
     },
     buttons: {
       linkBtn: {
