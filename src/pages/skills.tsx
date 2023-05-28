@@ -2,10 +2,10 @@ import { TagCloud, TagCloudOptions } from '@frank-mayer/react-tag-cloud';
 import React from 'react';
 import { Layout, Slider } from '../modules';
 import styled from 'styled-components';
-import { commonData } from '../libs/data/CommonData';
 import { useTranslation } from 'react-i18next';
 import { fontSize } from '../libs/theme/theme';
 import { isMobile } from 'react-device-detect';
+import { pageData } from './mockedData';
 
 const SkillsContent = styled.div({
   width: '100%',
@@ -52,7 +52,7 @@ export default function SkillsPage(): React.ReactElement {
             maxSpeed: 'normal',
           })}
         >
-          {commonData.skills}
+          {pageData.skills}
         </TagCloud>
       </SkillsContent>
     </Layout>

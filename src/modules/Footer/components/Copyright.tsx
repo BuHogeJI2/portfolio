@@ -1,6 +1,6 @@
 import React from 'react';
-import { commonData } from '../../../libs/data/CommonData';
+import { footer } from '../mockedData';
 
 export default function Copyright(): React.ReactElement {
-  return <div>{commonData.copyright}</div>;
+  return <div>{footer.copyright}</div>;
 }

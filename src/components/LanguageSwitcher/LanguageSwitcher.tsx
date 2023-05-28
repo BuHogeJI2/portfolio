@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { languageCookieName, languageList } from '../../libs/data/Constants';
 import { useTranslation } from 'react-i18next';
 import useCookies from '../../libs/hooks/useCookies';
+import { languageCookieName, languageList } from '../../constants';
 
 const SwitcherWrapper = styled.div({
   position: 'absolute',

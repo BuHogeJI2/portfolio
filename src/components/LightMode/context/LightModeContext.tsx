@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useContext, useState } from 'react';
 import noop from 'lodash/noop';
-import useCookies from '../hooks/useCookies';
-import { ELightMode, lightModeCookieName } from '../data/Constants';
+import useCookies from '../../../libs/hooks/useCookies';
+import { ELightMode, lightModeCookieName } from '../../../constants';
 
 type TLightModeContext = {
   mode: ELightMode;

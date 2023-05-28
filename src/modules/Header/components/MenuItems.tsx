@@ -1,7 +1,7 @@
 import React from 'react';
-import { useMenuItems } from '../../../libs/data/CommonData';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { useMenuItems } from '../hooks';
 
 const Menu = styled.div(({ theme }) => theme.menu);
 

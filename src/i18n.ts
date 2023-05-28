@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from './libs/locales/en/common.json';
 import translationRU from './libs/locales/ru/common.json';
 import translationBLR from './libs/locales/blr/common.json';
-import { defaultLanguage } from './libs/data/Constants';
+import { defaultLanguage } from './constants';
 
 const resources = {
   en: { translation: translationEN },

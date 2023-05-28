@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { commonData } from '../../../libs/data/CommonData';
-import { useLightModeContext } from '../../../libs/context/LightModeContext';
+import { useLightModeContext } from '../../../components';
 import styled from 'styled-components';
 import MenuItems from './MenuItems';
-import { ELightMode } from '../../../libs/data/Constants';
+import { ELightMode } from '../../../constants';
+import { header } from '../mockedData';
 
 const MobileMenuWrapper = styled.div({
   '.burger-button': {
@@ -36,13 +36,13 @@ export default function MobileMenu(): React.ReactElement {
 
   const burgerIcon =
     mode === ELightMode.LIGHT
-      ? commonData.menuIcons.burgerDark
-      : commonData.menuIcons.burgerLight;
+      ? header.menuIcons.burgerDark
+      : header.menuIcons.burgerLight;
 
   const closeIcon =
     mode === ELightMode.LIGHT
-      ? commonData.menuIcons.closeDark
-      : commonData.menuIcons.closeLight;
+      ? header.menuIcons.closeDark
+      : header.menuIcons.closeLight;
 
   const [opened, setOpened] = useState<boolean>(false);
 

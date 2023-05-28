@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLightModeContext } from '../../libs/context/LightModeContext';
+import { useLightModeContext } from './context';
 import Checkbox from './Checkbox';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 import { useTranslation } from 'react-i18next';
-import { ELightMode } from '../../libs/data/Constants';
+import { ELightMode } from '../../constants';
 
 const SwitcherWrapper = styled.div({
   position: 'absolute',

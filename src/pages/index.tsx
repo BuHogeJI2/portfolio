@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../modules';
-import BaseSlider from '../modules/Slider/BaseSlider';
+import BaseSlider from '../modules/Slider/components/BaseSlider';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
