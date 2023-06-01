@@ -14,7 +14,7 @@ export default function SocialLinks(): React.ReactElement {
   return (
     <SocialLinksWrapper>
       {footer.socialLinks(mode).map(item => (
-        <SocialItem {...item} />
+        <SocialItem key={item.id} {...item} />
       ))}
     </SocialLinksWrapper>
   );

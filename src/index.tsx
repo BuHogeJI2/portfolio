@@ -2,12 +2,10 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomePage from './pages';
+import { HomePage, ToolsPage, SkillsPage, ContactPage } from './pages';
 import { ThemeProvider } from 'styled-components';
-import SkillsPage from './pages/skills';
 import { LightModeContextProvider, useLightModeContext } from './components';
 import { darkTheme, lightTheme } from './libs/theme/theme';
-import ToolsPage from './pages/tools';
 import './i18n';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -27,8 +25,12 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/skills',
+    path: '/resume',
     element: <SkillsPage />,
+  },
+  {
+    path: '/contact',
+    element: <ContactPage />,
   },
   {
     path: '/tools',

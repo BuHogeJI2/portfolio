@@ -31,6 +31,7 @@ export default function LanguageSwitcher(): React.ReactElement {
       {languageList.map(lng => {
         return (
           <SwitchButton
+            key={lng}
             className={currentLanguage === lng ? 'active' : undefined}
             onClick={() => handleChangeLanguage(lng)}
           >

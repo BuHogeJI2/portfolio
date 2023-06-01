@@ -16,8 +16,9 @@ export default function MenuItems({
 
   return (
     <Menu className={className}>
-      {menuItems.map(({ link, page }) => (
+      {menuItems.map(({ link, page, id }) => (
         <NavLink
+          key={id}
           to={link}
           className={({ isActive }) => `menu-link ${isActive ? 'active' : ''}`}
         >

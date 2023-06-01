@@ -4,3 +4,4 @@ export { Slider } from './Slider';
 export { AboutMe } from './AboutMe';
 export { Skills } from './Skills';
 export { ToolsContent } from './Tools';
+export { ContactForm } from './ContactForm';

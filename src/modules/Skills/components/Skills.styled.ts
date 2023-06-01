@@ -6,9 +6,8 @@ export const SkillsContent = styled.div({
   height: '100%',
   display: 'flex',
   flexDirection: 'column-reverse',
-  justifyContent: 'space-between',
+  justifyContent: 'flex-end',
   alignItems: 'flex-end',
-  overflowY: 'auto',
   [media.tablet]: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -26,6 +25,11 @@ export const SkillsTextWrapper = styled.div({
   padding: '20px',
   maxWidth: '540px',
   fontSize: '18px',
+  overflowY: 'auto',
+  borderTop: '1px solid lightGray',
+  [media.tablet]: {
+    borderTop: 'none',
+  },
 });
 
 export const TagCloudWrapper = styled.div({

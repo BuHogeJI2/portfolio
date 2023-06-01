@@ -5,6 +5,7 @@ export const footer = {
   copyright: `Copyright © 2023 ${isMobile ? '' : 'Dmitry Demidovich'}`,
   socialLinks: (lightMode?: ELightMode) => [
     {
+      id: 1,
       name: 'Github',
       icon:
         lightMode === ELightMode.LIGHT
@@ -13,6 +14,7 @@ export const footer = {
       link: 'https://github.com/BuHogeJI2',
     },
     {
+      id: 2,
       name: 'Linkedin',
       icon:
         lightMode === ELightMode.LIGHT
@@ -21,6 +23,7 @@ export const footer = {
       link: 'https://www.linkedin.com/in/d-demidovich/',
     },
     {
+      id: 3,
       name: 'E-mail',
       icon:
         lightMode === ELightMode.LIGHT

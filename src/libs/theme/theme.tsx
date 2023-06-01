@@ -115,6 +115,11 @@ const unionStyles: TUnionStyles = {
         fontWeight: 'bold',
       },
     },
+    formButton: {
+      padding: '10px 20px',
+      backgroundColor: 'transparent',
+      cursor: 'pointer',
+    },
   },
   footer: {
     display: 'flex',
@@ -144,6 +149,11 @@ const unionStyles: TUnionStyles = {
       },
     },
   },
+  input: {
+    marginBottom: '10px',
+    padding: '10px',
+    backgroundColor: 'transparent',
+  },
 };
 
 export const lightTheme: DefaultTheme = merge(
@@ -171,6 +181,11 @@ export const lightTheme: DefaultTheme = merge(
       linkBtn: {
         color: colors.bgDark,
       },
+      formButton: {
+        border: '1px solid',
+        borderColor: colors.bgDark,
+        color: colors.bgDark,
+      },
     },
     menu: {
       '.menu-link': {
@@ -178,6 +193,14 @@ export const lightTheme: DefaultTheme = merge(
       },
       mobileOverlay: {
         backgroundColor: colors.bgLight,
+      },
+    },
+    input: {
+      border: '1px solid',
+      borderColor: colors.bgDark,
+      color: colors.bgDark,
+      '&::placeholder': {
+        color: colors.bgDark,
       },
     },
   },
@@ -208,6 +231,11 @@ export const darkTheme: DefaultTheme = merge(
       linkBtn: {
         color: colors.bgLight,
       },
+      formButton: {
+        border: '1px solid',
+        borderColor: colors.bgLight,
+        color: colors.bgLight,
+      },
     },
     menu: {
       '.menu-link': {
@@ -215,6 +243,14 @@ export const darkTheme: DefaultTheme = merge(
       },
       mobileOverlay: {
         backgroundColor: colors.bgDark,
+      },
+    },
+    input: {
+      border: '1px solid',
+      borderColor: colors.bgLight,
+      color: colors.bgLight,
+      '&::placeholder': {
+        color: colors.bgLight,
       },
     },
   },
