@@ -11,6 +11,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Error404Page from './pages/404';
 import { ELightMode } from './constants';
+import { ModalContextProvider, ModalRootComponent } from './modules';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,10 @@ function Initial(): React.ReactElement {
 
   return (
     <ThemeProvider theme={mode === ELightMode.LIGHT ? lightTheme : darkTheme}>
-      <RouterProvider router={router} />
+      <ModalContextProvider>
+        <RouterProvider router={router} />
+        <ModalRootComponent />
+      </ModalContextProvider>
     </ThemeProvider>
   );
 }

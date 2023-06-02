@@ -25,5 +25,14 @@
   "tools.utils": "Utility libraries:",
   "tools.code": "Code styling tools:",
   "tools.manager": "Package manager:",
-  "contact.me.title": "Hey there! I'm always here for a chat, so don't hesitate to drop me a message whenever you feel like it."
+  "contact.me.title": "Hey there! I'm always here for a chat, so don't hesitate to drop me a message whenever you feel like it.",
+  "contact.me.success.title": "Submission Successful!",
+  "contact.me.success.text": "Your message has been successfully sent. We will contact you soon!",
+  "contact.me.error.title": "Submission Failed!",
+  "contact.me.error.text": "Oops, there was a problem with your submission. Please try again.",
+  "contact.me.name": "Name",
+  "contact.me.email": "Email",
+  "contact.me.message": "Message",
+  "contact.me.send": "Send",
+  "contact.me.field.required": "This field is required"
 }

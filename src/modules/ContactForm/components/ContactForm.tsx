@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
+  CommonModalWrapper,
   Form,
   FormButton,
   FormInput,
   FormTextArea,
   FormTitle,
   FormWrapper,
+  LoadingOverlay,
 } from './ContactForm.styled';
 import emailjs from 'emailjs-com';
 import { useTranslation } from 'react-i18next';
@@ -29,14 +31,23 @@ interface ITemplateParams {
   message: string;
 }
 
+type TModal = {
+  show: boolean;
+  title: string;
+  text: string;
+  success: boolean;
+};
+
 export default function ContactForm(): React.ReactElement {
   const [t] = useTranslation();
-  const [emailSending, setEmailSending] = useState(false);
+  const [emailSending, setEmailSending] = useState<boolean>(false);
+  const [modal, setModal] = useState<TModal | null>(null);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<IFormInputs>();
 
   function onSubmit(data: IFormInputs) {
@@ -52,43 +63,70 @@ export default function ContactForm(): React.ReactElement {
       emailjs
         .send(emailServiceId, emailTemplateId, templateParams, emailUserId)
         .then(
-          response => {
+          () => {
             setEmailSending(false);
-            console.log('SUCCESS!', response.status, response.text);
+            setModal({
+              show: true,
+              title: t('contact.me.success.title'),
+              text: t('contact.me.success.text'),
+              success: true,
+            });
           },
-          err => {
+          () => {
             setEmailSending(false);
-            console.log('FAILED...', err);
+            setModal({
+              show: true,
+              title: t('contact.me.error.title'),
+              text: t('contact.me.error.text'),
+              success: false,
+            });
           }
-        );
+        )
+        .then(() => reset());
     } else {
       console.error('Environment variables not found');
     }
   }
 
-  console.log({ emailSending });
-
   return (
-    <FormWrapper>
-      <FormTitle>{t('contact.me.title')}</FormTitle>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        {errors.name && <span>This field is required</span>}
-        <FormInput
-          {...register('name', { required: true })}
-          placeholder="Your Name"
+    <>
+      <FormWrapper>
+        <FormTitle>{t('contact.me.title')}</FormTitle>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          {errors.name && <span>{t('contact.me.field.required')}</span>}
+          <FormInput
+            {...register('name', { required: true })}
+            placeholder={t('contact.me.name') as string}
+          />
+          {errors.email && <span>{t('contact.me.field.required')}</span>}
+          <FormInput
+            {...register('email', { required: true })}
+            placeholder={t('contact.me.email') as string}
+          />
+          {errors.message && <span>{t('contact.me.field.required')}</span>}
+          <FormTextArea
+            {...register('message', { required: true })}
+            placeholder={t('contact.me.message') as string}
+          />
+          <FormButton type="submit">{t('contact.me.send')}</FormButton>
+        </Form>
+      </FormWrapper>
+      <LoadingOverlay show={emailSending}>
+        <img
+          src="/portfolio/images/svg/spinner-button.svg"
+          alt="spinner"
+          className="loader"
         />
-        {errors.email && <span>This field is required</span>}
-        <FormInput
-          {...register('email', { required: true })}
-          placeholder="Your Email"
-        />
-        {errors.message && <span>This field is required</span>}
-        <FormTextArea
-          {...register('message', { required: true })}
-          placeholder="Your Message"
-        />
-        <FormButton type="submit">Send</FormButton>
-      </Form>
-    </FormWrapper>
+      </LoadingOverlay>
+      <CommonModalWrapper
+        show={modal?.show}
+        title={modal?.title}
+        text={modal?.text}
+        success={modal?.success}
+        onClose={() => {
+          setModal(null);
+        }}
+      />
+    </>
   );
 }

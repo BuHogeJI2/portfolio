@@ -19,11 +19,13 @@ This website was built with:
 - TypeScript: A statically typed superset of JavaScript that adds types.
 - React.js: A JavaScript library for building user interfaces.
 - Webpack: A static module bundler for modern JavaScript applications.
+- gh-pages: A tool that helps to deploy contents of the build folder to a gh-pages branch on GitHub.
 - react-router-dom: The DOM bindings for React Router.
 - styled-components: A library for styling React components with tagged template literals.
 
 ### Utility Tools
 - i18n: An internationalization-framework which provides a way to translate your web application.
+- EmailJS: A service that allows you to send emails directly from your client-side Javascript code.
 - lodash: A JavaScript utility library delivering consistency, modularity, and performance.
 - js-cookie: A simple, lightweight JavaScript API for handling cookies.
 

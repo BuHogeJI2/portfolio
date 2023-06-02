@@ -32,11 +32,12 @@ export const ToolsWrapper = styled.div({
     },
   },
   '.section-title': {
-    fontSize: fontSize.big,
+    fontSize: fontSize.middle2,
     width: '50%',
     display: 'flex',
     padding: '0px 20px',
     [media.tablet]: {
+      fontSize: fontSize.big,
       display: 'block',
       width: '100%',
     },
@@ -49,10 +50,13 @@ export const ToolsWrapper = styled.div({
     },
   },
   li: {
-    fontSize: fontSize.big,
+    fontSize: fontSize.middle2,
     fontWeight: 'bold',
     listStyle: 'none',
     lineHeight: 1.5,
+    [media.tablet]: {
+      fontSize: fontSize.big,
+    },
     '&:before': {
       content: "'⦿'",
       width: '10px',

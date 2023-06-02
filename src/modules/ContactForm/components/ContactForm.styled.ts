@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { media } from '../../../libs/theme/theme';
+import { CommonModal, ShadowOverlay } from '../../Modals';
 
 export const FormTitle = styled.h2({
   textAlign: 'center',
@@ -38,4 +39,25 @@ export const FormTextArea = styled.textarea(({ theme }) => theme.input);
 
 export const FormButton = styled.button(
   ({ theme }) => theme.buttons.formButton
+);
+
+export const LoadingOverlay = styled(ShadowOverlay)({
+  '.modal-wrapper': {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+  },
+  '.loader': {
+    width: '30%',
+    maxWidth: '300px',
+  },
+});
+
+export const CommonModalWrapper = styled(CommonModal)<{ success?: boolean }>(
+  ({ success }) => ({
+    '.modal-wrapper': {
+      boxShadow: success ? 'inset 0 0 15px green' : 'inset 0 0 15px red',
+    },
+  })
 );
