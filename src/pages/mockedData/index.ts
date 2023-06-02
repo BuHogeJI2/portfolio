@@ -1,0 +1,21 @@
+export const pageData = {
+  skills: [
+    'TypeScript',
+    'React.js',
+    'Next.js',
+    'Jest',
+    'ESLint',
+    'Apollo Graphql',
+    'Graphql',
+    'Git',
+    '_lodash',
+    'HTML',
+    'CSS',
+    'npm',
+    'Webpack',
+    'styled-components',
+    'REST',
+    'i18next',
+    'Bit',
+  ],
+};
