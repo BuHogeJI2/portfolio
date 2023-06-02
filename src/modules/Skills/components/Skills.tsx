@@ -18,7 +18,6 @@ export default function Skills(): React.ReactElement {
         <div className={'slide-text'}>{t('skills1')}</div>
         <div className={'slide-text'}>{t('skills2')}</div>
         <div className={'slide-text'}>{t('skills3')}</div>
-        <div className={'slide-text'}>{t('skills4')}</div>
       </SkillsTextWrapper>
       <TagCloudWrapper>
         <TagCloud

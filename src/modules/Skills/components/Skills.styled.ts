@@ -23,11 +23,12 @@ export const SkillsTextWrapper = styled.div({
   flexDirection: 'column',
   gap: '20px',
   padding: '20px',
-  maxWidth: '540px',
+
   fontSize: '18px',
   overflowY: 'auto',
   borderTop: '1px solid lightGray',
   [media.tablet]: {
+    maxWidth: '540px',
     borderTop: 'none',
   },
 });
