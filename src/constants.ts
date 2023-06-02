@@ -10,3 +10,7 @@ export enum ELightMode {
   LIGHT = 'light',
   DARK = 'dark',
 }
+
+export const emailServiceId = process.env.REACT_APP_SERVICE_ID;
+export const emailTemplateId = process.env.REACT_APP_TEMPLATE_ID;
+export const emailUserId = process.env.REACT_APP_USER_ID;
