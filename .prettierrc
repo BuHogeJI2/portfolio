@@ -1,0 +1,7 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-packagejson"],
+  "tabWidth": 2,
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "arrowParens": "avoid"
+}
