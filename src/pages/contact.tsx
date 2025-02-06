@@ -1,10 +1,10 @@
 import { Container } from '@/components';
 import { ReactElement } from 'react';
 
-export function HomePage(): ReactElement {
+export function ContactPage(): ReactElement {
   return (
     <Container>
-      <div className="text-3xl font-bold underline">Home Page</div>
+      <div className="text-3xl font-bold">Contact Me</div>
     </Container>
   );
 }
