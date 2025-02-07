@@ -1,3 +1,4 @@
+import { IPhoto } from './photos.types';
 import { selfPhotos } from './photos.const';
 
 export function Photos() {
@@ -9,54 +10,35 @@ export function Photos() {
   return (
     <div className="flex flex-col items-center">
       {/* Top photo */}
-      <div className="relative mb-[-2.5rem] transition-transform hover:z-10 hover:scale-105">
-        <img
-          src={topPhoto.src}
-          alt={topPhoto.alt}
-          className="h-24 w-24 rounded-full border-2 border-white object-cover"
-        />
+      <div className="mb-[-2.5rem] flex space-x-[-1rem]">
+        <Photo photo={topPhoto} />
       </div>
       {/* Middle row with two photos */}
       <div className="mb-[-2.5rem] flex space-x-[-1rem]">
-        <div className="relative transition-transform hover:z-10 hover:scale-105">
-          <img
-            src={middlePhotos[0].src}
-            alt={middlePhotos[0].alt}
-            className="h-24 w-24 rounded-full border-2 border-white object-cover"
-          />
-        </div>
-        <div className="relative transition-transform hover:z-10 hover:scale-105">
-          <img
-            src={middlePhotos[1].src}
-            alt={middlePhotos[1].alt}
-            className="h-24 w-24 rounded-full border-2 border-white object-cover"
-          />
-        </div>
+        <Photo photo={middlePhotos[0]} />
+        <Photo photo={middlePhotos[1]} />
       </div>
       {/* Bottom row with two photos */}
       <div className="mb-[-2.5rem] flex space-x-[-1rem]">
-        <div className="relative transition-transform hover:z-10 hover:scale-105">
-          <img
-            src={bottomPhotos[0].src}
-            alt={bottomPhotos[0].alt}
-            className="h-24 w-24 rounded-full border-2 border-white object-cover"
-          />
-        </div>
-        <div className="relative transition-transform hover:z-10 hover:scale-105">
-          <img
-            src={bottomPhotos[1].src}
-            alt={bottomPhotos[1].alt}
-            className="h-24 w-24 rounded-full border-2 border-white object-cover"
-          />
-        </div>
+        <Photo photo={bottomPhotos[0]} />
+        <Photo photo={bottomPhotos[1]} />
       </div>
       {/* Last photo */}
-      <div className="relative transition-transform hover:z-10 hover:scale-105">
-        <img
-          src={lastPhoto.src}
-          alt={lastPhoto.alt}
-          className="h-24 w-24 rounded-full border-2 border-white object-cover"
-        />
+      <Photo photo={lastPhoto} />
+    </div>
+  );
+}
+
+function Photo({ photo }: { photo: IPhoto }) {
+  return (
+    <div className="group relative transition-transform hover:z-10 hover:scale-105">
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        className="h-24 w-24 rounded-full border-2 border-white object-cover"
+      />
+      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded-md bg-black px-2 py-1 text-sm text-white opacity-0 transition-opacity group-hover:opacity-100">
+        {photo.alt}
       </div>
     </div>
   );
