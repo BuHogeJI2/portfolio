@@ -1,6 +1,7 @@
 import { Container } from '@/components/container/container';
 import { ReactElement } from 'react';
 import { SocialLinks } from '@/components/social-links/social-links';
+
 export function HomePage(): ReactElement {
   return (
     <Container>
