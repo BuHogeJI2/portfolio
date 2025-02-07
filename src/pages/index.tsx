@@ -2,6 +2,7 @@ import { Container } from '@/components/container/container';
 import { ReactElement } from 'react';
 import { SocialLinks } from '@/components/social-links/social-links';
 import { Photos } from '@/components/photos/photos';
+
 export function HomePage(): ReactElement {
   return (
     <Container>
