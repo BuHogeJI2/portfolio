@@ -1,5 +1,10 @@
 import { IPhoto } from './photos.types';
 
+export const mainPhoto: IPhoto = {
+  src: '/images/wed.jpg',
+  alt: '',
+};
+
 export const selfPhotos: IPhoto[] = [
   {
     src: '/images/bold.jpg',
