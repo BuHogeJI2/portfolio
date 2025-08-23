@@ -1,8 +1,8 @@
-import { Container } from '@/components/container/container';
+import { Container } from '@/components/base/container/container';
 import { ReactElement } from 'react';
-import { SocialLinks } from '@/components/social-links/social-links';
-import { Avatar } from '@/components/photos/avatar';
-import { SocialBlocks } from '@/components/social-links/social-block';
+import { SocialLinks } from '@/components/pages/home/social-links/social-links';
+import { Avatar } from '@/components/pages/home/photos/avatar';
+import { SocialBlocks } from '@/components/pages/home/social-links/social-block';
 
 export function HomePage(): ReactElement {
   return (

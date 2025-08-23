@@ -1,4 +1,4 @@
-import { Container } from '@/components/container/container';
+import { Container } from '@/components/base/container/container';
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 

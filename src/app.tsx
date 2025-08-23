@@ -1,9 +1,9 @@
 import { Fragment, useEffect } from 'react';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
-import { Navbar } from '@/components/navbar/navbar';
-import { Footer } from '@/components/footer/footer';
-import { PageBackground } from '@/components/page-background';
-import { ETheme } from './components/navbar/navbar.types';
+import { Navbar } from '@/components/base/navbar/navbar';
+import { Footer } from '@/components/base/footer/footer';
+import { PageBackground } from '@/components/base/page-background';
+import { ETheme } from './components/base/navbar/navbar.types';
 
 export default function App() {
   useEffect(() => {
