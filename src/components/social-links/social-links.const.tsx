@@ -1,4 +1,11 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaWordpressSimple,
+  FaFilePdf,
+  FaDownload,
+} from 'react-icons/fa';
 import { ReactElement } from 'react';
 
 interface ISocialLink {
@@ -20,5 +27,23 @@ export const socialLinks: ISocialLink[] = [
     href: 'https://linkedin.com/in/YOUR_USERNAME',
     icon: <FaLinkedin className={socialLinkClassName} />,
     label: 'LinkedIn',
+  },
+];
+
+export const socialBlocks: ISocialLink[] = [
+  {
+    href: '/contact',
+    icon: <FaEnvelope className={socialLinkClassName} />,
+    label: 'Contact me here',
+  },
+  {
+    href: '/', // todo: fix link
+    icon: <FaWordpressSimple className={socialLinkClassName} />, // todo: fix icon
+    label: 'Hire me on UpWork',
+  },
+  {
+    href: '/', // todo: fix link
+    icon: <FaDownload className={socialLinkClassName} />,
+    label: 'Download CV',
   },
 ];

@@ -2,6 +2,7 @@ import { Container } from '@/components/container/container';
 import { ReactElement } from 'react';
 import { SocialLinks } from '@/components/social-links/social-links';
 import { Avatar } from '@/components/photos/avatar';
+import { SocialBlocks } from '@/components/social-links/social-block';
 
 export function HomePage(): ReactElement {
   return (
@@ -27,6 +28,7 @@ export function HomePage(): ReactElement {
           <Avatar />
         </div>
       </div>
+      <SocialBlocks />
     </Container>
   );
 }
