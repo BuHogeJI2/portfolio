@@ -84,4 +84,65 @@ export const skills: Array<TSkillDomain> = [
       },
     ],
   },
+  {
+    domain: 'UX/UI & Style',
+    description:
+      'I have extensive experience working with a wide range of UI component libraries while building design systems and can assist you in selecting the best one for your project.',
+    skills: [
+      {
+        name: 'Shadcn UI',
+        description:
+          'Shadcn UI is a library of reusable UI components for React.',
+        icon: '/icons/svg/shadcn.svg',
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.',
+        icon: '/icons/svg/tailwind.svg',
+      },
+      {
+        name: 'Styled Components',
+        description:
+          'Styled Components is a library for styling React components.',
+        icon: '/icons/svg/styled.svg',
+      },
+      {
+        name: 'Storybook',
+        description:
+          'Storybook is a library for building UI components and pages in isolation.',
+        icon: '/icons/svg/storybook.svg',
+      },
+      {
+        name: 'Figma',
+        description:
+          'Figma is a design tool that allows you to create and share designs.',
+        icon: '/icons/svg/figma.svg',
+      },
+      {
+        name: 'HTML5',
+        description:
+          'HTML5 is a markup language for structuring and presenting content on the World Wide Web.',
+        icon: '/icons/svg/html5.svg',
+      },
+      {
+        name: 'CSS3',
+        description:
+          'CSS3 is a style sheet language used for describing the presentation of a document written in HTML.',
+        icon: '/icons/svg/css3.svg',
+      },
+      {
+        name: 'SCSS / SASS',
+        description:
+          'SCSS / SASS is a preprocessor for CSS that allows you to write CSS in a more organized and efficient way.',
+        icon: '/icons/svg/scss.svg',
+      },
+      {
+        name: 'CSS Modules',
+        description:
+          'CSS Modules is a CSS preprocessor that allows you to write CSS in a more organized and efficient way.',
+        icon: '/icons/svg/css-modules.svg',
+      },
+    ],
+  },
 ];
