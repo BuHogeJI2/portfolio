@@ -145,4 +145,34 @@ export const skills: Array<TSkillDomain> = [
       },
     ],
   },
+  {
+    domain: 'AI Tools',
+    description:
+      "I'm a strong advocate for AI and have firsthand experience with how it can boost productivity. Using AI tools, I enhance my work and free up more time for creativity",
+    skills: [
+      {
+        name: 'Cursor',
+        description:
+          'Cursor is a code editor that uses AI to help you write code.',
+        icon: '/icons/svg/cursor.svg',
+      },
+      {
+        name: 'OpenAI (ChatGPT)',
+        description: 'OpenAI is a company that provides AI tools and services.',
+        icon: '/icons/svg/openai.svg',
+      },
+      {
+        name: 'DeepSeek',
+        description:
+          'DeepSeek is a company that provides AI tools and services.',
+        icon: '/icons/svg/deepseek.svg',
+      },
+      {
+        name: 'Github Copilot',
+        description:
+          'Github Copilot is a tool that uses AI to help you write code.',
+        icon: '/icons/svg/copilot.svg',
+      },
+    ],
+  },
 ];
