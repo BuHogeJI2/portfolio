@@ -13,6 +13,10 @@ const Skills = lazy(() =>
   import('@/pages/skills').then(mod => ({ default: mod.SkillsPage })),
 );
 
+const Projects = lazy(() =>
+  import('@/pages/projects').then(mod => ({ default: mod.ProjectsPage })),
+);
+
 const Experience = lazy(() =>
   import('@/pages/experience').then(mod => ({ default: mod.ExperiencePage })),
 );
@@ -47,6 +51,14 @@ export const routes: Array<RouteObject> = [
     element: (
       <Suspense fallback={<div>Loading...</div>}>
         <Skills />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'projects',
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
       </Suspense>
     ),
   },
