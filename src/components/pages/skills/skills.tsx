@@ -3,7 +3,7 @@ import { skills } from './skills.const';
 
 export function Skills(): ReactElement {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-12">
       {skills.map(skill => (
         <div key={skill.domain}>
           <div className="text-2xl font-bold text-primary-default dark:text-white">
@@ -16,16 +16,16 @@ export function Skills(): ReactElement {
             {skill.skills.map(skill => (
               <div
                 key={skill.name}
-                className="flex w-fit flex-row items-center gap-2 rounded-xl bg-secondary-default px-4 py-2 dark:bg-secondary-default"
+                className="flex w-fit flex-row items-center gap-2 rounded-xl px-4 py-2 dark:bg-blue-500/20"
               >
-                <div className="h-10 w-10">
+                <div className="h-8 w-8">
                   <img
                     src={skill.icon}
                     alt={skill.name}
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <div className="text-xl font-bold text-primary-default dark:text-white">
+                <div className="text-base font-bold text-primary-default dark:text-white">
                   {skill.name}
                 </div>
               </div>
