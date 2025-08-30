@@ -1,33 +1,33 @@
 import { IPhoto } from './photos.types';
 
 export const mainPhoto: IPhoto = {
-  src: '/images/wed.jpg',
+  src: '/images/photos/wed.jpg',
   alt: '',
 };
 
 export const selfPhotos: IPhoto[] = [
   {
-    src: '/images/bold.jpg',
+    src: '/images/photos/bold.jpg',
     alt: 'Life in Georgia',
   },
   {
-    src: '/images/lake.jpg',
+    src: '/images/photos/lake.jpg',
     alt: "Friend's country house",
   },
   {
-    src: '/images/runa.jpg',
+    src: '/images/photos/runa.jpg',
     alt: 'Most beautiful dog in the world',
   },
   {
-    src: '/images/with_wife.jpg',
+    src: '/images/photos/with_wife.jpg',
     alt: 'With wife',
   },
   {
-    src: '/images/runa_park.jpg',
+    src: '/images/photos/runa_park.jpg',
     alt: 'Most beautiful dog in the park',
   },
   {
-    src: '/images/istanbul.jpg',
+    src: '/images/photos/istanbul.jpg',
     alt: 'Istanbul trip',
   },
 ];
