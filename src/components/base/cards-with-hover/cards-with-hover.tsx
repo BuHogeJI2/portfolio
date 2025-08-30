@@ -38,7 +38,7 @@ export function CardsWithHover({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-[#3F3F46]"
+                className="absolute inset-0 block h-full w-full rounded-3xl bg-primary-default dark:bg-primary-dark"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -78,7 +78,7 @@ export function Card({ className, children, link }: ICardProps): ReactElement {
     <a href={link} target="_blank" rel="noopener noreferrer">
       <div
         className={cn(
-          'relative z-20 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-transparent bg-[#27272A] group-hover:border-slate-700 dark:border-white/[0.2]',
+          'relative z-20 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-transparent bg-gray-200 group-hover:border-slate-700/20 dark:border-white/[0.2] dark:bg-[#27272A] dark:group-hover:border-slate-700',
           className,
         )}
       >
@@ -112,7 +112,10 @@ export function CardTitle({ className, children }: ICardProps): ReactElement {
   return (
     <div className="px-4 py-2">
       <h4
-        className={cn('mt-4 font-bold tracking-wide text-zinc-100', className)}
+        className={cn(
+          'mt-4 text-lg font-bold tracking-wide text-info-default dark:text-zinc-100',
+          className,
+        )}
       >
         {children}
       </h4>
@@ -128,7 +131,7 @@ export function CardDescription({
     <div className="px-4 py-2">
       <p
         className={cn(
-          'text-sm leading-relaxed tracking-wide text-zinc-400',
+          'text-sm leading-relaxed tracking-wide text-info-default dark:text-zinc-400',
           className,
         )}
       >
@@ -152,7 +155,7 @@ export function CardTechnologies({
       {technologies.map((tech, index) => (
         <span
           key={index}
-          className="inline-block rounded-full border border-blue-500/30 bg-blue-500/20 px-3 py-1 text-xs font-medium text-blue-300"
+          className="inline-block rounded-full border border-primary-default px-3 py-1 text-xs font-medium text-primary-default dark:border-primary-dark/50 dark:text-primary-dark/80"
         >
           {tech}
         </span>
@@ -173,7 +176,7 @@ export function CardLink({ className, link }: ICardLinkProps): ReactElement {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center text-sm font-medium text-blue-400 transition-colors duration-200 hover:text-blue-300 group-hover:text-blue-200"
+        className="inline-flex items-center text-sm font-medium text-primary-default transition-colors duration-200 hover:text-blue-300 group-hover:underline dark:text-primary-dark"
       >
         <span>View Project</span>
         <svg
