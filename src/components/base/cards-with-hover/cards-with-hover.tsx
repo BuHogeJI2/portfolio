@@ -103,7 +103,7 @@ export function CardImage({
     <img
       src={image}
       alt={title}
-      className={cn('h-48 w-full rounded-t-lg object-cover', className)}
+      className={cn('h-100 w-full rounded-t-lg object-cover', className)}
     />
   );
 }
