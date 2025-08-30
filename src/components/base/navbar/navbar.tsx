@@ -23,20 +23,20 @@ export function Navbar(): ReactElement {
           <nav className="flex items-center justify-center py-4 pt-12">
             {/* Desktop Navigation */}
             <div className="hidden w-full md:block">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-4">
                 <NavbarActionButton
                   type={ENavbarActionButtonType.THEME_TOGGLE}
                 />
-                <ul className="mx-12 flex flex-1 items-center justify-between rounded-full border border-slate-200 bg-white px-8 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md">
+                <ul className="flex flex-1 items-center justify-between rounded-full border border-slate-200 bg-white px-8 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md">
                   {navLinks.map(({ label, to }) => (
                     <li key={label}>
                       <NavLink
                         to={to}
                         className={({ isActive }) =>
-                          `relative rounded-full px-8 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 ${
+                          `relative rounded-full px-8 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800/50 ${
                             isActive
                               ? 'text-primary-default dark:text-primary-dark'
-                              : 'text-secondary-default hover:text-primary-default dark:text-secondary-dark dark:hover:text-primary-dark'
+                              : 'text-info-default dark:text-info-dark'
                           }`
                         }
                       >
@@ -45,9 +45,9 @@ export function Navbar(): ReactElement {
                     </li>
                   ))}
                 </ul>
-                <NavbarActionButton
+                {/* <NavbarActionButton
                   type={ENavbarActionButtonType.LANGUAGE_TOGGLE}
-                />
+                /> */}
               </div>
             </div>
 

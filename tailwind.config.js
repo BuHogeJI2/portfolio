@@ -6,15 +6,15 @@ module.exports = {
       extend: {
         colors: {
           primary: {
-            default: '#3EB489',
-            dark: '#ff0000',
+            default: '#3E736D',
+            dark: '#06B6D4',
           },
           secondary: {
             default: '#267055',
-            dark: '#fdcf04',
+            dark: '#06B6D4',
           },
           info: {
-            default: '#64748b',
+            default: '#666',
             dark: 'lightgray',
           },
         }
