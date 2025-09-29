@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 export const cardsContainerStyles = clsx(
-  'grid grid-cols-1 pb-10 md:grid-cols-2 lg:grid-cols-2',
+  'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2',
 );
 
 export const cardItemStyles = clsx('group relative block h-full w-full p-2');
