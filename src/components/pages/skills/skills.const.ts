@@ -151,6 +151,18 @@ export const skills: Array<TSkillDomain> = [
       "I'm a strong advocate for AI and have firsthand experience with how it can boost productivity. Using AI tools, I enhance my work and free up more time for creativity",
     skills: [
       {
+        name: 'Perplexity',
+        description:
+          'Perplexity is an AI-powered search engine and assistant known for delivering accurate, cited answers in real-time conversations.',
+        icon: '/icons/svg/perplexity.svg',
+      },
+      {
+        name: 'Comet',
+        description:
+          'Comet is an AI-first web browser by Perplexity, integrating search and an assistant to automate browsing, research, and tasks.',
+        icon: '/icons/svg/comet.svg',
+      },
+      {
         name: 'Cursor',
         description:
           'Cursor is a code editor that uses AI to help you write code.',
@@ -158,19 +170,20 @@ export const skills: Array<TSkillDomain> = [
       },
       {
         name: 'OpenAI (ChatGPT)',
-        description: 'OpenAI is a company that provides AI tools and services.',
+        description:
+          'ChatGPT is a conversational AI by OpenAI that answers questions, creates content, and automates tasks with human-like understanding.',
         icon: '/icons/svg/openai.svg',
       },
       {
         name: 'DeepSeek',
         description:
-          'DeepSeek is a company that provides AI tools and services.',
+          'DeepSeek is an AI model specializing in code search and generation, enabling users to find, complete, and understand code with natural language queries.',
         icon: '/icons/svg/deepseek.svg',
       },
       {
         name: 'Github Copilot',
         description:
-          'Github Copilot is a tool that uses AI to help you write code.',
+          'GitHub Copilot is an AI coding assistant that suggests code, completes functions, and automates repetitive programming tasks directly in code editors.',
         icon: '/icons/svg/copilot.svg',
       },
     ],
