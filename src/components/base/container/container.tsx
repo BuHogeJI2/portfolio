@@ -1,4 +1,5 @@
 import { PropsWithChildren, ReactElement } from 'react';
+import clsx from 'clsx';
 
 interface ContainerProps extends PropsWithChildren {
   className?: string;
@@ -7,14 +8,16 @@ interface ContainerProps extends PropsWithChildren {
 
 export function Container({
   children,
-  className = '',
+  className,
   fluid = false,
 }: ContainerProps): ReactElement {
   return (
     <div
-      className={`mx-auto w-full px-4 sm:px-6 lg:px-8 ${
-        fluid ? 'max-w-full' : 'max-w-4xl'
-      } ${className} `}
+      className={clsx(
+        'mx-auto w-full px-4 sm:px-6 lg:px-8',
+        fluid ? 'max-w-full' : 'max-w-4xl',
+        className,
+      )}
     >
       {children}
     </div>

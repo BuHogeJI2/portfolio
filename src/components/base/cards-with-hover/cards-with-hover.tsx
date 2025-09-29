@@ -1,6 +1,23 @@
-import { cn } from '@/lib/utils';
+import clsx from 'clsx';
 import { AnimatePresence, motion } from 'motion/react';
 import { ReactElement, useState } from 'react';
+import {
+  cardsContainerStyles,
+  cardItemStyles,
+  hoverBackgroundStyles,
+  cardStyles,
+  cardContentStyles,
+  cardImageStyles,
+  cardTitleContainerStyles,
+  cardTitleStyles,
+  cardDescriptionContainerStyles,
+  cardDescriptionStyles,
+  cardTechnologiesStyles,
+  technologyTagStyles,
+  cardLinkContainerStyles,
+  cardLinkStyles,
+  cardLinkIconStyles,
+} from './cards-with-hover.styles';
 
 interface ICardsWithHoverProps {
   items: Array<ICardWithHoverItem>;
@@ -22,23 +39,18 @@ export function CardsWithHover({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className={cn(
-        'grid grid-cols-1 pb-10 md:grid-cols-2 lg:grid-cols-2',
-        className,
-      )}
-    >
+    <div className={clsx(cardsContainerStyles, className)}>
       {items.map((item, idx) => (
         <div
           key={item?.link}
-          className="group relative block h-full w-full p-2"
+          className={cardItemStyles}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(idx)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-primary-default dark:bg-primary-dark"
+                className={hoverBackgroundStyles}
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -76,13 +88,8 @@ interface ICardProps {
 export function Card({ className, children, link }: ICardProps): ReactElement {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <div
-        className={cn(
-          'relative z-20 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-transparent bg-gray-200 group-hover:border-slate-700/20 dark:border-white/[0.2] dark:bg-[#27272A] dark:group-hover:border-slate-700',
-          className,
-        )}
-      >
-        <div className="relative z-50">{children}</div>
+      <div className={clsx(cardStyles, className)}>
+        <div className={cardContentStyles}>{children}</div>
       </div>
     </a>
   );
@@ -100,25 +107,14 @@ export function CardImage({
   title,
 }: ICardImageProps): ReactElement {
   return (
-    <img
-      src={image}
-      alt={title}
-      className={cn('h-100 w-full rounded-t-lg object-cover', className)}
-    />
+    <img src={image} alt={title} className={clsx(cardImageStyles, className)} />
   );
 }
 
 export function CardTitle({ className, children }: ICardProps): ReactElement {
   return (
-    <div className="px-4 py-2">
-      <h4
-        className={cn(
-          'mt-4 text-lg font-bold tracking-wide text-info-default dark:text-zinc-100',
-          className,
-        )}
-      >
-        {children}
-      </h4>
+    <div className={cardTitleContainerStyles}>
+      <h4 className={clsx(cardTitleStyles, className)}>{children}</h4>
     </div>
   );
 }
@@ -128,15 +124,8 @@ export function CardDescription({
   children,
 }: ICardProps): ReactElement {
   return (
-    <div className="px-4 py-2">
-      <p
-        className={cn(
-          'text-sm leading-relaxed tracking-wide text-info-default dark:text-zinc-400',
-          className,
-        )}
-      >
-        {children}
-      </p>
+    <div className={cardDescriptionContainerStyles}>
+      <p className={clsx(cardDescriptionStyles, className)}>{children}</p>
     </div>
   );
 }
@@ -151,12 +140,9 @@ export function CardTechnologies({
   technologies,
 }: ICardTechnologiesProps): ReactElement {
   return (
-    <div className={cn('flex flex-wrap gap-2 p-4', className)}>
+    <div className={clsx(cardTechnologiesStyles, className)}>
       {technologies.map((tech, index) => (
-        <span
-          key={index}
-          className="inline-block rounded-full border border-primary-default px-3 py-1 text-xs font-medium text-primary-default dark:border-primary-dark/50 dark:text-primary-dark/80"
-        >
+        <span key={index} className={technologyTagStyles}>
           {tech}
         </span>
       ))}
@@ -171,16 +157,16 @@ interface ICardLinkProps {
 
 export function CardLink({ className, link }: ICardLinkProps): ReactElement {
   return (
-    <div className={cn('mt-auto flex items-center p-4', className)}>
+    <div className={clsx(cardLinkContainerStyles, className)}>
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center text-sm font-medium text-primary-default transition-colors duration-200 hover:text-blue-300 group-hover:underline dark:text-primary-dark"
+        className={cardLinkStyles}
       >
         <span>View Project</span>
         <svg
-          className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+          className={cardLinkIconStyles}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

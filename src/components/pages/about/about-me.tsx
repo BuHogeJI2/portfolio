@@ -1,12 +1,27 @@
 import { Container } from '@/components/base/container/container';
 import { ReactElement } from 'react';
 import { aboutMeKeyPoints, aboutMePhotos } from './about-me.const';
+import {
+  aboutMeContainerStyles,
+  aboutMeContentStyles,
+  aboutMeDescriptionStyles,
+  aboutMeTextStyles,
+  aboutMeHighlightStyles,
+  aboutMePhotosContainerStyles,
+  aboutMePhotoWrapperStyles,
+  aboutMePhotoStyles,
+  aboutMePhotoSeparatorStyles,
+  aboutMeKeyPointsContainerStyles,
+  aboutMeKeyPointStyles,
+  aboutMeKeyPointTitleStyles,
+  aboutMeKeyPointDescriptionStyles,
+} from './about-me.styles';
 
 export function AboutMe(): ReactElement {
   return (
-    <div className="flex w-full flex-row items-center justify-between gap-12 py-12">
+    <div className={aboutMeContainerStyles}>
       <AboutMePhotos />
-      <div className="flex flex-row gap-4">
+      <div className={aboutMeContentStyles}>
         <AboutMeDescription />
         <AboutMeKeyPoints />
       </div>
@@ -16,34 +31,29 @@ export function AboutMe(): ReactElement {
 
 function AboutMeDescription(): ReactElement {
   return (
-    <div className="flex-1/2 flex flex-col gap-4">
-      <p className="text-lg text-secondary-default dark:text-white">
+    <div className={aboutMeDescriptionStyles}>
+      <p className={aboutMeTextStyles}>
         Greetings! I'm Dmitry, a frontend developer with over{' '}
-        <span className="font-bold text-primary-default dark:text-secondary-dark">
-          4 years
-        </span>{' '}
-        of hands-on experience in building modern, user-centric web
-        applications.
+        <span className={aboutMeHighlightStyles}>4 years</span> of hands-on
+        experience in building modern, user-centric web applications.
       </p>
-      <p className="text-lg text-secondary-default dark:text-white">
+      <p className={aboutMeTextStyles}>
         Throughout my journey, I've developed a strong specialization in
         building{' '}
-        <span className="font-bold text-primary-default dark:text-secondary-dark">
-          complex frontend systems
-        </span>{' '}
+        <span className={aboutMeHighlightStyles}>complex frontend systems</span>{' '}
         for the travel industry, tackling challenges like interactive maps,
         advanced search filters, and seamless booking flows. This experience has
         equipped me with a versatile skill set that I'm eager to apply to new
         domains and innovative projects.
       </p>
-      <p className="text-lg text-secondary-default dark:text-white">
+      <p className={aboutMeTextStyles}>
         I find joy in tackling complex frontend challenges and creating
         intuitive interfaces that bring tangible value to users. My goal is to
         harness creativity and modern tools to build innovative, user-centric
         products that make a meaningful difference.
       </p>
-      <p className="text-lg text-secondary-default dark:text-white">
-        Let’s collaborate and bring your ideas to life!
+      <p className={aboutMeTextStyles}>
+        Let's collaborate and bring your ideas to life!
       </p>
     </div>
   );
@@ -51,20 +61,18 @@ function AboutMeDescription(): ReactElement {
 
 function AboutMePhotos(): ReactElement {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className={aboutMePhotosContainerStyles}>
       {aboutMePhotos.map((photo, index) => (
         <>
-          <div key={photo.src} className="h-24 w-24 rounded-lg">
+          <div key={photo.src} className={aboutMePhotoWrapperStyles}>
             <img
               src={photo.src}
               alt={photo.alt}
-              className="h-24 w-24 rounded-lg object-cover"
+              className={aboutMePhotoStyles}
             />
           </div>
           {index < aboutMePhotos.length - 1 && (
-            <div className="text-lg text-secondary-default dark:text-white">
-              |
-            </div>
+            <div className={aboutMePhotoSeparatorStyles}>|</div>
           )}
         </>
       ))}
@@ -74,14 +82,13 @@ function AboutMePhotos(): ReactElement {
 
 function AboutMeKeyPoints(): ReactElement {
   return (
-    <div className="flex flex-col gap-4">
+    <div className={aboutMeKeyPointsContainerStyles}>
       {aboutMeKeyPoints.map(keyPoint => (
-        <div
-          key={keyPoint.title}
-          className="flex flex-col items-center justify-center gap-2 rounded-lg bg-primary-default p-4 text-white"
-        >
-          <h3 className="text-4xl font-bold">{keyPoint.title}</h3>
-          <p className="text-center text-sm">{keyPoint.description}.</p>
+        <div key={keyPoint.title} className={aboutMeKeyPointStyles}>
+          <h3 className={aboutMeKeyPointTitleStyles}>{keyPoint.title}</h3>
+          <p className={aboutMeKeyPointDescriptionStyles}>
+            {keyPoint.description}.
+          </p>
         </div>
       ))}
     </div>

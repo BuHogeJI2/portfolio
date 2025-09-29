@@ -1,6 +1,6 @@
 import { ReactElement, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import clsx from 'clsx';
+import { labelStyles, inputStyles, textareaStyles, buttonStyles, successMessageStyles, errorMessageStyles } from './contact-form.styles';
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -45,43 +45,6 @@ export function ContactForm(): ReactElement {
       setIsSubmitting(false);
     }
   };
-
-  const labelStyles = clsx(
-    'mb-2 block text-sm font-medium',
-    'text-gray-700 dark:text-gray-300',
-  );
-
-  const inputStyles = clsx(
-    'w-full rounded-md border px-3 py-2 shadow-sm',
-    'placeholder-gray-400',
-    'focus:border-primary-default focus:outline-none focus:ring-2 focus:ring-primary-default',
-    'disabled:cursor-not-allowed disabled:opacity-50',
-    'border-gray-300',
-    'dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500',
-  );
-
-  const textareaStyles = clsx(inputStyles, 'resize-vertical');
-
-  const buttonStyles = clsx(
-    'flex w-full justify-center rounded-md border border-transparent',
-    'px-4 py-2 text-sm font-medium text-white shadow-sm',
-    'bg-primary-default dark:bg-primary-dark',
-    'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100',
-    'hover:bg-primary-default/90 dark:hover:bg-primary-dark/90',
-    'transition-colors duration-200',
-  );
-
-  const successMessageStyles = clsx(
-    'rounded-md p-4',
-    'bg-green-50 text-green-800',
-    'dark:bg-green-900 dark:text-green-200',
-  );
-
-  const errorMessageStyles = clsx(
-    'rounded-md p-4',
-    'bg-red-50 text-red-800',
-    'dark:bg-red-900 dark:text-red-200',
-  );
 
   return (
     <div className="mx-auto mt-8 w-full max-w-md">
