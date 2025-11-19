@@ -15,7 +15,7 @@ export function HomePage(): ReactElement {
               Dmitry
             </span>
           </h1>
-          <h2 className="text-3xl font-bold text-secondary-default dark:text-secondary-dark md:text-5xl">
+          <h2 className="text-3xl font-bold text-primary-default dark:text-secondary-dark md:text-5xl">
             Frontend Developer
           </h2>
           <p className="text-xl text-info-default dark:text-info-dark">

@@ -19,12 +19,12 @@ const socialLinkClassName =
 
 export const socialLinks: ISocialLink[] = [
   {
-    href: 'https://https://github.com/BuHogeJI2',
+    href: 'https://github.com/BuHogeJI2',
     icon: <FaGithub className={socialLinkClassName} />,
     label: 'GitHub',
   },
   {
-    href: 'https://linkedin.com/in/YOUR_USERNAME',
+    href: 'https://www.linkedin.com/in/d-demidovich/',
     icon: <FaLinkedin className={socialLinkClassName} />,
     label: 'LinkedIn',
   },

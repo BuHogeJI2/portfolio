@@ -9,11 +9,11 @@ export const aboutMeContentStyles = clsx('flex flex-row gap-4');
 export const aboutMeDescriptionStyles = clsx('flex-1/2 flex flex-col gap-4');
 
 export const aboutMeTextStyles = clsx(
-  'text-lg text-secondary-default dark:text-white',
+  'text-lg text-info-default dark:text-white',
 );
 
 export const aboutMeHighlightStyles = clsx(
-  'font-bold text-primary-default dark:text-secondary-dark',
+  'font-bold text-secondary-default dark:text-secondary-dark',
 );
 
 export const aboutMePhotosContainerStyles = clsx(

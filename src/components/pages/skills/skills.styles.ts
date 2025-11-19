@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export const containerStyles = clsx('relative flex flex-col gap-12');
 
@@ -17,8 +17,8 @@ export const skillsContainerStyles = clsx('mt-4 flex flex-row flex-wrap gap-4');
 export const skillItemStyles = clsx(
   'group flex w-fit cursor-pointer flex-row items-center gap-2 rounded-xl px-4 py-2',
   'transition-all duration-300 ease-in-out',
-  'hover:scale-105 hover:bg-blue-500/30 hover:shadow-lg',
-  'dark:bg-blue-500/20',
+  'bg-secondary-default/10 hover:scale-105 hover:shadow hover:shadow-primary-default/20',
+  'dark:bg-blue-500/20 dark:hover:bg-blue-500/30',
 );
 
 export const skillIconStyles = clsx(
