@@ -21,7 +21,9 @@ import {
   mobileNavLinkStyles,
   mobileNavLinkActiveStyles,
   mobileNavLinkInactiveStyles,
+  mobileNavActionButtonContainerStyles,
 } from './navbar.styles';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks: NavItem[] = [
   { label: 'Home', to: '/' },
@@ -71,26 +73,22 @@ export function Navbar(): ReactElement {
             </div>
 
             {/* Mobile Navigation Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className={mobileMenuButtonStyles}
-            >
-              <svg
-                className={mobileMenuIconStyles}
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <div className={mobileNavActionButtonContainerStyles}>
+              <NavbarActionButton type={ENavbarActionButtonType.THEME_TOGGLE} />
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={mobileMenuButtonStyles}
               >
+                <span className="text-info-default dark:text-info-dark">
+                  Menu
+                </span>
                 {isOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
+                  <FaTimes className={mobileMenuIconStyles} />
                 ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
+                  <FaBars className={mobileMenuIconStyles} />
                 )}
-              </svg>
-            </button>
+              </button>
+            </div>
           </nav>
 
           {/* Mobile Menu */}

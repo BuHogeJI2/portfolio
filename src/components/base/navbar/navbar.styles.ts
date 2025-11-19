@@ -29,11 +29,13 @@ export const navLinkInactiveStyles = clsx(
 );
 
 export const mobileMenuButtonStyles = clsx(
+  'flex items-center gap-2',
+  'ml-4 md:ml-0 px-4 md:px-0',
   'block rounded-full border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md md:hidden',
 );
 
 export const mobileMenuIconStyles = clsx(
-  'text-secondary-DEFAULT h-6 w-6 dark:text-secondary-dark',
+  'text-secondary-default h-5 w-5 dark:text-secondary-dark',
 );
 
 export const mobileMenuStyles = clsx('md:hidden');
@@ -63,4 +65,8 @@ export const actionButtonStyles = clsx(
 
 export const actionButtonContentStyles = clsx(
   'flex h-6 w-6 items-center justify-center',
+);
+
+export const mobileNavActionButtonContainerStyles = clsx(
+  'flex w-full items-center justify-center gap-2 md:hidden',
 );

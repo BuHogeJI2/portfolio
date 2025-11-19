@@ -9,7 +9,7 @@ export function HomePage(): ReactElement {
     <Container>
       <div className="flex flex-row items-start gap-4 md:items-start md:items-center md:gap-16 md:py-16">
         <div className="flex-[0.75] space-y-2 md:space-y-4">
-          <h1 className="text-3xl font-bold dark:text-white md:text-7xl">
+          <h1 className="text-3xl font-bold text-gray-700 dark:text-white md:text-7xl">
             <span>Hi, I'm</span>{' '}
             <span className="text-primary-default dark:text-primary-dark">
               Dmitry

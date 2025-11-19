@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 export const socialBlockContainerStyles = clsx(
-  'flex h-full min-h-[200px] w-full flex-1 flex-col items-center gap-4 pt-16',
+  'flex h-full min-h-[200px] w-full flex-1 flex-col items-center gap-4 pt-24',
   'md:mx-auto md:w-fit md:w-full md:flex-row md:justify-center md:pt-4',
 );
 
@@ -18,7 +18,7 @@ export const socialBlockItemStyles = clsx(
 export const socialBlockItemContentStyles = clsx('flex items-center gap-4');
 
 export const socialBlockItemLabelStyles = clsx(
-  'text-md font-medium text-secondary-default dark:text-secondary-dark',
+  'text-md font-medium text-info-default dark:text-info-dark',
 );
 
 export const socialBlockItemIconStyles = clsx('h-5 w-5', 'md:h-6 md:w-6');
