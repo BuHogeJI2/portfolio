@@ -7,6 +7,7 @@ import {
   FaDownload,
 } from 'react-icons/fa';
 import { ReactElement } from 'react';
+import clsx from 'clsx';
 
 interface ISocialLink {
   href: string;
@@ -14,8 +15,21 @@ interface ISocialLink {
   label: string;
 }
 
-const socialLinkClassName =
-  'hover:text-primary-default dark:hover:text-primary-dark h-6 w-6 text-gray-600 dark:text-gray-400';
+const socialBlockClassName = clsx(
+  'text-secondary-default dark:text-secondary-dark',
+  'h-5 w-5',
+  'md:h-6 md:w-6',
+);
+
+const socialLinkClassName = clsx(
+  'h-6 w-6',
+  'md:text-gray-600 dark:md:text-gray-400',
+  'text-secondary-default dark:text-secondary-dark',
+  'hover:text-primary-default dark:hover:text-primary-dark',
+  'transition-all duration-300 ease-in-out',
+  'hover:scale-105',
+  'md:hover:scale-105',
+);
 
 export const socialLinks: ISocialLink[] = [
   {
@@ -33,17 +47,17 @@ export const socialLinks: ISocialLink[] = [
 export const socialBlocks: ISocialLink[] = [
   {
     href: '/contact',
-    icon: <FaEnvelope className={socialLinkClassName} />,
+    icon: <FaEnvelope className={socialBlockClassName} />,
     label: 'Contact me here',
   },
   {
     href: '/', // todo: fix link
-    icon: <FaWordpressSimple className={socialLinkClassName} />, // todo: fix icon
+    icon: <FaWordpressSimple className={socialBlockClassName} />, // todo: fix icon
     label: 'Hire me on UpWork',
   },
   {
     href: '/', // todo: fix link
-    icon: <FaDownload className={socialLinkClassName} />,
+    icon: <FaDownload className={socialBlockClassName} />,
     label: 'Download CV',
   },
 ];

@@ -21,7 +21,7 @@ export const navLinkStyles = clsx(
 );
 
 export const navLinkActiveStyles = clsx(
-  'bg-slate-100 dark:bg-slate-800/50 text-secondary-default dark:text-primary-dark',
+  'underline underline-offset-4 text-secondary-default dark:text-primary-dark',
 );
 
 export const navLinkInactiveStyles = clsx(
