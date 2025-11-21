@@ -8,7 +8,6 @@ import {
   cardStyles,
   cardContentStyles,
   cardImageStyles,
-  cardTitleContainerStyles,
   cardTitleStyles,
   cardDescriptionContainerStyles,
   cardDescriptionStyles,
@@ -17,6 +16,7 @@ import {
   cardLinkContainerStyles,
   cardLinkStyles,
   cardLinkIconStyles,
+  readMoreButtonStyles,
 } from './cards-with-hover.styles';
 
 interface ICardsWithHoverProps {
@@ -36,46 +36,84 @@ export function CardsWithHover({
   items,
   className,
 }: ICardsWithHoverProps): ReactElement {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+
+  const toggleItem = (link: string) => {
+    setExpandedItems((prev) =>
+      prev.includes(link) ? prev.filter((l) => l !== link) : [...prev, link],
+    );
+  };
 
   return (
     <div className={clsx(cardsContainerStyles, className)}>
-      {items.map((item, idx) => (
-        <div
-          key={item?.link}
-          className={cardItemStyles}
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(idx)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className={hoverBackgroundStyles}
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card link={item.link}>
-            <CardImage image={item.image} title={item.title} />
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            {item.technologies && (
-              <CardTechnologies technologies={item.technologies} />
-            )}
-            <CardLink link={item.link} />
-          </Card>
-        </div>
-      ))}
+      {items.map((item, idx) => {
+        const isExpanded = expandedItems.includes(item.link);
+        return (
+          <div
+            key={item?.link}
+            className={cardItemStyles}
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(idx)}
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className={hoverBackgroundStyles}
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.15 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { duration: 0.15, delay: 0.2 },
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <Card link={item.link}>
+              <CardImage image={item.image} title={item.title} />
+              <div className="flex items-center justify-between mt-4 px-4">
+                <CardTitle>{item.title}</CardTitle>
+                <ReadMoreButton
+                  isExpanded={isExpanded}
+                  onClick={() => toggleItem(item.link)}
+                />
+              </div>
+              <div className={!isExpanded ? 'hidden md:block' : ''}>
+                <CardDescription>{item.description}</CardDescription>
+              </div>
+              {item.technologies && (
+                <CardTechnologies technologies={item.technologies} />
+              )}
+              <CardLink link={item.link} />
+            </Card>
+          </div>
+        );
+      })}
     </div>
+  );
+}
+
+function ReadMoreButton({
+  isExpanded,
+  onClick,
+}: {
+  isExpanded: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      className={readMoreButtonStyles}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
+    >
+      {isExpanded ? 'Hide description' : 'Show description'}
+    </button>
   );
 }
 
@@ -113,8 +151,8 @@ export function CardImage({
 
 export function CardTitle({ className, children }: ICardProps): ReactElement {
   return (
-    <div className={cardTitleContainerStyles}>
-      <h4 className={clsx(cardTitleStyles, className)}>{children}</h4>
+    <div className={className}>
+      <h4 className={clsx(cardTitleStyles)}>{children}</h4>
     </div>
   );
 }

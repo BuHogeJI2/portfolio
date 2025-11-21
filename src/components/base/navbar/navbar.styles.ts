@@ -41,7 +41,8 @@ export const mobileMenuIconStyles = clsx(
 export const mobileMenuStyles = clsx('md:hidden');
 
 export const mobileMenuListStyles = clsx(
-  'rounded-lg border border-slate-200 bg-white p-4 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md',
+  'rounded-lg border border-slate-200 bg-white/80 backdrop-blur-md p-4 shadow-lg',
+  'dark:border-slate-700/50 dark:bg-slate-900/90 dark:backdrop-blur-md',
 );
 
 export const mobileMenuItemStyles = clsx('mb-2');
@@ -51,11 +52,13 @@ export const mobileNavLinkStyles = clsx(
 );
 
 export const mobileNavLinkActiveStyles = clsx(
-  'text-primary-DEFAULT bg-slate-100 dark:bg-slate-800 dark:text-primary-dark',
+  'text-secondary-default bg-slate-100 shadow-lg',
+  'dark:bg-slate-800 dark:text-primary-dark',
 );
 
 export const mobileNavLinkInactiveStyles = clsx(
-  'text-secondary-DEFAULT hover:text-primary-DEFAULT hover:bg-slate-50 dark:text-secondary-dark dark:hover:bg-slate-800/50 dark:hover:text-primary-dark',
+  'text-info-default',
+  'dark:text-info-dark',
 );
 
 // NavbarActionButton styles

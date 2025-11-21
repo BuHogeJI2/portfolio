@@ -12,8 +12,8 @@ function PorjectContainer({ children }: { children: ReactElement }) {
 
 export function Projects(): ReactElement {
   return (
-    <div className="flex flex-col gap-8">
-      <h1 className="text-center text-2xl font-bold text-primary-default dark:text-white">
+    <div className="flex flex-col gap-4 md:gap-8">
+      <h1 className="text-center text-xl md:text-2xl font-bold text-primary-default dark:text-white">
         My projects and previous work places
       </h1>
       <PorjectContainer>

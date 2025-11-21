@@ -7,7 +7,7 @@ export const cardsContainerStyles = clsx(
 export const cardItemStyles = clsx('group relative block h-full w-full p-2');
 
 export const hoverBackgroundStyles = clsx(
-  'absolute inset-0 block h-full w-full rounded-3xl bg-primary-default dark:bg-primary-dark',
+  'absolute inset-0 hidden h-full w-full rounded-3xl bg-primary-default dark:bg-primary-dark md:block',
 );
 
 export const cardStyles = clsx(
@@ -18,10 +18,8 @@ export const cardContentStyles = clsx('relative z-50');
 
 export const cardImageStyles = clsx('h-100 w-full rounded-t-lg object-cover');
 
-export const cardTitleContainerStyles = clsx('px-4 py-2');
-
 export const cardTitleStyles = clsx(
-  'mt-4 text-lg font-bold tracking-wide text-info-default dark:text-zinc-100',
+  ' text-2xl md:text-lg font-bold tracking-wide text-info-default dark:text-zinc-100',
 );
 
 export const cardDescriptionContainerStyles = clsx('px-4 py-2');
@@ -33,10 +31,10 @@ export const cardDescriptionStyles = clsx(
 export const cardTechnologiesStyles = clsx('flex flex-wrap gap-2 p-4');
 
 export const technologyTagStyles = clsx(
-  'inline-block rounded-full border border-primary-default px-3 py-1 text-xs font-medium text-primary-default dark:border-primary-dark/50 dark:text-primary-dark/80',
+  'inline-block rounded-full border border-primary-default px-2 md:px-3 py-1 text-xs font-medium text-primary-default dark:border-primary-dark/50 dark:text-primary-dark/80',
 );
 
-export const cardLinkContainerStyles = clsx('mt-auto flex items-center p-4');
+export const cardLinkContainerStyles = clsx('mt-auto flex items-center px-4 py-2 md:p-4');
 
 export const cardLinkStyles = clsx(
   'inline-flex items-center text-sm font-medium text-primary-default transition-colors duration-200 hover:text-blue-300 group-hover:underline dark:text-primary-dark',
@@ -44,4 +42,10 @@ export const cardLinkStyles = clsx(
 
 export const cardLinkIconStyles = clsx(
   'ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1',
+);
+
+export const readMoreButtonStyles = clsx(
+  'flex items-center md:hidden block',
+  'text-primary-default dark:text-primary-dark underline underline-offset-4',
+  'text-sm'
 );
