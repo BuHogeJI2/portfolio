@@ -2,10 +2,9 @@ import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaWordpressSimple,
-  FaFilePdf,
   FaDownload,
 } from 'react-icons/fa';
+import { SiUpwork } from 'react-icons/si';
 import { ReactElement } from 'react';
 import clsx from 'clsx';
 
@@ -52,7 +51,7 @@ export const socialBlocks: ISocialLink[] = [
   },
   {
     href: '/', // todo: fix link
-    icon: <FaWordpressSimple className={socialBlockClassName} />, // todo: fix icon
+    icon: <SiUpwork className={socialBlockClassName} />,
     label: 'Hire me on UpWork',
   },
   {
