@@ -1,5 +1,6 @@
 import { Container } from '@/components/base/container/container';
 import { ReactElement } from 'react';
+import { Image } from '@/components/base/image/image';
 import { aboutMeKeyPoints, aboutMePhotos } from './about-me.const';
 import {
   aboutMeContainerStyles,
@@ -65,10 +66,12 @@ function AboutMePhotos(): ReactElement {
       {aboutMePhotos.map((photo, index) => (
         <>
           <div key={photo.src} className={aboutMePhotoWrapperStyles}>
-            <img
-              src={photo.src}
+            <Image
+              imageSrc={photo.src}
               alt={photo.alt}
               className={aboutMePhotoStyles}
+              skeletonClassName="h-24 w-24 rounded-lg"
+              lazyLoading={true}
             />
           </div>
           {index < aboutMePhotos.length - 1 && (

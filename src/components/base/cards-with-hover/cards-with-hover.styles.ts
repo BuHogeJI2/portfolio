@@ -16,7 +16,18 @@ export const cardStyles = clsx(
 
 export const cardContentStyles = clsx('relative z-50');
 
-export const cardImageStyles = clsx('h-100 w-full rounded-t-lg object-cover');
+export const cardImageContainerStyles = clsx('relative w-full');
+
+export const cardImageStyles = clsx(
+  'h-100 w-full rounded-t-lg object-cover transition-opacity duration-300 relative z-10',
+);
+
+export const cardImageSkeletonStyles = clsx(
+  'absolute inset-0 h-100 w-full rounded-t-lg z-0',
+  'bg-gray-300 dark:bg-gray-700',
+  'animate-pulse',
+  'flex items-center justify-center',
+);
 
 export const cardTitleStyles = clsx(
   ' text-2xl md:text-lg font-bold tracking-wide text-info-default dark:text-zinc-100',
@@ -34,7 +45,9 @@ export const technologyTagStyles = clsx(
   'inline-block rounded-full border border-primary-default px-2 md:px-3 py-1 text-xs font-medium text-primary-default dark:border-primary-dark/50 dark:text-primary-dark/80',
 );
 
-export const cardLinkContainerStyles = clsx('mt-auto flex items-center px-4 py-2 md:p-4');
+export const cardLinkContainerStyles = clsx(
+  'mt-auto flex items-center px-4 py-2 md:p-4',
+);
 
 export const cardLinkStyles = clsx(
   'inline-flex items-center text-sm font-medium text-primary-default transition-colors duration-200 hover:text-blue-300 group-hover:underline dark:text-primary-dark',
@@ -47,5 +60,5 @@ export const cardLinkIconStyles = clsx(
 export const readMoreButtonStyles = clsx(
   'flex items-center md:hidden block',
   'text-primary-default dark:text-primary-dark underline underline-offset-4',
-  'text-sm'
+  'text-sm',
 );

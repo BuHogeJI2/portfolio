@@ -17,7 +17,9 @@ import {
   cardLinkStyles,
   cardLinkIconStyles,
   readMoreButtonStyles,
+  cardImageContainerStyles,
 } from './cards-with-hover.styles';
+import { Image } from '@/components/base/image/image';
 
 interface ICardsWithHoverProps {
   items: Array<ICardWithHoverItem>;
@@ -40,8 +42,8 @@ export function CardsWithHover({
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleItem = (link: string) => {
-    setExpandedItems((prev) =>
-      prev.includes(link) ? prev.filter((l) => l !== link) : [...prev, link],
+    setExpandedItems(prev =>
+      prev.includes(link) ? prev.filter(l => l !== link) : [...prev, link],
     );
   };
 
@@ -75,7 +77,7 @@ export function CardsWithHover({
             </AnimatePresence>
             <Card link={item.link}>
               <CardImage image={item.image} title={item.title} />
-              <div className="flex items-center justify-between mt-4 px-4">
+              <div className="mt-4 flex items-center justify-between px-4">
                 <CardTitle>{item.title}</CardTitle>
                 <ReadMoreButton
                   isExpanded={isExpanded}
@@ -107,7 +109,7 @@ function ReadMoreButton({
   return (
     <button
       className={readMoreButtonStyles}
-      onClick={(e) => {
+      onClick={e => {
         e.preventDefault();
         onClick();
       }}
@@ -145,7 +147,15 @@ export function CardImage({
   title,
 }: ICardImageProps): ReactElement {
   return (
-    <img src={image} alt={title} className={clsx(cardImageStyles, className)} />
+    <div className={cardImageContainerStyles}>
+      <Image
+        imageSrc={image}
+        alt={title}
+        className={clsx(cardImageStyles, className)}
+        skeletonClassName="h-100 w-full rounded-t-lg"
+        lazyLoading={true}
+      />
+    </div>
   );
 }
 

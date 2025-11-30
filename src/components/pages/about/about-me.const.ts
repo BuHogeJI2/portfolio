@@ -1,4 +1,4 @@
-import { selfPhotos } from '../home/photos/photos.const';
+import { selfPhotos } from '@/components/pages/home/photos/photos.const';
 
 export type TAboutMeKeyPoint = {
   title: string;

@@ -1,5 +1,6 @@
 import { IPhoto } from './photos.types';
 import { selfPhotos, mainPhoto } from './photos.const';
+import { Image } from '@/components/base/image/image';
 
 export function Photos() {
   const topLinePhotos = selfPhotos.slice(0, 3);
@@ -25,10 +26,12 @@ export function Photos() {
 function Photo({ photo }: { photo: IPhoto }) {
   return (
     <div className="group relative transition-transform hover:z-10 hover:scale-105">
-      <img
-        src={photo.src}
+      <Image
+        imageSrc={photo.src}
         alt={photo.alt}
         className="h-24 w-24 rounded-full border-2 border-white object-cover"
+        skeletonClassName="h-24 w-24 rounded-full"
+        lazyLoading={true}
       />
       {photo.alt && (
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded-md bg-black px-2 py-1 text-sm text-white opacity-0 transition-opacity group-hover:opacity-100">
