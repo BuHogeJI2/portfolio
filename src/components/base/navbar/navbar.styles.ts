@@ -1,6 +1,11 @@
 import clsx from 'clsx';
 
-export const headerStyles = clsx('fixed left-0 right-0 z-[999] w-full');
+export const headerStyles = clsx(
+  'fixed left-0 right-0 z-[999] w-full',
+  'bg-white/80 dark:bg-zinc-900/80',
+  'backdrop-blur-sm',
+  'transition-colors duration-300',
+);
 
 export const navContainerStyles = clsx('relative');
 

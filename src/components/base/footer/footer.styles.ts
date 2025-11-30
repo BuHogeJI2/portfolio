@@ -2,10 +2,11 @@ import clsx from 'clsx';
 
 // Main footer container
 export const footerStyles = clsx(
-  'bg-gray-50 dark:bg-gray-900',
-  'mt-16 md:mt-16',
-  'relative',
+  'bg-white dark:bg-zinc-900',
+  'mt-12 md:mt-16',
+  'relative z-10',
   'animate-fade-in-up',
+  'border-t border-gray-200/50 dark:border-zinc-800/50',
 );
 
 // Top border separator
