@@ -9,15 +9,17 @@ export const navStyles = clsx('flex items-center justify-center py-4 pt-12');
 export const desktopNavStyles = clsx('hidden w-full md:block');
 
 export const desktopNavContentStyles = clsx(
-  'flex items-center justify-between gap-4',
+  'flex items-center justify-around max-w-2xl mx-auto',
 );
 
 export const navListStyles = clsx(
-  'flex flex-1 items-center justify-between rounded-full border border-slate-200 bg-white px-8 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md',
+  'flex items-center gap-8 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md',
 );
 
+export const navListItemStyles = clsx('list-none');
+
 export const navLinkStyles = clsx(
-  'relative rounded-full px-8 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800/50',
+  'relative rounded-full px-4 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800/50',
 );
 
 export const navLinkActiveStyles = clsx(

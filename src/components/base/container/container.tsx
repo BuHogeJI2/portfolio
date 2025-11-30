@@ -15,7 +15,7 @@ export function Container({
     <div
       className={clsx(
         'mx-auto w-full px-4 sm:px-6 lg:px-8',
-        fluid ? 'max-w-full' : 'max-w-4xl',
+        fluid ? 'max-w-full' : 'max-w-6xl',
         className,
       )}
     >

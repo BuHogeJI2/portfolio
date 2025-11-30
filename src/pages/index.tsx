@@ -1,10 +1,9 @@
 import { Container } from '@/components/base/container/container';
-import { ReactElement } from 'react';
-import { SocialLinks } from '@/components/pages/home/social-links/social-links';
+import { WordRotate } from '@/components/base/word-rotate/word-rotate';
 import { Avatar } from '@/components/pages/home/photos/avatar';
 import { SocialBlocks } from '@/components/pages/home/social-links/social-block';
-import { Highlighter } from '@/components/base/highlighter/highlighter';
-import { WordRotate } from '@/components/base/word-rotate/word-rotate';
+import { SocialLinks } from '@/components/pages/home/social-links/social-links';
+import { ReactElement } from 'react';
 
 export function HomePage(): ReactElement {
   return (
@@ -23,7 +22,7 @@ export function HomePage(): ReactElement {
             </span>{' '}
             <span className="text-gray-700 dark:text-white">developer</span>
           </h2>
-          <p className="mt-10 text-base text-info-default dark:text-info-dark md:mt-12 md:text-xl">
+          <p className="mt-10 max-w-2xl text-base text-info-default dark:text-info-dark md:mt-12 md:text-xl">
             <span>I build</span>
             <WordRotate
               className="mx-2 font-bold text-secondary-default dark:text-secondary-dark"

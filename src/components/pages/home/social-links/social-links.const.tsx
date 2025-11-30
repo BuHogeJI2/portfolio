@@ -25,6 +25,32 @@ const socialLinkClassName = clsx(
   'md:hover:scale-105',
 );
 
+// Raw social link data (without icons)
+export interface SocialLinkData {
+  href: string;
+  label: string;
+  iconType: 'github' | 'linkedin' | 'upwork';
+}
+
+export const socialLinksData: SocialLinkData[] = [
+  {
+    href: 'https://github.com/BuHogeJI2',
+    label: 'GitHub',
+    iconType: 'github',
+  },
+  {
+    href: 'https://www.linkedin.com/in/d-demidovich/',
+    label: 'LinkedIn',
+    iconType: 'linkedin',
+  },
+  {
+    href: 'https://www.upwork.com/freelancers/~0172bfbb89bd2d6d6b',
+    label: 'Upwork',
+    iconType: 'upwork',
+  },
+];
+
+// Social links with icons (for existing components)
 export const socialLinks: ISocialLink[] = [
   {
     href: 'https://github.com/BuHogeJI2',

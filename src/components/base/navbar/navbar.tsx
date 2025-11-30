@@ -10,6 +10,7 @@ import {
   desktopNavStyles,
   desktopNavContentStyles,
   navListStyles,
+  navListItemStyles,
   navLinkStyles,
   navLinkActiveStyles,
   navLinkInactiveStyles,
@@ -25,7 +26,7 @@ import {
 } from './navbar.styles';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-const navLinks: NavItem[] = [
+export const navLinks: NavItem[] = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Skills', to: '/skills' },
@@ -50,7 +51,7 @@ export function Navbar(): ReactElement {
                 />
                 <ul className={navListStyles}>
                   {navLinks.map(({ label, to }) => (
-                    <li key={label}>
+                    <li key={label} className={navListItemStyles}>
                       <NavLink
                         to={to}
                         className={({ isActive }) =>
