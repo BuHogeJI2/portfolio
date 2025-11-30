@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import routes from '@/routes';
 import App from '@/app';
+import { Loader } from '@/components/base/loader/loader';
 import '@/global';
 
 const container = document.getElementById('root') as HTMLElement;
@@ -20,6 +21,6 @@ const router = createBrowserRouter([
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} fallbackElement={<div>loading...</div>} />
+    <RouterProvider router={router} fallbackElement={<Loader />} />
   </StrictMode>,
 );

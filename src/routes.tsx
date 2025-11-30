@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { type RouteObject } from 'react-router-dom';
+import { Loader } from './components/base/loader/loader';
 
 const Home = lazy(() =>
   import('@/pages/index').then(mod => ({ default: mod.HomePage })),
@@ -33,7 +34,7 @@ export const routes: Array<RouteObject> = [
   {
     index: true,
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Home />
       </Suspense>
     ),
@@ -41,7 +42,7 @@ export const routes: Array<RouteObject> = [
   {
     path: 'about',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <About />
       </Suspense>
     ),
@@ -49,7 +50,7 @@ export const routes: Array<RouteObject> = [
   {
     path: 'skills',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Skills />
       </Suspense>
     ),
@@ -57,7 +58,7 @@ export const routes: Array<RouteObject> = [
   {
     path: 'projects',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Projects />
       </Suspense>
     ),
@@ -65,7 +66,7 @@ export const routes: Array<RouteObject> = [
   {
     path: 'experience',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Experience />
       </Suspense>
     ),
@@ -73,7 +74,7 @@ export const routes: Array<RouteObject> = [
   {
     path: 'contact',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Contact />
       </Suspense>
     ),
@@ -81,7 +82,7 @@ export const routes: Array<RouteObject> = [
   {
     path: '*',
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <NotFound />
       </Suspense>
     ),
