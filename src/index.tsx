@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import routes from '@/routes';
 import App from '@/app';
 import { Loader } from '@/components/base/loader/loader';
+import { ThemeProvider } from '@/contexts/theme-context';
 import '@/global';
 
 const container = document.getElementById('root') as HTMLElement;
@@ -21,6 +22,8 @@ const router = createBrowserRouter([
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} fallbackElement={<Loader />} />
+    <ThemeProvider>
+      <RouterProvider router={router} fallbackElement={<Loader />} />
+    </ThemeProvider>
   </StrictMode>,
 );

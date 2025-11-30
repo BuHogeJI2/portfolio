@@ -1,9 +1,4 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaDownload,
-} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import { SiUpwork } from 'react-icons/si';
 import { ReactElement } from 'react';
 import clsx from 'clsx';
@@ -50,7 +45,7 @@ export const socialBlocks: ISocialLink[] = [
     label: 'Contact me here',
   },
   {
-    href: '/', // todo: fix link
+    href: 'https://www.upwork.com/freelancers/~0172bfbb89bd2d6d6b',
     icon: <SiUpwork className={socialBlockClassName} />,
     label: 'Hire me on UpWork',
   },

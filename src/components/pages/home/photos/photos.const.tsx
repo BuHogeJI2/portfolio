@@ -1,7 +1,7 @@
 import { IPhoto } from './photos.types';
 
 export const mainPhoto: IPhoto = {
-  src: '/images/photos/wed.jpg',
+  src: '/images/photos/me-ai.png',
   alt: '',
 };
 
