@@ -6,16 +6,14 @@ export function Avatar() {
 
   const imageSrc =
     theme === ETheme.LIGHT
-      ? '/images/photos/me-ai-2.png'
-      : '/images/photos/me-ai.png';
+      ? '/images/photos/me-ai.png'
+      : '/images/photos/me-ai-2.png';
 
   return (
-    <div className="flex w-full flex-col items-center">
-      <img
-        src={imageSrc}
-        alt="Avatar"
-        className="rounded-full border-2 border-white object-cover"
-      />
-    </div>
+    <img
+      src={imageSrc}
+      alt="Avatar"
+      className="h-32 w-32 rounded-full border-2 border-white object-cover md:h-40 md:w-40"
+    />
   );
 }
