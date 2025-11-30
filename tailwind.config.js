@@ -29,9 +29,15 @@ module.exports = {
               transform: 'translateY(0)',
             },
           },
+          'scroll': {
+            'to': {
+              transform: 'translate(calc(-50% - 0.5rem))',
+            },
+          },
         },
         animation: {
           'fade-in-up': 'fade-in-up 0.6s ease-out',
+          'scroll': 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         },
       },
     },

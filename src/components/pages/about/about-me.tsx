@@ -1,6 +1,4 @@
-import { Container } from '@/components/base/container/container';
 import { ReactElement } from 'react';
-import { Image } from '@/components/base/image/image';
 import { aboutMeKeyPoints, aboutMePhotos } from './about-me.const';
 import {
   aboutMeContainerStyles,
@@ -9,23 +7,21 @@ import {
   aboutMeTextStyles,
   aboutMeHighlightStyles,
   aboutMePhotosContainerStyles,
-  aboutMePhotoWrapperStyles,
-  aboutMePhotoStyles,
-  aboutMePhotoSeparatorStyles,
   aboutMeKeyPointsContainerStyles,
   aboutMeKeyPointStyles,
   aboutMeKeyPointTitleStyles,
   aboutMeKeyPointDescriptionStyles,
 } from './about-me.styles';
+import { InfiniteMovingImages } from '@/components/base/infinite-moving-cards/infinite-moving-cards';
 
 export function AboutMe(): ReactElement {
   return (
     <div className={aboutMeContainerStyles}>
-      <AboutMePhotos />
       <div className={aboutMeContentStyles}>
         <AboutMeDescription />
         <AboutMeKeyPoints />
       </div>
+      <AboutMePhotos />
     </div>
   );
 }
@@ -63,22 +59,12 @@ function AboutMeDescription(): ReactElement {
 function AboutMePhotos(): ReactElement {
   return (
     <div className={aboutMePhotosContainerStyles}>
-      {aboutMePhotos.map((photo, index) => (
-        <>
-          <div key={photo.src} className={aboutMePhotoWrapperStyles}>
-            <Image
-              imageSrc={photo.src}
-              alt={photo.alt}
-              className={aboutMePhotoStyles}
-              skeletonClassName="h-24 w-24 rounded-lg"
-              lazyLoading={true}
-            />
-          </div>
-          {index < aboutMePhotos.length - 1 && (
-            <div className={aboutMePhotoSeparatorStyles}>|</div>
-          )}
-        </>
-      ))}
+      <InfiniteMovingImages
+        items={aboutMePhotos}
+        speed="slow"
+        pauseOnHover={false}
+        className="mx-auto w-[75%] justify-center"
+      />
     </div>
   );
 }
