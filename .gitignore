@@ -1,4 +1,13 @@
+# Dependencies
 /node_modules
+
+
+# IDEs
 .vscode
+.idea
+
+# Settings
 settings.json
+
+# Environment variables
 .env
