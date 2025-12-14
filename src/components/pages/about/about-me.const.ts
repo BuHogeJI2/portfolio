@@ -16,4 +16,4 @@ export const aboutMeKeyPoints: TAboutMeKeyPoint[] = [
   },
 ];
 
-export const aboutMePhotos = [selfPhotos[5], selfPhotos[1], selfPhotos[3]];
+export const aboutMePhotos = [...selfPhotos];

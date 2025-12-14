@@ -6,7 +6,7 @@ export const aboutMeContainerStyles = clsx(
 );
 
 export const aboutMeContentStyles = clsx(
-  'flex w-full flex-col gap-6',
+  'flex w-full flex-col-reverse gap-6',
   'md:flex-row md:gap-8',
 );
 
@@ -23,17 +23,19 @@ export const aboutMeHighlightStyles = clsx(
   'font-bold text-secondary-default dark:text-secondary-dark',
 );
 
-export const aboutMePhotosContainerStyles = clsx('w-full');
+export const aboutMePhotosContainerStyles = clsx('mx-auto w-full');
 
 export const aboutMeKeyPointsContainerStyles = clsx(
-  'flex w-full flex-col gap-4',
-  'md:w-1/4',
+  'flex w-full flex-row gap-4 items-center justify-center',
+  'md:w-1/4 md:flex-col',
 );
 
 export const aboutMeKeyPointStyles = clsx(
-  'flex flex-col gap-2 rounded-lg dark:bg-primary-dark/70 bg-primary-default p-4 text-white',
+  'w-fit flex flex-col gap-2 rounded-lg dark:bg-primary-dark/70 bg-primary-default p-4 text-white align-center justify-center',
 );
 
-export const aboutMeKeyPointTitleStyles = clsx('text-4xl font-bold');
+export const aboutMeKeyPointTitleStyles = clsx(
+  'text-4xl font-bold text-center',
+);
 
 export const aboutMeKeyPointDescriptionStyles = clsx('text-center text-sm');

@@ -10,7 +10,7 @@ export default function App() {
       <PageBackground>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-1 pt-32">
+          <main className="flex-1 pt-36 md:pt-32">
             <Outlet />
           </main>
           <Footer />

@@ -21,7 +21,7 @@ export function AboutMe(): ReactElement {
         <AboutMeDescription />
         <AboutMeKeyPoints />
       </div>
-      <AboutMePhotos />
+      {/* <AboutMePhotos /> todo: adjust photos layout; add relevant photos */}
     </div>
   );
 }
@@ -63,7 +63,6 @@ function AboutMePhotos(): ReactElement {
         items={aboutMePhotos}
         speed="slow"
         pauseOnHover={false}
-        className="mx-auto w-[75%] justify-center"
       />
     </div>
   );

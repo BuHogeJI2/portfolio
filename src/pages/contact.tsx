@@ -8,7 +8,7 @@ const email = 'dzmitrydziamidovich@gmail.com';
 export function ContactPage(): ReactElement {
   const containerStyles = clsx(
     'flex flex-col items-center justify-center space-y-4',
-    'mt-16',
+    'md:mt-16 mt-12',
   );
 
   const titleStyles = clsx(
