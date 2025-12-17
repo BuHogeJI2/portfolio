@@ -7,3 +7,4 @@
 ### CI/DE
 
 - vercel speed insights
+- vercel web analytics
