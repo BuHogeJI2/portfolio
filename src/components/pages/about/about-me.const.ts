@@ -5,9 +5,12 @@ export type TAboutMeKeyPoint = {
   description: string;
 };
 
+export const year_of_beginning = 2020;
+export const experience = new Date().getFullYear() - year_of_beginning;
+
 export const aboutMeKeyPoints: TAboutMeKeyPoint[] = [
   {
-    title: '4+',
+    title: `${experience}+`,
     description: 'Years of experience',
   },
   {

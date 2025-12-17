@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { aboutMeKeyPoints, aboutMePhotos } from './about-me.const';
+import { aboutMeKeyPoints, aboutMePhotos, experience } from './about-me.const';
 import {
   aboutMeContainerStyles,
   aboutMeContentStyles,
@@ -30,9 +30,9 @@ function AboutMeDescription(): ReactElement {
   return (
     <div className={aboutMeDescriptionStyles}>
       <p className={aboutMeTextStyles}>
-        Greetings! I'm Dmitry, a frontend developer with over{' '}
-        <span className={aboutMeHighlightStyles}>4 years</span> of hands-on
-        experience in building modern, user-centric web applications.
+        Greetings! I'm Dmitry, a frontend developer with{' '}
+        <span className={aboutMeHighlightStyles}>{experience}+ years</span> of
+        hands-on experience in building modern, user-centric web applications.
       </p>
       <p className={aboutMeTextStyles}>
         Throughout my journey, I've developed a strong specialization in

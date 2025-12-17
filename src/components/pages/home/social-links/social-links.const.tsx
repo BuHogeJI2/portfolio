@@ -76,7 +76,7 @@ export const socialBlocks: ISocialLink[] = [
     label: 'Hire me on UpWork',
   },
   {
-    href: '/', // todo: fix link
+    href: '/files/cv_2025.pdf',
     icon: <FaDownload className={socialBlockClassName} />,
     label: 'Download CV',
   },
