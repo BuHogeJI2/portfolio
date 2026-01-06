@@ -120,7 +120,7 @@ export function Footer(): ReactElement {
                 <span>Get in Touch</span>
               </NavLink>
               <a
-                href="/files/cv_2025.pdf"
+                href="/files/cv_demidovich_2026.pdf"
                 className={footerContactLinkStyles}
                 aria-label="Download CV"
                 download
