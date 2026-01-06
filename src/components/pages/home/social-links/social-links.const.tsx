@@ -76,7 +76,7 @@ export const socialBlocks: ISocialLink[] = [
     label: 'Hire me on UpWork',
   },
   {
-    href: '/files/cv_2025.pdf',
+    href: '/files/cv_demidovich_2026.pdf',
     icon: <FaDownload className={socialBlockClassName} />,
     label: 'Download CV',
   },
