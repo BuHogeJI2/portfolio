@@ -12,3 +12,7 @@ settings.json
 
 # Environment variables
 .env
+
+# Local planning notes
+/TODO.md
+/todo.md

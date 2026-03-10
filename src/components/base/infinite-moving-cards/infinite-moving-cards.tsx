@@ -20,12 +20,11 @@ export const InfiniteMovingCards = ({
 }: InfiniteMovingCardsProps) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const animationDirection = direction === 'left' ? 'forwards' : 'reverse';
+  const animationDuration =
+    speed === 'fast' ? '20s' : speed === 'normal' ? '40s' : '80s';
 
   useEffect(() => {
-    addAnimation();
-  }, []);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -36,37 +35,10 @@ export const InfiniteMovingCards = ({
         }
       });
 
-      getDirection();
-      getSpeed();
-      setStart(true);
+      scrollerRef.current.classList.add('animate-scroll');
     }
-  }
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === 'left') {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'forwards',
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'reverse',
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === 'fast') {
-        containerRef.current.style.setProperty('--animation-duration', '20s');
-      } else if (speed === 'normal') {
-        containerRef.current.style.setProperty('--animation-duration', '40s');
-      } else {
-        containerRef.current.style.setProperty('--animation-duration', '80s');
-      }
-    }
-  };
+  }, []);
+
   return (
     <div
       ref={containerRef}
@@ -74,12 +46,17 @@ export const InfiniteMovingCards = ({
         'scroller relative z-20 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className,
       )}
+      style={
+        {
+          '--animation-direction': animationDirection,
+          '--animation-duration': animationDuration,
+        } as React.CSSProperties
+      }
     >
       <ul
         ref={scrollerRef}
         className={cn(
           'flex w-max min-w-full shrink-0 flex-nowrap gap-8 py-4 md:gap-16',
-          start && 'animate-scroll',
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >
@@ -173,7 +150,7 @@ export const InfiniteMovingImages = ({
   React.useEffect(() => {
     const loadPromises = items.map(
       item =>
-        new Promise<void>((resolve, reject) => {
+        new Promise<void>(resolve => {
           const img = new window.Image();
           img.onload = () => resolve();
           img.onerror = () => resolve(); // Resolve even on error to not block

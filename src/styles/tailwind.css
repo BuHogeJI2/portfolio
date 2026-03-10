@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -25,4 +26,18 @@ html {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  background: #f4efe7;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+::selection {
+  background: rgba(62, 115, 109, 0.22);
+  color: inherit;
 }

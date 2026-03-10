@@ -1,23 +1,14 @@
 import clsx from 'clsx';
 
-// Main footer container
-export const footerStyles = clsx(
-  'bg-white dark:bg-zinc-900',
-  'mt-12 md:mt-16',
-  'relative z-10',
-  'animate-fade-in-up',
-  'border-t border-gray-200/50 dark:border-zinc-800/50',
-);
+export const footerStyles = clsx('relative z-10 mt-2 md:mt-3');
 
-// Top border separator
 export const footerTopBorderStyles = clsx(
   'absolute top-0 left-0 right-0',
   'h-px',
   'bg-gradient-to-r',
-  'from-transparent via-gray-300 dark:via-gray-700 to-transparent',
+  'from-transparent via-slate-300/80 to-transparent dark:via-white/10',
 );
 
-// Container with padding - matches Container component max-width
 export const footerContainerStyles = clsx(
   'mx-auto w-full',
   'max-w-6xl',
@@ -25,150 +16,74 @@ export const footerContainerStyles = clsx(
   'py-8 md:py-12',
 );
 
-// Responsive grid layout
 export const footerGridStyles = clsx(
-  'grid grid-cols-2',
-  'sm:grid-cols-2',
-  'lg:grid-cols-4',
-  'gap-8 md:gap-12',
-  'mb-8',
+  'grid gap-8 rounded-[2rem] border border-white/70 bg-white/72 p-6 shadow-[0_22px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl',
+  'dark:border-white/10 dark:bg-white/5 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:gap-12 md:p-8',
 );
 
-// Footer section container
-export const footerSectionStyles = clsx('flex flex-col', 'space-y-4');
+export const footerSectionTwoColStyles = clsx('space-y-4');
 
-// Navigation and Connect sections (1 column each on mobile, side by side)
-export const footerSectionTwoColStyles = clsx('flex flex-col', 'space-y-4');
+export const footerSectionFullWidthStyles = clsx('space-y-5');
 
-// Contact & Resources and About sections (full width on mobile)
-export const footerSectionFullWidthStyles = clsx(
-  'flex flex-col',
-  'space-y-4',
-  'col-span-2 sm:col-span-1',
-);
-
-// Section title
 export const footerSectionTitleStyles = clsx(
-  'text-base font-semibold',
-  'text-gray-900 dark:text-gray-100',
-  'mb-2',
+  'text-xs font-semibold uppercase tracking-[0.24em]',
+  'text-primary-default/80 dark:text-primary-dark/80',
 );
 
-// Navigation list
-export const footerNavListStyles = clsx('flex flex-col', 'space-y-2');
-
-// Navigation item
+export const footerNavListStyles = clsx('grid gap-3 sm:grid-cols-2');
 export const footerNavItemStyles = clsx('list-none');
-
-// Navigation link
 export const footerNavLinkStyles = clsx(
-  'flex items-center gap-2',
-  'text-sm',
-  'text-gray-600 dark:text-gray-400',
-  'hover:text-primary-default dark:hover:text-primary-dark',
-  'transition-all duration-300 ease-in-out',
-  'hover:translate-x-1',
-  'group',
+  'inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/80 px-4 py-2 text-sm text-slate-600 transition-all duration-300',
+  'hover:bg-white hover:text-slate-900 dark:border-white/10 dark:bg-slate-950/35 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white',
 );
 
-// Navigation icon
-export const footerNavIconStyles = clsx(
-  'w-4 h-4',
-  'text-gray-500 dark:text-gray-500',
-  'group-hover:text-primary-default dark:group-hover:text-primary-dark',
-  'transition-colors duration-300',
-);
+export const footerNavIconStyles = clsx('h-4 w-4');
 
-// Social links list
-export const footerSocialListStyles = clsx('flex flex-col', 'space-y-2');
-
-// Social item
+export const footerSocialListStyles = clsx('flex flex-wrap gap-3');
 export const footerSocialItemStyles = clsx('list-none');
-
-// Social link
 export const footerSocialLinkStyles = clsx(
-  'flex items-center gap-2',
-  'text-sm',
-  'text-gray-600 dark:text-gray-400',
-  'hover:text-primary-default dark:hover:text-primary-dark',
-  'transition-all duration-300 ease-in-out',
-  'hover:translate-x-1',
-  'group',
+  'inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/80 px-4 py-2 text-sm text-slate-600 transition-all duration-300',
+  'hover:bg-white hover:text-slate-900 dark:border-white/10 dark:bg-slate-950/35 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white',
 );
 
-// Social icon
-export const footerSocialIconStyles = clsx(
-  'w-4 h-4',
-  'text-gray-500 dark:text-gray-500',
-  'group-hover:text-primary-default dark:group-hover:text-primary-dark',
-  'transition-colors duration-300',
-  'group-hover:scale-110',
-);
+export const footerSocialIconStyles = clsx('h-4 w-4');
 
-// Contact info container
 export const footerContactInfoStyles = clsx(
-  'flex flex-col',
-  'space-y-2',
-  'mb-4',
+  'flex flex-col gap-3 sm:flex-row sm:flex-wrap',
 );
 
-// Contact link
 export const footerContactLinkStyles = clsx(
-  'flex items-center gap-2',
-  'text-sm',
-  'text-gray-600 dark:text-gray-400',
-  'hover:text-primary-default dark:hover:text-primary-dark',
-  'transition-all duration-300 ease-in-out',
-  'hover:translate-x-1',
-  'group',
+  'inline-flex items-center justify-center gap-3 rounded-full border px-5 py-3 text-sm font-semibold transition-colors duration-300',
 );
 
-// Tagline
 export const footerTaglineStyles = clsx(
-  'text-sm',
-  'text-gray-600 dark:text-gray-400',
-  'leading-relaxed',
-  'mb-4',
+  'max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300',
 );
 
-// Availability container
 export const footerAvailabilityStyles = clsx('mt-2');
 
-// Availability badge
 export const footerAvailabilityBadgeStyles = clsx(
   'inline-block',
   'px-3 py-1',
   'text-xs font-medium',
   'rounded-full',
-  'bg-green-100 dark:bg-green-900/30',
-  'text-green-800 dark:text-green-300',
-  'border border-green-200 dark:border-green-800',
+  'bg-emerald-100 text-emerald-800 border border-emerald-200',
+  'dark:bg-emerald-400/10 dark:text-emerald-200 dark:border-emerald-300/25',
 );
 
-// Bottom section
 export const footerBottomStyles = clsx(
-  'pt-6',
-  'border-t border-gray-200 dark:border-gray-800',
-  'mt-8',
+  'mt-8 flex flex-col gap-3 border-t border-slate-200/80 pt-6 text-sm text-slate-500 dark:border-white/10 dark:text-slate-400 md:flex-row md:items-center md:justify-between',
 );
 
-// Copyright text
-export const footerCopyrightStyles = clsx(
-  'text-center',
-  'text-sm',
-  'text-gray-600 dark:text-gray-400',
-);
+export const footerCopyrightStyles = clsx('text-sm');
 
-// Built with section
 export const footerBuiltWithStyles = clsx(
   'text-xs',
-  'text-gray-500 dark:text-gray-500',
-  'mt-2',
+  'text-slate-500 dark:text-slate-400',
 );
 
-// Built with link
 export const footerBuiltWithLinkStyles = clsx(
-  'text-primary-default dark:text-primary-dark',
+  'text-primary-default dark:text-primary-dark/90',
   'hover:underline',
   'transition-colors duration-200',
 );

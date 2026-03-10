@@ -35,20 +35,30 @@ export const navLinks: NavItem[] = [
   { label: 'Contact', to: '/contact' },
 ];
 
+function Brand() {
+  return (
+    <NavLink to="/" className="flex min-w-0 flex-col">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary-default dark:text-primary-dark">
+        Frontend Engineer
+      </span>
+      <span className="truncate text-sm font-semibold tracking-[0.01em] text-slate-900 dark:text-white md:text-base">
+        Dzmitry Dziamidovich
+      </span>
+    </NavLink>
+  );
+}
+
 export function Navbar(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className={headerStyles}>
-      <Container>
-        <div className={navContainerStyles}>
-          <nav className={navStyles}>
-            {/* Desktop Navigation */}
+      <Container className={navContainerStyles}>
+        <div className={navStyles}>
+          <nav>
             <div className={desktopNavStyles}>
               <div className={desktopNavContentStyles}>
-                <NavbarActionButton
-                  type={ENavbarActionButtonType.THEME_TOGGLE}
-                />
+                <Brand />
                 <ul className={navListStyles}>
                   {navLinks.map(({ label, to }) => (
                     <li key={label} className={navListItemStyles}>
@@ -67,32 +77,35 @@ export function Navbar(): ReactElement {
                     </li>
                   ))}
                 </ul>
-                {/* <NavbarActionButton
-                  type={ENavbarActionButtonType.LANGUAGE_TOGGLE}
-                /> */}
+                <div className="flex items-center justify-end">
+                  <NavbarActionButton
+                    type={ENavbarActionButtonType.THEME_TOGGLE}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Mobile Navigation Button */}
             <div className={mobileNavActionButtonContainerStyles}>
-              <NavbarActionButton type={ENavbarActionButtonType.THEME_TOGGLE} />
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={mobileMenuButtonStyles}
-              >
-                <span className="text-info-default dark:text-info-dark">
-                  Menu
-                </span>
-                {isOpen ? (
-                  <FaTimes className={mobileMenuIconStyles} />
-                ) : (
-                  <FaBars className={mobileMenuIconStyles} />
-                )}
-              </button>
+              <Brand />
+              <div className="flex items-center gap-2">
+                <NavbarActionButton
+                  type={ENavbarActionButtonType.THEME_TOGGLE}
+                />
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className={mobileMenuButtonStyles}
+                >
+                  <span>Menu</span>
+                  {isOpen ? (
+                    <FaTimes className={mobileMenuIconStyles} />
+                  ) : (
+                    <FaBars className={mobileMenuIconStyles} />
+                  )}
+                </button>
+              </div>
             </div>
           </nav>
 
-          {/* Mobile Menu */}
           {isOpen && (
             <div className={mobileMenuStyles}>
               <ul className={mobileMenuListStyles}>

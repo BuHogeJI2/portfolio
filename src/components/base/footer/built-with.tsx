@@ -14,7 +14,7 @@ const techStack: TechStackItem[] = [
   { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
   { name: 'Tailwind CSS', url: 'https://tailwindcss.com' },
   { name: 'Vite', url: 'https://vitejs.dev' },
-  { name: 'Cursor', url: 'https://cursor.sh' },
+  { name: 'Codex', url: 'https://openai.com/codex/' },
 ];
 
 export function BuiltWith(): ReactElement {

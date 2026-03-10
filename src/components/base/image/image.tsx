@@ -21,34 +21,46 @@ export function Image({
   skeletonClassName,
   lazyLoading = true,
 }: IImageProps): ReactElement {
+  return (
+    <ImageContent
+      key={imageSrc}
+      imageSrc={imageSrc}
+      alt={alt}
+      className={className}
+      skeletonClassName={skeletonClassName}
+      lazyLoading={lazyLoading}
+    />
+  );
+}
+
+function ImageContent({
+  imageSrc,
+  alt,
+  className,
+  skeletonClassName,
+  lazyLoading = true,
+}: IImageProps): ReactElement {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
   const isMountedRef = useRef(true);
 
-  // Reset state when imageSrc changes
   useEffect(() => {
-    setIsLoading(true);
-    setHasError(false);
     isMountedRef.current = true;
 
-    // Check if image is already loaded (cached) after DOM update
-    // Use setTimeout to ensure the img element has been rendered
     const checkCachedImage = () => {
       if (imgRef.current?.complete && imgRef.current?.naturalHeight !== 0) {
         setIsLoading(false);
       }
     };
 
-    // Check immediately and after a microtask to catch cached images
-    checkCachedImage();
     const timeoutId = setTimeout(checkCachedImage, 0);
 
     return () => {
       clearTimeout(timeoutId);
       isMountedRef.current = false;
     };
-  }, [imageSrc]);
+  }, []);
 
   const handleImageLoad = () => {
     if (isMountedRef.current) {

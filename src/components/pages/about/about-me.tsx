@@ -1,18 +1,16 @@
 import { ReactElement } from 'react';
-import { aboutMeKeyPoints, aboutMePhotos, experience } from './about-me.const';
+import { aboutMeKeyPoints, experience } from './about-me.const';
 import {
   aboutMeContainerStyles,
   aboutMeContentStyles,
   aboutMeDescriptionStyles,
   aboutMeTextStyles,
   aboutMeHighlightStyles,
-  aboutMePhotosContainerStyles,
   aboutMeKeyPointsContainerStyles,
   aboutMeKeyPointStyles,
   aboutMeKeyPointTitleStyles,
   aboutMeKeyPointDescriptionStyles,
 } from './about-me.styles';
-import { InfiniteMovingImages } from '@/components/base/infinite-moving-cards/infinite-moving-cards';
 
 export function AboutMe(): ReactElement {
   return (
@@ -52,18 +50,6 @@ function AboutMeDescription(): ReactElement {
       <p className={aboutMeTextStyles}>
         Let's collaborate and bring your ideas to life!
       </p>
-    </div>
-  );
-}
-
-function AboutMePhotos(): ReactElement {
-  return (
-    <div className={aboutMePhotosContainerStyles}>
-      <InfiniteMovingImages
-        items={aboutMePhotos}
-        speed="slow"
-        pauseOnHover={false}
-      />
     </div>
   );
 }

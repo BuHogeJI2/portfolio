@@ -2,75 +2,75 @@ import clsx from 'clsx';
 
 export const headerStyles = clsx(
   'fixed left-0 right-0 z-[999] w-full',
-  'bg-white/80 dark:bg-zinc-900/80',
-  'backdrop-blur-sm',
   'transition-colors duration-300',
 );
 
-export const navContainerStyles = clsx('relative');
+export const navContainerStyles = clsx('relative pt-4 md:pt-5');
 
-export const navStyles = clsx('flex items-center justify-center py-4 pt-12');
+export const navStyles = clsx(
+  'rounded-[1.75rem] border border-white/70 bg-white/68 px-4 py-3 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl',
+  'dark:border-white/10 dark:bg-slate-950/45 dark:shadow-[0_20px_60px_rgba(2,6,23,0.4)]',
+);
 
-export const desktopNavStyles = clsx('hidden w-full md:block');
+export const desktopNavStyles = clsx('hidden md:block');
 
 export const desktopNavContentStyles = clsx(
-  'flex items-center justify-around max-w-2xl mx-auto',
+  'grid grid-cols-[auto_1fr_auto] items-center gap-6',
 );
 
 export const navListStyles = clsx(
-  'flex items-center gap-8 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md',
+  'mx-auto flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/85 px-3 py-2',
+  'dark:border-white/10 dark:bg-white/5',
 );
 
 export const navListItemStyles = clsx('list-none');
 
 export const navLinkStyles = clsx(
-  'relative rounded-full px-4 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800/50',
+  'relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300',
+  'hover:bg-white hover:text-slate-900 dark:hover:bg-white/10 dark:hover:text-white',
 );
 
 export const navLinkActiveStyles = clsx(
-  'underline underline-offset-4 text-secondary-default dark:text-primary-dark',
+  'border border-primary-default/20 bg-primary-default/12 text-slate-950 shadow-sm dark:border-primary-dark/20 dark:bg-white/10 dark:text-white',
 );
 
-export const navLinkInactiveStyles = clsx(
-  'text-info-default dark:text-info-dark',
-);
+export const navLinkInactiveStyles = clsx('text-slate-600 dark:text-slate-300');
 
 export const mobileMenuButtonStyles = clsx(
   'flex items-center gap-2',
-  'ml-4 md:ml-0 px-4 md:px-0',
-  'block rounded-full border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md md:hidden',
+  'rounded-full border border-slate-200/80 bg-slate-50/85 px-4 py-2 text-sm font-medium shadow-sm backdrop-blur',
+  'dark:border-white/10 dark:bg-white/5 md:hidden',
 );
 
 export const mobileMenuIconStyles = clsx(
-  'text-secondary-default h-5 w-5 dark:text-secondary-dark',
+  'h-4 w-4 text-slate-700 dark:text-slate-200',
 );
 
-export const mobileMenuStyles = clsx('md:hidden');
+export const mobileMenuStyles = clsx('mt-4 md:hidden');
 
 export const mobileMenuListStyles = clsx(
-  'rounded-lg border border-slate-200 bg-white/80 backdrop-blur-md p-4 shadow-lg',
-  'dark:border-slate-700/50 dark:bg-slate-900/90 dark:backdrop-blur-md',
+  'space-y-2 rounded-[1.5rem] border border-white/70 bg-white/78 p-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl',
+  'dark:border-white/10 dark:bg-slate-950/65',
 );
 
-export const mobileMenuItemStyles = clsx('mb-2');
+export const mobileMenuItemStyles = clsx();
 
 export const mobileNavLinkStyles = clsx(
-  'block rounded-lg px-8 py-2 text-base font-medium transition-all duration-300',
+  'block rounded-2xl px-4 py-3 text-sm font-medium transition-all duration-300',
 );
 
 export const mobileNavLinkActiveStyles = clsx(
-  'text-secondary-default bg-slate-100 shadow-lg',
-  'dark:bg-slate-800 dark:text-primary-dark',
+  'bg-primary-default/12 text-slate-950 shadow-sm dark:bg-white/10 dark:text-white',
 );
 
 export const mobileNavLinkInactiveStyles = clsx(
-  'text-info-default',
-  'dark:text-info-dark',
+  'text-slate-600 dark:text-slate-300',
 );
 
 // NavbarActionButton styles
 export const actionButtonStyles = clsx(
-  'text-secondary-default dark:text-secondary-dark rounded-full border border-slate-200/50 bg-white/60 p-2 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-white/80 dark:border-slate-700/50 dark:bg-slate-900/60 dark:hover:border-slate-700/50 dark:hover:bg-slate-900/80',
+  'rounded-full border border-slate-200/80 bg-slate-50/85 p-2 text-slate-700 shadow-sm backdrop-blur transition-all duration-300',
+  'hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:hover:bg-white/10',
 );
 
 export const actionButtonContentStyles = clsx(
@@ -78,5 +78,5 @@ export const actionButtonContentStyles = clsx(
 );
 
 export const mobileNavActionButtonContainerStyles = clsx(
-  'flex w-full items-center justify-center gap-2 md:hidden',
+  'flex items-center justify-between gap-3 md:hidden',
 );
