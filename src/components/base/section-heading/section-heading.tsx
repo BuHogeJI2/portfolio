@@ -5,6 +5,7 @@ export type TSectionHeadingAlignment = 'left' | 'center';
 
 interface ISectionHeadingProps {
   title: string;
+  titleId?: string;
   eyebrow?: string;
   description?: ReactNode;
   alignment?: TSectionHeadingAlignment;
@@ -13,6 +14,7 @@ interface ISectionHeadingProps {
 
 export function SectionHeading({
   title,
+  titleId,
   eyebrow,
   description,
   alignment = 'left',
@@ -33,7 +35,10 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="text-3xl font-semibold tracking-tight text-content md:text-5xl">
+      <h2
+        id={titleId}
+        className="text-3xl font-semibold tracking-tight text-content md:text-5xl"
+      >
         {title}
       </h2>
       {description && (

@@ -1,6 +1,13 @@
-import { ReactElement, useState } from 'react';
+import { FormEvent, ReactElement, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { labelStyles, inputStyles, textareaStyles, buttonStyles, successMessageStyles, errorMessageStyles } from './contact-form.styles';
+import {
+  buttonStyles,
+  errorMessageStyles,
+  inputStyles,
+  labelStyles,
+  successMessageStyles,
+  textareaStyles,
+} from './contact-form.styles';
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -15,8 +22,8 @@ export function ContactForm(): ReactElement {
     'idle' | 'success' | 'error'
   >('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -29,7 +36,7 @@ export function ContactForm(): ReactElement {
 
       const templateParams = {
         from_name: email,
-        message: message,
+        message,
         to_email: toEmail,
       };
 
@@ -47,58 +54,66 @@ export function ContactForm(): ReactElement {
   };
 
   return (
-    <div className="mx-auto mt-8 w-full max-w-md">
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <label htmlFor="email" className={labelStyles}>
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-            disabled={isSubmitting}
-            className={inputStyles}
-            placeholder="Enter your email"
-          />
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6"
+      aria-busy={isSubmitting}
+    >
+      <div>
+        <label htmlFor="email" className={labelStyles}>
+          Email address
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autoComplete="email"
+          value={email}
+          onChange={event => setEmail(event.target.value)}
+          required
+          disabled={isSubmitting}
+          className={inputStyles}
+          placeholder="you@example.com"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="message" className={labelStyles}>
+          Project context
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={message}
+          onChange={event => setMessage(event.target.value)}
+          required
+          rows={7}
+          disabled={isSubmitting}
+          className={textareaStyles}
+          placeholder="What are you building, and where could frontend support make the biggest difference?"
+        />
+      </div>
+
+      <button type="submit" disabled={isSubmitting} className={buttonStyles}>
+        {isSubmitting ? 'Sending…' : 'Send enquiry'}
+      </button>
+
+      {submitStatus === 'success' && (
+        <div className={successMessageStyles} role="status" aria-live="polite">
+          <p className="text-sm font-medium">
+            Message sent. Thanks—I’ll reply by email.
+          </p>
         </div>
+      )}
 
-        <div>
-          <label htmlFor="message" className={labelStyles}>
-            Message
-          </label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-            required
-            rows={4}
-            disabled={isSubmitting}
-            className={textareaStyles}
-            placeholder="Enter your message"
-          />
+      {submitStatus === 'error' && (
+        <div className={errorMessageStyles} role="alert" aria-live="assertive">
+          <p className="text-sm font-medium">
+            The message could not be sent. Please try again or use the direct
+            email link.
+          </p>
         </div>
-
-        <button type="submit" disabled={isSubmitting} className={buttonStyles}>
-          {isSubmitting ? 'Sending...' : 'Submit'}
-        </button>
-
-        {submitStatus === 'success' && (
-          <div className={successMessageStyles}>
-            <p className="text-sm font-medium">Message sent successfully!</p>
-          </div>
-        )}
-
-        {submitStatus === 'error' && (
-          <div className={errorMessageStyles}>
-            <p className="text-sm font-medium">
-              Failed to send message. Please try again.
-            </p>
-          </div>
-        )}
-      </form>
-    </div>
+      )}
+    </form>
   );
 }

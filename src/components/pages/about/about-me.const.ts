@@ -1,22 +1,52 @@
-import { selfPhotos } from '@/components/pages/home/photos/photos.const';
-
-export type TAboutMeKeyPoint = {
+export type TAboutHighlight = {
+  label: string;
   title: string;
   description: string;
 };
 
-export const year_of_beginning = 2020;
-export const experience = new Date().getFullYear() - year_of_beginning;
+export type TAboutStrength = {
+  title: string;
+  description: string;
+};
 
-export const aboutMeKeyPoints: TAboutMeKeyPoint[] = [
+export const yearOfBeginning = 2020;
+export const experience = new Date().getFullYear() - yearOfBeginning;
+
+export const aboutHighlights: TAboutHighlight[] = [
   {
-    title: `${experience}+`,
-    description: 'Years of experience',
+    label: '2020',
+    title: 'Frontend career begins',
+    description:
+      'Started building production web interfaces and developing a strong foundation in React, TypeScript, and responsive design.',
   },
   {
-    title: '10+',
-    description: 'Projects I worked on',
+    label: 'Travel products',
+    title: 'Complex search and booking systems',
+    description:
+      'Worked with interactive maps, advanced filters, and multi-step booking experiences where clarity is essential.',
+  },
+  {
+    label: 'Today',
+    title: 'Product-focused frontend partnership',
+    description:
+      'Bring engineering depth and product judgement together to shape interfaces that are useful, maintainable, and polished.',
   },
 ];
 
-export const aboutMePhotos = [...selfPhotos];
+export const aboutStrengths: TAboutStrength[] = [
+  {
+    title: 'Complex product UI',
+    description:
+      'Structure dense workflows and information so people can move through them with confidence.',
+  },
+  {
+    title: 'Frontend systems',
+    description:
+      'Create reusable components and clear patterns that help teams build consistently over time.',
+  },
+  {
+    title: 'Collaborative delivery',
+    description:
+      'Work closely with product, design, and engineering partners from early decisions through final polish.',
+  },
+];

@@ -20,11 +20,10 @@
 - `/about` -> `src/pages/about.tsx`
 - `/skills` -> `src/pages/skills.tsx`
 - `/projects` -> `src/pages/projects.tsx`
-- `/experience` -> `src/pages/experience.tsx`
 - `/contact` -> `src/pages/contact.tsx`
 - `*` -> `src/pages/404.tsx`
 
-The experience route exists in routing, but the navbar currently keeps it commented out.
+Unexpected route failures render `src/pages/route-error.tsx` through the root router error boundary.
 
 ## Directory Map
 
@@ -73,10 +72,10 @@ Static assets served directly by Vite:
 
 ## Content Placement
 
-- Project data: `src/components/pages/projects/project.const.ts`
-- Skills data: `src/components/pages/skills/skills.const.ts`
+- Project case-study data: `src/components/pages/projects/project.const.ts`
+- Capability and technology data: `src/components/pages/skills/skills.const.ts`
 - Social/contact blocks: `src/components/pages/home/social-links/social-links.const.tsx`
-- About key points and optional photo content: `src/components/pages/about/about-me.const.ts`
+- About experience highlights and strengths: `src/components/pages/about/about-me.const.ts`
 
 ## Runtime Notes
 

@@ -25,13 +25,15 @@ Then check the affected user flows in the browser.
 - route navigation works for home, about, skills, projects, contact, and 404
 - theme toggle still updates light and dark mode correctly
 - mobile navigation opens, closes, and routes correctly
-- project cards still render screenshots, descriptions, and outbound links
+- project case studies render screenshots, contribution details, and outbound links
+- skills capability content is available without hover or click interaction
 - contact form shows the right success or error state for the current EmailJS configuration
+- 404 and route-level error states provide working Home and Contact recovery actions
+- `/experience` resolves through the 404 route rather than a placeholder page
 - layout still holds together on mobile and desktop widths
 
-## Known Quality Gaps
+## Deferred Quality Work
 
-- Skill tooltips currently rely on pointer interaction more than keyboard/touch access
-- The router error element is still a plain fallback string
-- Project cards contain an invalid nested-link structure
-- The hover-card state currently does not clear correctly on mouse leave
+- Add route and interaction smoke coverage with Playwright after the redesign is complete.
+- Verify the EmailJS success path with valid test credentials; the missing-configuration error path can be checked locally without them.
+- Add continuous integration once a deployment target and hosting workflow are selected.

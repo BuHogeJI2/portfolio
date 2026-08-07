@@ -1,15 +1,10 @@
 import { ReactElement } from 'react';
-import {
-  footerBuiltWithLinkStyles,
-  footerBuiltWithStyles,
-} from './footer.styles';
-
-interface TechStackItem {
+interface ITechStackItem {
   name: string;
   url: string;
 }
 
-const techStack: TechStackItem[] = [
+const techStack: ITechStackItem[] = [
   { name: 'React', url: 'https://react.dev' },
   { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
   { name: 'Tailwind CSS', url: 'https://tailwindcss.com' },
@@ -19,7 +14,7 @@ const techStack: TechStackItem[] = [
 
 export function BuiltWith(): ReactElement {
   return (
-    <div className={footerBuiltWithStyles}>
+    <div className="text-xs text-content-subtle">
       <span>Built with </span>
       {techStack.map((tech, index) => (
         <span key={tech.name}>
@@ -27,7 +22,7 @@ export function BuiltWith(): ReactElement {
             href={tech.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={footerBuiltWithLinkStyles}
+            className="rounded-sm text-accent transition-colors duration-200 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
           >
             {tech.name}
           </a>

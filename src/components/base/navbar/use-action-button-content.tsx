@@ -13,7 +13,8 @@ export function useActionButtonContent(
           ? '/icons/dark-mode.svg'
           : '/icons/light-mode.svg'
       }
-      alt="Toggle theme"
+      alt=""
+      aria-hidden="true"
       className="mx-auto my-auto h-3/4 w-3/4 dark:invert"
     />
   );

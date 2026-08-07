@@ -11,32 +11,14 @@ import {
 } from 'react-icons/fa';
 import { SiUpwork } from 'react-icons/si';
 import { NavLink } from 'react-router-dom';
+import { ActionLink } from '@/components/base/action-link/action-link';
+import { Container } from '@/components/base/container/container';
 import { navLinks } from '@/components/base/navbar/navbar';
+import { SectionHeading } from '@/components/base/section-heading/section-heading';
+import { Surface } from '@/components/base/surface/surface';
+import { Tag } from '@/components/base/tag/tag';
 import { socialLinksData } from '@/components/pages/home/social-links/social-links.const';
 import { BuiltWith } from './built-with';
-import {
-  footerAvailabilityBadgeStyles,
-  footerAvailabilityStyles,
-  footerBottomStyles,
-  footerContactInfoStyles,
-  footerContactLinkStyles,
-  footerContainerStyles,
-  footerCopyrightStyles,
-  footerGridStyles,
-  footerNavIconStyles,
-  footerNavItemStyles,
-  footerNavLinkStyles,
-  footerNavListStyles,
-  footerSectionTitleStyles,
-  footerSectionTwoColStyles,
-  footerSocialIconStyles,
-  footerSocialItemStyles,
-  footerSocialLinkStyles,
-  footerSocialListStyles,
-  footerStyles,
-  footerTaglineStyles,
-  footerTopBorderStyles,
-} from './footer.styles';
 
 // Map navigation routes to icons
 const getNavIcon = (to: string): ReactElement => {
@@ -66,59 +48,50 @@ export function Footer(): ReactElement {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={footerStyles}>
-      <div className={footerTopBorderStyles} />
-      <div className={footerContainerStyles}>
-        <div className={footerGridStyles}>
+    <footer className="relative z-10 mt-3 py-8 md:py-12">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-line/70 to-transparent dark:via-line/10" />
+      <Container>
+        <Surface className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:gap-12">
           <div className="space-y-6">
-            <div className="space-y-4">
-              <p className={footerSectionTitleStyles}>Close</p>
-              <h3 className="max-w-xl text-3xl font-semibold tracking-tight text-slate-900 dark:text-white md:text-4xl">
-                Product-facing frontend work with more polish, more clarity, and
-                less noise.
-              </h3>
-              <p className={footerTaglineStyles}>
-                I help turn complex requirements into interfaces that feel more
-                intentional, easier to trust, and better aligned with product
-                goals.
-              </p>
-            </div>
+            <SectionHeading
+              eyebrow="Close"
+              title="Product-facing frontend work with more polish, more clarity, and less noise."
+              description="I help turn complex requirements into interfaces that feel more intentional, easier to trust, and better aligned with product goals."
+            />
 
-            <div className={footerContactInfoStyles}>
-              <NavLink
-                to="/contact"
-                className={`${footerContactLinkStyles} bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100`}
-              >
-                <FaEnvelope className={footerNavIconStyles} />
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ActionLink to="/contact" variant="primary">
+                <FaEnvelope className="h-4 w-4" />
                 <span>Start a conversation</span>
-              </NavLink>
-              <a
+              </ActionLink>
+              <ActionLink
                 href="/files/cv_demidovich_2026.pdf"
-                className={`${footerContactLinkStyles} border-slate-300/80 bg-white/70 text-slate-800 shadow-sm backdrop-blur hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:hover:bg-white/10`}
-                aria-label="Download CV"
+                variant="secondary"
                 download
               >
-                <FaDownload className={footerNavIconStyles} />
+                <FaDownload className="h-4 w-4" />
                 <span>Download CV</span>
-              </a>
+              </ActionLink>
+              <ActionLink to="/projects" variant="text">
+                Review projects
+              </ActionLink>
             </div>
-            <div className={footerAvailabilityStyles}>
-              <span className={footerAvailabilityBadgeStyles}>
-                Available for freelance work
-              </span>
-            </div>
+            <Tag tone="accent">Available for freelance work</Tag>
           </div>
 
-          <div className={footerSectionTwoColStyles}>
+          <div className="space-y-8">
             <div className="space-y-4">
-              <h3 className={footerSectionTitleStyles}>Navigate</h3>
-              <ul className={footerNavListStyles}>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                Navigate
+              </h3>
+              <ul className="grid gap-3 sm:grid-cols-2">
                 {navLinks.map(({ label, to }) => (
-                  <li key={label} className={footerNavItemStyles}>
-                    <NavLink to={to} className={footerNavLinkStyles}>
-                      <span className={footerNavIconStyles}>
-                        {getNavIcon(to)}
-                      </span>
+                  <li key={label} className="list-none">
+                    <NavLink
+                      to={to}
+                      className="inline-flex items-center gap-2 rounded-control border border-line/70 bg-surface-subtle/80 px-4 py-2 text-sm text-content-muted transition duration-300 hover:bg-surface hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus dark:border-line/10"
+                    >
+                      <span className="h-4 w-4">{getNavIcon(to)}</span>
                       <span>{label}</span>
                     </NavLink>
                   </li>
@@ -126,21 +99,21 @@ export function Footer(): ReactElement {
               </ul>
             </div>
 
-            <div className="mt-8 space-y-4 md:mt-10">
-              <h3 className={footerSectionTitleStyles}>Connect</h3>
-              <ul className={footerSocialListStyles}>
+            <div className="space-y-4">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                Connect
+              </h3>
+              <ul className="flex flex-wrap gap-3">
                 {socialLinksData.map(({ label, href, iconType }) => (
-                  <li key={label} className={footerSocialItemStyles}>
+                  <li key={label} className="list-none">
                     <a
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={footerSocialLinkStyles}
+                      className="inline-flex items-center gap-2 rounded-control border border-line/70 bg-surface-subtle/80 px-4 py-2 text-sm text-content-muted transition duration-300 hover:bg-surface hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus dark:border-line/10"
                       aria-label={label}
                     >
-                      <span className={footerSocialIconStyles}>
-                        {getSocialIcon(iconType)}
-                      </span>
+                      <span className="h-4 w-4">{getSocialIcon(iconType)}</span>
                       <span>{label}</span>
                     </a>
                   </li>
@@ -148,17 +121,16 @@ export function Footer(): ReactElement {
               </ul>
             </div>
           </div>
-        </div>
-
-        <div className={footerBottomStyles}>
-          <div className="space-y-2">
-            <p className={footerCopyrightStyles}>
-              &copy; {currentYear} Dzmitry Dziamidovich. All rights reserved.
-            </p>
-            <BuiltWith />
+          <div className="mt-8 border-t border-line/70 pt-6 text-sm text-content-subtle dark:border-line/10 md:col-span-2">
+            <div className="space-y-2">
+              <p className="text-sm">
+                &copy; {currentYear} Dzmitry Dziamidovich. All rights reserved.
+              </p>
+              <BuiltWith />
+            </div>
           </div>
-        </div>
-      </div>
+        </Surface>
+      </Container>
     </footer>
   );
 }

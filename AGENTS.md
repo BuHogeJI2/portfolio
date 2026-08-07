@@ -50,5 +50,5 @@ This repository is a single React/Vite portfolio app. Use this file as the entry
 ## Current Product State
 
 - Active routes: home, about, skills, projects, contact, and 404
-- Dormant route: experience exists but is not linked in the navbar and still contains placeholder content
+- Route-level failures use a dedicated recovery page consistent with the shared design system
 - The portfolio depends on static assets in `public/` for project screenshots, photos, icons, and CV download

@@ -86,3 +86,48 @@ html.dark body {
   background: rgb(var(--color-accent) / 0.22);
   color: inherit;
 }
+
+.page-background-art {
+  background: radial-gradient(
+      circle at top left,
+      rgb(var(--color-surface) / 0.92),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgb(var(--color-accent) / 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgb(var(--color-content) / 0.08),
+      transparent 30%
+    );
+}
+
+.page-background-grid {
+  background-image: linear-gradient(
+      rgb(var(--color-content) / 0.8) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgb(var(--color-content) / 0.8) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+html.dark .page-background-art {
+  background: radial-gradient(
+      circle at top left,
+      rgb(var(--color-accent-strong) / 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgb(var(--color-content) / 0.06),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgb(var(--color-accent) / 0.14),
+      transparent 28%
+    );
+}

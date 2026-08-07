@@ -70,11 +70,9 @@ const featuredSource = projects[0];
 export const featuredWorkTeaser = {
   title: featuredSource.title,
   image: featuredSource.image,
-  link: featuredSource.link,
-  stack: featuredSource.technologies?.slice(0, 4) ?? [],
-  role: 'Frontend engineer',
-  summary:
-    'High-traffic travel product work focused on search, discovery, and package-booking journeys that needed to stay clear under real product complexity.',
-  value:
-    'A strong example of shipping UI for comparison-heavy flows where trust, speed, and content clarity all matter.',
+  link: featuredSource.href,
+  stack: featuredSource.technologies.slice(0, 4),
+  role: featuredSource.role,
+  summary: featuredSource.summary,
+  value: featuredSource.value,
 };
