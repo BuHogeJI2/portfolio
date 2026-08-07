@@ -445,6 +445,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/manrope@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/manrope@npm:5.3.0"
+  checksum: 10c0/8b760dff605c6d43c64e39243568c89f7806e59e86ac80e83a0dab42dfadfb1498d8f1816c78c24875e2f743b5340653c8bdd33cd75d051a1af56ed3802bfd0d
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -3276,6 +3283,7 @@ __metadata:
   dependencies:
     "@emailjs/browser": "npm:^4.4.1"
     "@eslint/js": "npm:^10.0.1"
+    "@fontsource-variable/manrope": "npm:^5.3.0"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:^19.0.2"

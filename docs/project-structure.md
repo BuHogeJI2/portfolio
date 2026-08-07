@@ -36,6 +36,8 @@ Thin route entry files. Keep them light and delegate real page content to `src/c
 
 Reusable UI primitives and layout blocks, including navigation, footer, container, image handling, loaders, cards, and animation helpers.
 
+The visual foundation includes shared page introductions, section headings, surfaces, action links, tags, and reduced-motion-aware reveal wrappers. Route layouts use `Container` for a consistent `max-w-6xl` content width.
+
 ### `src/components/pages`
 
 Page-focused sections and content constants:
@@ -81,4 +83,5 @@ Static assets served directly by Vite:
 - Dev server port is fixed to `5173` in `vite.config.ts`
 - Build output uses a manual `react-vendor` chunk
 - `vite-plugin-mkcert` is enabled for local certificate support
+- Manrope Variable is bundled locally through `@fontsource-variable/manrope`
 - The contact form relies on EmailJS values from `.env`

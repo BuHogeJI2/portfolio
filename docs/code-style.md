@@ -22,9 +22,10 @@
 
 ## Styling
 
-- Prefer the existing Tailwind tokens from `tailwind.config.js` before adding new color values
+- Prefer semantic Tailwind tokens for canvas, surfaces, content, accent, lines, focus, radii, and shadows before adding raw values
 - Preserve both light and dark theme behavior
-- Reuse layout primitives such as `Container`, `Navbar`, `Footer`, `Image`, and `Loader` before adding new abstractions
+- Reuse layout and presentation primitives such as `Container`, `PageIntro`, `SectionHeading`, `Surface`, `ActionLink`, `Tag`, and `Reveal` before adding new abstractions
+- Keep prominent entrance motion limited to `Reveal`'s `hero` and `featured` variants, and preserve reduced-motion behavior
 - Use `clsx` or `cn` when conditional class composition improves clarity
 
 ## UX Expectations
