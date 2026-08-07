@@ -2,10 +2,10 @@
 /node_modules
 /dist
 
-
 # IDEs
 .vscode
 .idea
+/.DS_Store
 
 # Settings
 settings.json
@@ -13,6 +13,5 @@ settings.json
 # Environment variables
 .env
 
-# Local planning notes
-/TODO.md
-/todo.md
+# Local artifacts
+/.tmp/

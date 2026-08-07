@@ -11,7 +11,6 @@ This repository is a single React/Vite portfolio app. Use this file as the entry
 3. `docs/project-structure.md`
 4. `docs/code-style.md`
 5. `docs/testing-and-quality.md`
-6. `TODO.md`
 
 ## Documentation Map
 
@@ -23,8 +22,6 @@ This repository is a single React/Vite portfolio app. Use this file as the entry
   - Component, styling, and documentation conventions
 - `docs/testing-and-quality.md`
   - Current quality gates, missing automation, and manual verification expectations
-- `TODO.md`
-  - Product and technical follow-up work discovered in review
 
 ## Source of Truth
 
@@ -39,7 +36,7 @@ This repository is a single React/Vite portfolio app. Use this file as the entry
 ## Repository Constraints
 
 - Package manager: `yarn@4.12.0`
-- Main scripts: `yarn dev`, `yarn build`, `yarn preview`
+- Main scripts: `yarn dev`, `yarn build`, `yarn preview`, `yarn lint`, `yarn typecheck`
 - Contact form configuration lives in `.env.example`
 - There is currently no database, no API layer beyond EmailJS, no automated test suite, and no documented deployment target
 

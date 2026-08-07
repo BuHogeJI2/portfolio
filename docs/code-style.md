@@ -39,4 +39,4 @@
 - Update `README.md` when setup or run commands change
 - Update `AGENTS.md` when technical doc files are added, removed, or renamed
 - Update the relevant file in `docs/` when architecture or conventions change
-- Update `TODO.md` when documentation review reveals real follow-up work
+- Keep temporary implementation plans under `.tmp/plans/` and durable technical decisions in `docs/`

@@ -2,9 +2,9 @@
 
 ## Current State
 
-- Available scripts: `yarn dev`, `yarn build`, `yarn preview`
-- There is no dedicated lint script
-- There is no separate typecheck script
+- Available scripts: `yarn dev`, `yarn build`, `yarn preview`, `yarn lint`, `yarn typecheck`
+- ESLint provides the repository lint gate
+- TypeScript runs in no-emit mode as the typecheck gate
 - There is no automated unit, integration, or end-to-end test suite
 - There is no CI pipeline documented in the repository
 
@@ -13,6 +13,8 @@
 Run:
 
 ```bash
+yarn lint
+yarn typecheck
 yarn build
 ```
 
@@ -33,5 +35,3 @@ Then check the affected user flows in the browser.
 - The router error element is still a plain fallback string
 - Project cards contain an invalid nested-link structure
 - The hover-card state currently does not clear correctly on mouse leave
-
-Track fixes and larger follow-up work in `TODO.md`.
