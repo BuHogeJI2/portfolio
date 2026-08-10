@@ -42,10 +42,10 @@ export function AboutMe(): ReactElement {
       >
         <Surface padding="none" variant="elevated" className="overflow-hidden">
           <Image
-            imageSrc="/images/photos/bold.jpg"
-            alt="Dzmitry Dziamidovich outdoors"
-            width={590}
-            height={755}
+            imageSrc="/images/photos/d_demidovich_profile.webp"
+            alt="Studio portrait of Dzmitry Dziamidovich"
+            width={1122}
+            height={1402}
             className="aspect-[4/5] h-full w-full object-cover"
             fallbackClassName="aspect-[4/5]"
           />

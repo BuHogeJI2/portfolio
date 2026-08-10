@@ -13,15 +13,15 @@ export function Avatar({ className, fallbackClassName }: AvatarProps) {
 
   const imageSrc =
     theme === ETheme.LIGHT
-      ? '/images/photos/me-ai.webp'
-      : '/images/photos/me-ai-2.webp';
+      ? '/images/photos/duck_tag.webp'
+      : '/images/photos/coffee.webp';
 
   return (
     <Image
       imageSrc={imageSrc}
       alt="Portrait of Dzmitry Dziamidovich"
-      width={864}
-      height={1184}
+      width={1254}
+      height={1254}
       className={clsx(
         'h-28 w-28 rounded-full border-2 border-white object-cover md:h-40 md:w-40',
         className,

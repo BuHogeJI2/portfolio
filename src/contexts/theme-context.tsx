@@ -24,34 +24,23 @@ interface ThemeProviderProps {
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<ETheme>(() => {
     if (typeof window !== 'undefined') {
-      // Check for saved theme preference or system preference
       const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      ).matches;
 
-      const initialTheme =
-        savedTheme === ETheme.DARK || (!savedTheme && systemPrefersDark)
-          ? ETheme.DARK
-          : ETheme.LIGHT;
-
-      // Apply theme to DOM immediately
-      if (initialTheme === ETheme.DARK) {
-        document.documentElement.classList.add(ETheme.DARK);
-      }
-
-      return initialTheme;
+      return savedTheme === ETheme.LIGHT ? ETheme.LIGHT : ETheme.DARK;
     }
-    return ETheme.LIGHT;
+
+    return ETheme.DARK;
   });
 
-  // Sync DOM class with theme state
   useEffect(() => {
-    if (theme === ETheme.DARK) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle(
+      ETheme.DARK,
+      theme === ETheme.DARK,
+    );
+
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', theme === ETheme.DARK ? '#0b1220' : '#f4efe7');
   }, [theme]);
 
   const toggleTheme = useCallback(() => {
