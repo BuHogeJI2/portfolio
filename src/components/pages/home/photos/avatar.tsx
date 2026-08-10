@@ -13,13 +13,15 @@ export function Avatar({ className, skeletonClassName }: AvatarProps) {
 
   const imageSrc =
     theme === ETheme.LIGHT
-      ? '/images/photos/me-ai.png'
-      : '/images/photos/me-ai-2.png';
+      ? '/images/photos/me-ai.webp'
+      : '/images/photos/me-ai-2.webp';
 
   return (
     <Image
       imageSrc={imageSrc}
       alt="Portrait of Dzmitry Dziamidovich"
+      width={864}
+      height={1184}
       className={clsx(
         'h-28 w-28 rounded-full border-2 border-white object-cover md:h-40 md:w-40',
         className,

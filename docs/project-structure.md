@@ -33,7 +33,7 @@ Thin route entry files. Keep them light and delegate real page content to `src/c
 
 ### `src/components/base`
 
-Reusable UI primitives and layout blocks, including navigation, footer, container, image handling, loaders, cards, and animation helpers.
+Reusable UI primitives and layout blocks, including navigation, footer, container, image handling, and loaders.
 
 The visual foundation includes shared page introductions, section headings, surfaces, action links, tags, and reduced-motion-aware reveal wrappers. Route layouts use `Container` for a consistent `max-w-6xl` content width.
 
@@ -55,7 +55,7 @@ Global React context providers. The current app uses this for theme state only.
 
 ### `src/hooks`
 
-Shared hooks. `use-outside-click` exists but is not yet broadly integrated.
+Shared hooks. `use-outside-click` supports the mobile navigation disclosure.
 
 ### `src/lib`
 
@@ -65,9 +65,11 @@ Small generic helpers such as `cn`.
 
 Static assets served directly by Vite:
 
-- `images/projects/` for portfolio screenshots
-- `images/photos/` for profile and personal photos
+- `images/projects/` for optimized WebP portfolio screenshots
+- `images/photos/` for the active WebP profile art and About portrait
+- `images/social/` for the 1200×630 social-preview image
 - `icons/` and `icons/svg/` for theme and skill icons
+- `favicon.svg` for the browser icon
 - `files/` for downloadable CV
 
 ## Content Placement
@@ -84,3 +86,5 @@ Static assets served directly by Vite:
 - `vite-plugin-mkcert` is enabled for local certificate support
 - Manrope Variable is bundled locally through `@fontsource-variable/manrope`
 - The contact form relies on EmailJS values from `.env`
+- `index.html` owns the site title, description, canonical URL, social metadata, theme colors, and favicon reference
+- The canonical public URL is `https://buhogeji.me`; the deployment workflow is managed outside this repository

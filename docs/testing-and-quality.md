@@ -5,7 +5,7 @@
 - Available scripts: `yarn dev`, `yarn build`, `yarn preview`, `yarn lint`, `yarn typecheck`
 - ESLint provides the repository lint gate
 - TypeScript runs in no-emit mode as the typecheck gate
-- There is no automated unit, integration, or end-to-end test suite
+- There is no automated test suite because the current app contains presentation and integration code without non-trivial business logic
 - There is no CI pipeline documented in the repository
 
 ## Minimum Verification For Changes
@@ -32,8 +32,14 @@ Then check the affected user flows in the browser.
 - `/experience` resolves through the 404 route rather than a placeholder page
 - layout still holds together on mobile and desktop widths
 
-## Deferred Quality Work
+## Testing Scope Decision
 
-- Add route and interaction smoke coverage with Playwright after the redesign is complete.
-- Verify the EmailJS success path with valid test credentials; the missing-configuration error path can be checked locally without them.
-- Add continuous integration once a deployment target and hosting workflow are selected.
+The testing boundary is deliberately narrow for this small personal portfolio and should not be reopened as routine follow-up work:
+
+- Do not add component tests (CT), visual or visual-regression tests (VT), Playwright, Cypress, or another browser-automation suite.
+- Add small unit tests only when non-trivial pure business logic is introduced, such as a validator, mapper, parser, or state reducer.
+- Do not create tests for static content, presentational components, route wiring, or styling solely to increase coverage.
+- Continue using lint, typecheck, production build, and focused manual browser checks for UI changes.
+- Revisit this decision only if the user explicitly changes direction or the application grows materially beyond a static portfolio.
+
+The EmailJS success path still requires valid test credentials. Without them, verify the missing-configuration error path and the form's pending/error accessibility behavior.

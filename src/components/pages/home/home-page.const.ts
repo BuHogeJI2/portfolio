@@ -70,6 +70,8 @@ const featuredSource = projects[0];
 export const featuredWorkTeaser = {
   title: featuredSource.title,
   image: featuredSource.image,
+  imageWidth: featuredSource.imageWidth,
+  imageHeight: featuredSource.imageHeight,
   link: featuredSource.href,
   stack: featuredSource.technologies.slice(0, 4),
   role: featuredSource.role,

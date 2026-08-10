@@ -38,7 +38,8 @@ This repository is a single React/Vite portfolio app. Use this file as the entry
 - Package manager: `yarn@4.12.0`
 - Main scripts: `yarn dev`, `yarn build`, `yarn preview`, `yarn lint`, `yarn typecheck`
 - Contact form configuration lives in `.env.example`
-- There is currently no database, no API layer beyond EmailJS, no automated test suite, and no documented deployment target
+- There is currently no database or API layer beyond EmailJS
+- Testing intentionally excludes component, visual, and browser-automation suites; add focused unit tests only when non-trivial business logic warrants them
 
 ## Documentation Rules
 

@@ -41,7 +41,9 @@ export function AboutMe(): ReactElement {
         <Surface padding="none" variant="elevated" className="overflow-hidden">
           <Image
             imageSrc="/images/photos/bold.jpg"
-            alt="Dmitry Dziamidovich outdoors"
+            alt="Dzmitry Dziamidovich outdoors"
+            width={590}
+            height={755}
             className="aspect-[4/5] h-full w-full object-cover"
             skeletonClassName="aspect-[4/5]"
           />

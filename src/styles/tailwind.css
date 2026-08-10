@@ -23,8 +23,6 @@
   --radius-control: 9999px;
   --shadow-surface: 0 18px 50px rgb(15 23 42 / 0.08);
   --shadow-elevated: 0 24px 70px rgb(15 23 42 / 0.12);
-  --animate-scroll: scroll var(--animation-duration, 40s)
-    var(--animation-direction, forwards) linear infinite;
 }
 
 html.dark {

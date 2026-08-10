@@ -8,7 +8,7 @@ export const imageStyles = clsx(
 
 export const imageSkeletonStyles = clsx(
   'absolute inset-0 w-full h-full z-0',
-  'bg-gray-300 dark:bg-gray-700',
-  'animate-pulse',
+  'border border-line/70 bg-surface-subtle dark:border-line/10',
+  'animate-pulse motion-reduce:animate-none',
   'flex items-center justify-center',
 );

@@ -1,12 +1,12 @@
 import { ReactElement } from 'react';
 import { cn } from '@/lib/utils';
 
-interface LoaderProps {
+interface ILoaderProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 
-export function Loader({ className, size = 'md' }: LoaderProps): ReactElement {
+export function Loader({ className, size = 'md' }: ILoaderProps): ReactElement {
   const sizeClasses = {
     sm: 'w-8 h-8 border-2',
     md: 'w-12 h-12 border-4',
@@ -18,13 +18,13 @@ export function Loader({ className, size = 'md' }: LoaderProps): ReactElement {
       <div className="relative">
         <div
           className={cn(
-            'animate-spin rounded-full border-transparent border-t-primary-default dark:border-t-primary-dark',
+            'animate-spin rounded-full border-transparent border-t-accent motion-reduce:animate-none',
             sizeClasses[size],
           )}
         />
         <div
           className={cn(
-            'absolute inset-0 animate-spin rounded-full border-transparent border-r-secondary-default opacity-50 dark:border-r-secondary-dark',
+            'absolute inset-0 animate-spin rounded-full border-transparent border-r-accent-strong opacity-50 motion-reduce:animate-none',
             sizeClasses[size],
           )}
           style={{

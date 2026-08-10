@@ -79,6 +79,8 @@ export function Projects(): ReactElement {
                 <Image
                   imageSrc={featuredProject.image}
                   alt={`${featuredProject.title} travel interface`}
+                  width={featuredProject.imageWidth}
+                  height={featuredProject.imageHeight}
                   className="aspect-[16/11] object-cover lg:h-full"
                   skeletonClassName="aspect-[16/11] lg:h-full"
                   lazyLoading={false}
@@ -148,6 +150,8 @@ export function Projects(): ReactElement {
                   <Image
                     imageSrc={project.image}
                     alt={`${project.title} project interface`}
+                    width={project.imageWidth}
+                    height={project.imageHeight}
                     className="aspect-[16/9] object-cover"
                     skeletonClassName="aspect-[16/9]"
                   />

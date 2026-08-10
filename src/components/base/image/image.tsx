@@ -9,6 +9,8 @@ import {
 export interface IImageProps {
   imageSrc: string;
   alt: string;
+  width: number;
+  height: number;
   className?: string;
   skeletonClassName?: string;
   lazyLoading?: boolean;
@@ -17,6 +19,8 @@ export interface IImageProps {
 export function Image({
   imageSrc,
   alt,
+  width,
+  height,
   className,
   skeletonClassName,
   lazyLoading = true,
@@ -26,6 +30,8 @@ export function Image({
       key={imageSrc}
       imageSrc={imageSrc}
       alt={alt}
+      width={width}
+      height={height}
       className={className}
       skeletonClassName={skeletonClassName}
       lazyLoading={lazyLoading}
@@ -36,6 +42,8 @@ export function Image({
 function ImageContent({
   imageSrc,
   alt,
+  width,
+  height,
   className,
   skeletonClassName,
   lazyLoading = true,
@@ -80,13 +88,15 @@ function ImageContent({
       {isLoading && !hasError && (
         <div
           className={clsx(imageSkeletonStyles, skeletonClassName)}
-          aria-label="Loading image..."
+          aria-hidden="true"
         />
       )}
       <img
         ref={imgRef}
         src={imageSrc}
         alt={alt}
+        width={width}
+        height={height}
         loading={lazyLoading ? 'lazy' : 'eager'}
         decoding="async"
         className={clsx(imageStyles, className, {
@@ -103,9 +113,12 @@ function ImageContent({
       {hasError && (
         <div
           className={clsx(imageSkeletonStyles, skeletonClassName)}
-          aria-label="Failed to load image"
+          role="img"
+          aria-label={`Failed to load: ${alt}`}
         >
-          <span className="text-sm text-gray-400">Image not available</span>
+          <span className="text-sm text-content-subtle">
+            Image not available
+          </span>
         </div>
       )}
     </div>

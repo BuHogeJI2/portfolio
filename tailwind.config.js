@@ -32,18 +32,6 @@ module.exports = {
           strong: withOpacity('--color-line-strong'),
         },
         focus: withOpacity('--color-focus'),
-        primary: {
-          default: withOpacity('--color-accent'),
-          dark: withOpacity('--color-accent'),
-        },
-        secondary: {
-          default: withOpacity('--color-accent-strong'),
-          dark: withOpacity('--color-accent'),
-        },
-        info: {
-          default: withOpacity('--color-content-muted'),
-          dark: withOpacity('--color-content-muted'),
-        },
       },
       borderRadius: {
         card: 'var(--radius-card)',
@@ -53,28 +41,6 @@ module.exports = {
       boxShadow: {
         surface: 'var(--shadow-surface)',
         elevated: 'var(--shadow-elevated)',
-      },
-      keyframes: {
-        'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        scroll: {
-          to: {
-            transform: 'translate(calc(-50% - 0.5rem))',
-          },
-        },
-      },
-      animation: {
-        'fade-in-up': 'fade-in-up 0.6s ease-out',
-        scroll:
-          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
       },
     },
   },

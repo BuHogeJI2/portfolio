@@ -7,6 +7,8 @@ export type TProject = {
   contribution: string;
   value: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   href: string;
   technologies: string[];
   featured: boolean;
@@ -35,7 +37,9 @@ export const projects: TProject[] = [
       'Frontend implementation across product interfaces using Next.js, TypeScript, GraphQL, and shared UI tooling for a complex travel domain.',
     value:
       'A representative example of product UI work where responsive behavior, content hierarchy, and decision confidence all matter.',
-    image: '/images/projects/hotelplan.png',
+    image: '/images/projects/hotelplan.webp',
+    imageWidth: 1600,
+    imageHeight: 862,
     href: 'https://www.hotelplan.ch',
     technologies: productStack,
     featured: true,
@@ -52,7 +56,9 @@ export const projects: TProject[] = [
       'Built frontend product interfaces within the shared Next.js, TypeScript, GraphQL, and component-tooling ecosystem.',
     value:
       'Shows experience working on consumer journeys where trust and clear choices are central to the interface.',
-    image: '/images/projects/migros-ferien.png',
+    image: '/images/projects/migros-ferien.webp',
+    imageWidth: 1600,
+    imageHeight: 863,
     href: 'https://migros-ferien.ch/',
     technologies: productStack,
     featured: false,
@@ -69,7 +75,9 @@ export const projects: TProject[] = [
       'Delivered frontend interfaces using the shared React stack and GraphQL-based product architecture.',
     value:
       'Demonstrates frontend work across content-rich discovery and transactional travel experiences.',
-    image: '/images/projects/travelhouse.png',
+    image: '/images/projects/travelhouse.webp',
+    imageWidth: 1600,
+    imageHeight: 860,
     href: 'https://travelhouse.ch/',
     technologies: productStack,
     featured: false,
@@ -86,7 +94,9 @@ export const projects: TProject[] = [
       'Implemented responsive frontend experiences within the same typed, component-oriented delivery stack.',
     value:
       'Broadens the portfolio from leisure booking flows into business-facing travel communication.',
-    image: '/images/projects/btafirst.png',
+    image: '/images/projects/btafirst.webp',
+    imageWidth: 1600,
+    imageHeight: 862,
     href: 'https://btafirst.ch/',
     technologies: productStack,
     featured: false,
@@ -103,7 +113,9 @@ export const projects: TProject[] = [
       'Built frontend presentation and content interfaces with the shared Next.js and TypeScript foundation.',
     value:
       'Shows the same frontend system supporting brand and corporate communication as well as product journeys.',
-    image: '/images/projects/corp.png',
+    image: '/images/projects/corp.webp',
+    imageWidth: 1600,
+    imageHeight: 863,
     href: 'https://hotelplan.com/',
     technologies: productStack,
     featured: false,
@@ -120,7 +132,9 @@ export const projects: TProject[] = [
       'Implemented booking-oriented frontend interfaces with Next.js, TypeScript, GraphQL, and shared component tooling.',
     value:
       'Represents hands-on work with dense transactional flows where state, clarity, and confidence are closely connected.',
-    image: '/images/projects/vtours.png',
+    image: '/images/projects/vtours.webp',
+    imageWidth: 1600,
+    imageHeight: 818,
     href: 'https://buchung.vtours.com/',
     technologies: productStack,
     featured: false,

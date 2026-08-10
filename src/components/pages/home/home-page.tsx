@@ -187,6 +187,8 @@ export function HomePageView(): ReactElement {
                   <Image
                     imageSrc={featuredWorkTeaser.image}
                     alt={`${featuredWorkTeaser.title} project interface`}
+                    width={featuredWorkTeaser.imageWidth}
+                    height={featuredWorkTeaser.imageHeight}
                     className="aspect-[16/10] object-cover"
                     skeletonClassName="aspect-[16/10]"
                   />
