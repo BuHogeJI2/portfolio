@@ -52,7 +52,7 @@ export function Footer(): ReactElement {
     <footer className="relative z-10 mt-3 py-8 md:py-12">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-line/70 to-transparent dark:via-line/10" />
       <Container>
-        <Surface className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:gap-12">
+        <Surface className="grid gap-10 bg-surface/95 backdrop-blur-none md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:gap-12">
           <div className="space-y-6">
             <SectionHeading
               eyebrow="Work together"
