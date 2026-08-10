@@ -2,75 +2,75 @@ import clsx from 'clsx';
 
 export const headerStyles = clsx(
   'fixed left-0 right-0 z-[999] w-full',
-  'bg-white/80 dark:bg-zinc-900/80',
-  'backdrop-blur-sm',
   'transition-colors duration-300',
 );
 
-export const navContainerStyles = clsx('relative');
+export const navContainerStyles = clsx('relative pt-4 md:pt-5');
 
-export const navStyles = clsx('flex items-center justify-center py-4 pt-12');
+export const navStyles = clsx(
+  'rounded-card border border-line/70 bg-surface/75 px-4 py-3 shadow-surface backdrop-blur-xl',
+  'dark:border-line/10',
+);
 
-export const desktopNavStyles = clsx('hidden w-full md:block');
+export const desktopNavStyles = clsx('hidden md:block');
 
 export const desktopNavContentStyles = clsx(
-  'flex items-center justify-around max-w-2xl mx-auto',
+  'grid grid-cols-[auto_1fr_auto] items-center gap-6',
 );
 
 export const navListStyles = clsx(
-  'flex items-center gap-8 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md',
+  'mx-auto flex items-center gap-2 rounded-control border border-line/70 bg-surface-subtle/80 px-3 py-2',
+  'dark:border-line/10',
 );
 
 export const navListItemStyles = clsx('list-none');
 
 export const navLinkStyles = clsx(
-  'relative rounded-full px-4 py-2 text-base font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800/50',
+  'relative rounded-control px-4 py-2 text-sm font-medium transition duration-300',
+  'hover:bg-surface hover:text-content',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas',
 );
 
 export const navLinkActiveStyles = clsx(
-  'underline underline-offset-4 text-secondary-default dark:text-primary-dark',
+  'border border-accent/20 bg-accent/10 text-content shadow-sm',
 );
 
-export const navLinkInactiveStyles = clsx(
-  'text-info-default dark:text-info-dark',
-);
+export const navLinkInactiveStyles = clsx('text-content-muted');
 
 export const mobileMenuButtonStyles = clsx(
   'flex items-center gap-2',
-  'ml-4 md:ml-0 px-4 md:px-0',
-  'block rounded-full border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-700/50 dark:bg-slate-900/60 dark:backdrop-blur-md md:hidden',
+  'rounded-control border border-line/70 bg-surface-subtle/80 px-4 py-2 text-sm font-medium text-content shadow-sm backdrop-blur',
+  'transition duration-300 hover:bg-surface dark:border-line/10 md:hidden',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas',
 );
 
-export const mobileMenuIconStyles = clsx(
-  'text-secondary-default h-5 w-5 dark:text-secondary-dark',
-);
+export const mobileMenuIconStyles = clsx('h-4 w-4 text-content');
 
-export const mobileMenuStyles = clsx('md:hidden');
+export const mobileMenuStyles = clsx('mt-4 md:hidden');
 
 export const mobileMenuListStyles = clsx(
-  'rounded-lg border border-slate-200 bg-white/80 backdrop-blur-md p-4 shadow-lg',
-  'dark:border-slate-700/50 dark:bg-slate-900/90 dark:backdrop-blur-md',
+  'space-y-2 rounded-card border border-line/70 bg-surface/90 p-4 shadow-surface backdrop-blur-xl',
+  'dark:border-line/10',
 );
 
-export const mobileMenuItemStyles = clsx('mb-2');
+export const mobileMenuItemStyles = clsx();
 
 export const mobileNavLinkStyles = clsx(
-  'block rounded-lg px-8 py-2 text-base font-medium transition-all duration-300',
+  'block rounded-2xl px-4 py-3 text-sm font-medium transition-all duration-300',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus',
 );
 
 export const mobileNavLinkActiveStyles = clsx(
-  'text-secondary-default bg-slate-100 shadow-lg',
-  'dark:bg-slate-800 dark:text-primary-dark',
+  'bg-accent/10 text-content shadow-sm',
 );
 
-export const mobileNavLinkInactiveStyles = clsx(
-  'text-info-default',
-  'dark:text-info-dark',
-);
+export const mobileNavLinkInactiveStyles = clsx('text-content-muted');
 
 // NavbarActionButton styles
 export const actionButtonStyles = clsx(
-  'text-secondary-default dark:text-secondary-dark rounded-full border border-slate-200/50 bg-white/60 p-2 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-white/80 dark:border-slate-700/50 dark:bg-slate-900/60 dark:hover:border-slate-700/50 dark:hover:bg-slate-900/80',
+  'rounded-control border border-line/70 bg-surface-subtle/80 p-2 text-content shadow-sm backdrop-blur transition duration-300',
+  'hover:bg-surface dark:border-line/10',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas',
 );
 
 export const actionButtonContentStyles = clsx(
@@ -78,5 +78,5 @@ export const actionButtonContentStyles = clsx(
 );
 
 export const mobileNavActionButtonContainerStyles = clsx(
-  'flex w-full items-center justify-center gap-2 md:hidden',
+  'flex items-center justify-between gap-3 md:hidden',
 );

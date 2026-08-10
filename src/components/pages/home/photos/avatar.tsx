@@ -1,21 +1,35 @@
+import clsx from 'clsx';
 import { useTheme } from '@/contexts/theme-context';
 import { ETheme } from '@/components/base/navbar/navbar.types';
 import { Image } from '@/components/base/image/image';
 
-export function Avatar() {
+interface AvatarProps {
+  className?: string;
+  fallbackClassName?: string;
+}
+
+export function Avatar({ className, fallbackClassName }: AvatarProps) {
   const { theme } = useTheme();
 
   const imageSrc =
     theme === ETheme.LIGHT
-      ? '/images/photos/me-ai.png'
-      : '/images/photos/me-ai-2.png';
+      ? '/images/photos/duck_tag.webp'
+      : '/images/photos/coffee.webp';
 
   return (
     <Image
       imageSrc={imageSrc}
-      alt="Avatar"
-      className="h-32 w-32 rounded-full border-2 border-white object-cover md:h-40 md:w-40"
-      skeletonClassName="h-32 w-32 rounded-full md:h-40 md:w-40"
+      alt="Portrait of Dmitry Demidovich"
+      width={1254}
+      height={1254}
+      className={clsx(
+        'h-28 w-28 rounded-full border-2 border-white object-cover md:h-40 md:w-40',
+        className,
+      )}
+      fallbackClassName={clsx(
+        'h-28 w-28 rounded-full md:h-40 md:w-40',
+        fallbackClassName,
+      )}
       lazyLoading={false}
     />
   );

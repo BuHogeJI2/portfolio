@@ -5,6 +5,7 @@ import routes from '@/routes';
 import App from '@/app';
 import { Loader } from '@/components/base/loader/loader';
 import { ThemeProvider } from '@/contexts/theme-context';
+import { RouteErrorPage } from '@/pages/route-error';
 import '@/global';
 
 const container = document.getElementById('root') as HTMLElement;
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: routes,
-    errorElement: <div>error</div>,
+    errorElement: <RouteErrorPage />,
   },
 ]);
 

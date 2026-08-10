@@ -1,13 +1,17 @@
 # Dependencies
 /node_modules
-
+/dist
 
 # IDEs
 .vscode
 .idea
+/.DS_Store
 
 # Settings
 settings.json
 
 # Environment variables
 .env
+
+# Local artifacts
+/.tmp/

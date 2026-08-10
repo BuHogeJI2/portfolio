@@ -1,38 +1,34 @@
 import clsx from 'clsx';
 
 export const labelStyles = clsx(
-  'mb-2 block text-sm font-medium',
-  'text-gray-700 dark:text-gray-300',
+  'mb-2 block text-sm font-semibold text-content',
 );
 
 export const inputStyles = clsx(
-  'w-full rounded-md border px-3 py-2 shadow-sm',
-  'placeholder-gray-400',
-  'focus:border-primary-default focus:outline-none focus:ring-2 focus:ring-primary-default',
-  'disabled:cursor-not-allowed disabled:opacity-50',
-  'border-gray-300',
-  'dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500',
+  'w-full rounded-xl border border-line/70 bg-surface-subtle/80 px-4 py-3 text-content shadow-sm',
+  'placeholder:text-content-subtle dark:border-line/10',
+  'focus:border-accent focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-surface',
+  'disabled:cursor-not-allowed disabled:opacity-60',
 );
 
-export const textareaStyles = clsx(inputStyles, 'resize-vertical');
+export const textareaStyles = clsx(
+  inputStyles,
+  'min-h-40 resize-y rounded-2xl px-4 py-4 leading-6',
+);
 
 export const buttonStyles = clsx(
-  'flex w-full justify-center rounded-md border border-transparent',
-  'px-4 py-2 text-sm font-medium text-white shadow-sm',
-  'bg-primary-default dark:bg-primary-dark',
-  'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100',
-  'hover:bg-primary-default/90 dark:hover:bg-primary-dark/90',
-  'transition-colors duration-200',
+  'flex min-h-12 w-full items-center justify-center rounded-control bg-content px-6 py-3 text-sm font-semibold text-content-inverse shadow-sm',
+  'transition duration-300 hover:-translate-y-0.5 hover:bg-content/90',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-surface',
+  'disabled:cursor-not-allowed disabled:translate-y-0 disabled:opacity-60',
 );
 
 export const successMessageStyles = clsx(
-  'rounded-md p-4',
-  'bg-green-50 text-green-800',
-  'dark:bg-green-900 dark:text-green-200',
+  'rounded-control border border-green-600/20 bg-green-50 p-4 text-green-900',
+  'dark:bg-green-950/40 dark:text-green-100',
 );
 
 export const errorMessageStyles = clsx(
-  'rounded-md p-4',
-  'bg-red-50 text-red-800',
-  'dark:bg-red-900 dark:text-red-200',
+  'rounded-control border border-red-600/20 bg-red-50 p-4 text-red-900',
+  'dark:bg-red-950/40 dark:text-red-100',
 );

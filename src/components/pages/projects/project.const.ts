@@ -1,100 +1,144 @@
-import { ICardWithHoverItem } from '@/components/base/cards-with-hover/cards-with-hover';
+export type TProject = {
+  id: string;
+  title: string;
+  summary: string;
+  role: string;
+  challenge: string;
+  contribution: string;
+  value: string;
+  image: string;
+  imageWidth: number;
+  imageHeight: number;
+  href: string;
+  technologies: string[];
+  featured: boolean;
+};
 
-export const projects: Array<ICardWithHoverItem> = [
+const productStack = [
+  'Next.js',
+  'TypeScript',
+  'Apollo GraphQL',
+  'GraphQL',
+  'Styled Components',
+  'Bit.dev',
+  'Jest',
+];
+
+export const projects: TProject[] = [
   {
+    id: 'hotelplan',
     title: 'Hotelplan',
-    description:
-      "hotelplan.ch is one of Switzerland's leading and oldest tour operators. It specializes in organizing and selling package holidays, including flights, hotel accommodations, transfers, and often additional services like excursions or travel insurance.",
-    link: 'https://www.hotelplan.ch',
-    image: '/images/projects/hotelplan.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    summary:
+      "A consumer travel platform for one of Switzerland's established tour operators, covering package holidays, flights, accommodation, transfers, and supporting services.",
+    role: 'Frontend engineer',
+    challenge:
+      'Present comparison-heavy search and package-booking journeys without losing clarity across destinations, dates, transport, accommodation, and optional extras.',
+    contribution:
+      'Frontend implementation across product interfaces using Next.js, TypeScript, GraphQL, and shared UI tooling for a complex travel domain.',
+    value:
+      'A representative example of product UI work where responsive behavior, content hierarchy, and decision confidence all matter.',
+    image: '/images/projects/hotelplan.webp',
+    imageWidth: 1600,
+    imageHeight: 862,
+    href: 'https://www.hotelplan.ch',
+    technologies: productStack,
+    featured: true,
   },
   {
+    id: 'migros-ferien',
     title: 'Migros-Ferien',
-    description:
-      'migros-ferien.ch is the official online travel portal and booking platform for Hotelplan Suisse, which is the travel agency owned by the Swiss retail giant Migros. It is one of the most popular and trusted websites for Swiss residents to book package holidays, flights, hotels, and other travel services.',
-    link: 'https://migros-ferien.ch/',
-    image: '/images/projects/migros-ferien.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    summary:
+      'A Swiss travel portal for discovering and booking package holidays, flights, hotels, and related travel services.',
+    role: 'Frontend engineer',
+    challenge:
+      'Keep a broad holiday inventory approachable while supporting search, comparison, and booking-oriented product journeys.',
+    contribution:
+      'Built frontend product interfaces within the shared Next.js, TypeScript, GraphQL, and component-tooling ecosystem.',
+    value:
+      'Shows experience working on consumer journeys where trust and clear choices are central to the interface.',
+    image: '/images/projects/migros-ferien.webp',
+    imageWidth: 1600,
+    imageHeight: 863,
+    href: 'https://migros-ferien.ch/',
+    technologies: productStack,
+    featured: false,
   },
   {
+    id: 'travelhouse',
     title: 'Travelhouse',
-    description:
-      'travelhouse.ch is a major Swiss online travel agency (OTA) that specializes in offering package holidays, flight tickets, hotel stays, and rental cars, primarily to destinations around the Mediterranean, but also worldwide.',
-    link: 'https://travelhouse.ch/',
-    image: '/images/projects/travelhouse.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    summary:
+      'An online travel platform spanning package holidays, flights, hotels, rental cars, and destinations worldwide.',
+    role: 'Frontend engineer',
+    challenge:
+      'Organize a wide product range and destination content into discovery paths that remain readable and useful.',
+    contribution:
+      'Delivered frontend interfaces using the shared React stack and GraphQL-based product architecture.',
+    value:
+      'Demonstrates frontend work across content-rich discovery and transactional travel experiences.',
+    image: '/images/projects/travelhouse.webp',
+    imageWidth: 1600,
+    imageHeight: 860,
+    href: 'https://travelhouse.ch/',
+    technologies: productStack,
+    featured: false,
   },
   {
+    id: 'bta-first',
     title: 'Bta first',
-    description:
-      'btafirst.ch is the website for Bta first travel, a Swiss company that is a leading business travel management specialist, providing tailored services for national and international SMEs, and large companies.',
-    link: 'https://btafirst.ch/',
-    image: '/images/projects/btafirst.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    summary:
+      'A digital presence for a Swiss business-travel management specialist serving national and international companies.',
+    role: 'Frontend engineer',
+    challenge:
+      'Communicate a service-led B2B offering clearly to organizations with different travel-management needs.',
+    contribution:
+      'Implemented responsive frontend experiences within the same typed, component-oriented delivery stack.',
+    value:
+      'Broadens the portfolio from leisure booking flows into business-facing travel communication.',
+    image: '/images/projects/btafirst.webp',
+    imageWidth: 1600,
+    imageHeight: 862,
+    href: 'https://btafirst.ch/',
+    technologies: productStack,
+    featured: false,
   },
   {
-    title: 'Hotelplan corporate website',
-    description:
-      'hotelplan.com is the website for the Hotelplan Group, a Swiss travel group founded in 1935 that provides a wide range of leisure and business travel services, including package holidays, individual travel, and vacation rental brokerage.',
-    link: 'https://hotelplan.com/',
-    image: '/images/projects/corp.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    id: 'hotelplan-group',
+    title: 'Hotelplan Group',
+    summary:
+      'The corporate website for a Swiss travel group with leisure, business-travel, and vacation-rental brands.',
+    role: 'Frontend engineer',
+    challenge:
+      'Present group-level information and a broad portfolio of travel businesses through a coherent corporate experience.',
+    contribution:
+      'Built frontend presentation and content interfaces with the shared Next.js and TypeScript foundation.',
+    value:
+      'Shows the same frontend system supporting brand and corporate communication as well as product journeys.',
+    image: '/images/projects/corp.webp',
+    imageWidth: 1600,
+    imageHeight: 863,
+    href: 'https://hotelplan.com/',
+    technologies: productStack,
+    featured: false,
   },
   {
+    id: 'vtours-booking',
     title: 'Vtours booking portal',
-    description:
-      'buchung.vtours.com is a portal for the vtours GmbH, a dynamic tour operator that creates travel packages, including flights, hotels, and transfers, in real-time based on customer requests.',
-    link: 'https://buchung.vtours.com/',
-    image: '/images/projects/vtours.png',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Apollo GraphQL',
-      'GraphQL',
-      'Styled Components',
-      'Bit.dev',
-      'Jest',
-    ],
+    summary:
+      'A portal for dynamically assembled travel packages that combine flights, hotels, and transfers around customer requests.',
+    role: 'Frontend engineer',
+    challenge:
+      'Keep a multi-part, transaction-focused booking journey understandable while package details are assembled around user choices.',
+    contribution:
+      'Implemented booking-oriented frontend interfaces with Next.js, TypeScript, GraphQL, and shared component tooling.',
+    value:
+      'Represents hands-on work with dense transactional flows where state, clarity, and confidence are closely connected.',
+    image: '/images/projects/vtours.webp',
+    imageWidth: 1600,
+    imageHeight: 818,
+    href: 'https://buchung.vtours.com/',
+    technologies: productStack,
+    featured: false,
   },
 ];
+
+export const featuredProject = projects[0];
