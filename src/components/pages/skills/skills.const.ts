@@ -74,18 +74,18 @@ export const capabilityGroups: TCapabilityGroup[] = [
   },
   {
     id: 'ai-assisted-workflow',
-    title: 'AI-assisted workflow',
+    title: 'AI-assisted engineering',
     summary:
-      'Using AI as a supporting tool for research, exploration, and repetitive work while keeping human judgement in charge.',
+      'Using coding agents for implementation, exploration, and review while keeping technical judgement and verification in the loop.',
     strengths: [
-      'Faster research and early-stage prototyping',
-      'Acceleration of repetitive engineering tasks',
-      'Deliberate review of generated ideas and implementation',
+      'Repo-aware implementation and refactoring with coding agents',
+      'Faster research, debugging, and early-stage prototyping',
+      'Human review of generated changes before delivery',
     ],
     technologies: [
-      { name: 'OpenAI', icon: '/icons/svg/openai.svg' },
+      { name: 'Claude Code', icon: '/icons/svg/claude-code.svg' },
+      { name: 'Codex', icon: '/icons/svg/codex.svg' },
       { name: 'Cursor', icon: '/icons/svg/cursor.svg' },
-      { name: 'GitHub Copilot', icon: '/icons/svg/copilot.svg' },
       { name: 'Perplexity', icon: '/icons/svg/perplexity.svg' },
       { name: 'DeepSeek', icon: '/icons/svg/deepseek.svg' },
       { name: 'Comet', icon: '/icons/svg/comet.svg' },

@@ -82,7 +82,7 @@ export function Projects(): ReactElement {
                   width={featuredProject.imageWidth}
                   height={featuredProject.imageHeight}
                   className="aspect-[16/11] object-cover lg:h-full"
-                  skeletonClassName="aspect-[16/11] lg:h-full"
+                  fallbackClassName="aspect-[16/11] lg:h-full"
                   lazyLoading={false}
                 />
               </div>
@@ -153,7 +153,7 @@ export function Projects(): ReactElement {
                     width={project.imageWidth}
                     height={project.imageHeight}
                     className="aspect-[16/9] object-cover"
-                    skeletonClassName="aspect-[16/9]"
+                    fallbackClassName="aspect-[16/9]"
                   />
                 </div>
 

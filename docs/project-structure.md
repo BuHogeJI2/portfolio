@@ -76,7 +76,7 @@ Static assets served directly by Vite:
 
 - Project case-study data: `src/components/pages/projects/project.const.ts`
 - Capability and technology data: `src/components/pages/skills/skills.const.ts`
-- Social/contact blocks: `src/components/pages/home/social-links/social-links.const.tsx`
+- Social/contact blocks: `src/components/pages/home/social-links/social-links.const.ts`
 - About experience highlights and strengths: `src/components/pages/about/about-me.const.ts`
 
 ## Runtime Notes

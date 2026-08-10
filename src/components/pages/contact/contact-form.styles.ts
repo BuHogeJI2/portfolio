@@ -5,13 +5,16 @@ export const labelStyles = clsx(
 );
 
 export const inputStyles = clsx(
-  'w-full rounded-control border border-line/70 bg-surface-subtle/80 px-4 py-3 text-content shadow-sm',
+  'w-full rounded-xl border border-line/70 bg-surface-subtle/80 px-4 py-3 text-content shadow-sm',
   'placeholder:text-content-subtle dark:border-line/10',
   'focus:border-accent focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-surface',
   'disabled:cursor-not-allowed disabled:opacity-60',
 );
 
-export const textareaStyles = clsx(inputStyles, 'resize-y');
+export const textareaStyles = clsx(
+  inputStyles,
+  'min-h-40 resize-y rounded-2xl px-4 py-4 leading-6',
+);
 
 export const buttonStyles = clsx(
   'flex min-h-12 w-full items-center justify-center rounded-control bg-content px-6 py-3 text-sm font-semibold text-content-inverse shadow-sm',

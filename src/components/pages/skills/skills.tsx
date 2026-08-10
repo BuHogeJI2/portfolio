@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { ActionLink } from '@/components/base/action-link/action-link';
 import { PageIntro } from '@/components/base/page-intro/page-intro';
 import { Surface } from '@/components/base/surface/surface';
@@ -10,12 +11,13 @@ export function Skills(): ReactElement {
     <div className="space-y-12 py-12 md:space-y-16 md:py-20">
       <PageIntro
         eyebrow="Capabilities"
-        title="The skills behind clear, resilient product experiences."
-        description="My toolkit is broad, but the outcome matters more than the logo: understandable interfaces, reusable frontend systems, and dependable delivery."
+        title="Capabilities for building and improving product interfaces."
+        description="The tools support the work: clear interfaces, reusable frontend systems, and dependable delivery."
         actions={
           <>
             <ActionLink to="/contact" size="large">
               Discuss a project
+              <FaArrowRight className="h-3.5 w-3.5" />
             </ActionLink>
             <ActionLink to="/projects" variant="secondary" size="large">
               See the work
@@ -40,7 +42,7 @@ export function Skills(): ReactElement {
                   {group.summary}
                 </p>
               </div>
-              {group.secondary && <Tag tone="accent">Supporting layer</Tag>}
+              {group.secondary && <Tag tone="accent">Supporting tools</Tag>}
             </div>
 
             <ul className="mt-7 space-y-3" aria-label="Core strengths">
@@ -63,12 +65,16 @@ export function Skills(): ReactElement {
                 <Tag
                   key={technology.name}
                   icon={
-                    <img
-                      src={technology.icon}
-                      alt=""
+                    <span
                       aria-hidden="true"
-                      className="h-4 w-4 object-contain"
-                    />
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white p-1.5 shadow-sm ring-1 ring-slate-900/10"
+                    >
+                      <img
+                        src={technology.icon}
+                        alt=""
+                        className="h-full w-full object-contain"
+                      />
+                    </span>
                   }
                 >
                   {technology.name}

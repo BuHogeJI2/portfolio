@@ -22,8 +22,8 @@ export function ContactPage(): ReactElement {
       <div className="space-y-12 py-12 md:space-y-16 md:py-20">
         <PageIntro
           eyebrow="Contact"
-          title="Let’s make the next product experience feel intentional."
-          description="Share what you are building, where the interface is getting in the way, or what kind of frontend support you need. A concise outline is enough to start."
+          title="Have a frontend project in mind?"
+          description="Share what you are building, what feels difficult, and where you need support. A concise outline is enough to start."
         />
 
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
@@ -53,11 +53,11 @@ export function ContactPage(): ReactElement {
                   What happens next
                 </p>
                 <h2 className="mt-3 text-xl font-semibold text-content">
-                  A direct, low-friction first conversation.
+                  You’ll get a practical first reply.
                 </h2>
                 <p className="mt-3 leading-7 text-content-muted">
-                  I will review the context you send and reply by email so we
-                  can clarify scope, timing, and whether I am the right fit.
+                  I’ll review the context and reply by email so we can clarify
+                  scope, timing, and fit.
                 </p>
               </div>
 

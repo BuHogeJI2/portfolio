@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { ActionLink } from '@/components/base/action-link/action-link';
 import { Image } from '@/components/base/image/image';
 import { PageIntro } from '@/components/base/page-intro/page-intro';
@@ -27,8 +28,9 @@ export function AboutMe(): ReactElement {
             >
               Download CV
             </ActionLink>
-            <ActionLink to="/projects" variant="text" size="large">
+            <ActionLink to="/projects" variant="tertiary" size="large">
               View projects
+              <FaArrowRight className="h-3.5 w-3.5" />
             </ActionLink>
           </>
         }
@@ -45,7 +47,7 @@ export function AboutMe(): ReactElement {
             width={590}
             height={755}
             className="aspect-[4/5] h-full w-full object-cover"
-            skeletonClassName="aspect-[4/5]"
+            fallbackClassName="aspect-[4/5]"
           />
         </Surface>
 
@@ -121,8 +123,8 @@ export function AboutMe(): ReactElement {
       <section className="space-y-8" aria-labelledby="about-strengths-title">
         <SectionHeading
           titleId="about-strengths-title"
-          eyebrow="What I bring"
-          title="A balanced contribution across interface, system, and team."
+          eyebrow="Working style"
+          title="Thoughtful about the interface, practical about delivery."
         />
         <div className="grid gap-5 md:grid-cols-3">
           {aboutStrengths.map(strength => (
@@ -143,8 +145,8 @@ export function AboutMe(): ReactElement {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
             <SectionHeading
               eyebrow="Work together"
-              title="Have a product challenge that needs clearer frontend thinking?"
-              description="Share the context and I’ll help determine where interface craft, product judgement, and implementation can make the strongest contribution."
+              title="Need a frontend partner for a complex product?"
+              description="Share the context and I’ll tell you where I can contribute across interface craft, product judgement, and implementation."
             />
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <ActionLink to="/contact" size="large">
@@ -158,8 +160,9 @@ export function AboutMe(): ReactElement {
               >
                 Download CV
               </ActionLink>
-              <ActionLink to="/projects" variant="text" size="large">
+              <ActionLink to="/projects" variant="tertiary" size="large">
                 View projects
+                <FaArrowRight className="h-3.5 w-3.5" />
               </ActionLink>
             </div>
           </div>

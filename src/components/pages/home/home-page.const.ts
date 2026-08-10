@@ -13,9 +13,9 @@ export const homeProofItems = [
     detail: 'Work spanning travel platforms, marketing sites, and booking UX.',
   },
   {
-    value: 'Complex',
-    label: 'search and booking flows',
-    detail: 'Experience making dense product journeys feel calmer and clearer.',
+    value: 'Travel',
+    label: 'domain experience',
+    detail: 'Search, comparison, maps, and booking flows built for real users.',
   },
 ];
 

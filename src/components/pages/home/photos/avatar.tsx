@@ -5,10 +5,10 @@ import { Image } from '@/components/base/image/image';
 
 interface AvatarProps {
   className?: string;
-  skeletonClassName?: string;
+  fallbackClassName?: string;
 }
 
-export function Avatar({ className, skeletonClassName }: AvatarProps) {
+export function Avatar({ className, fallbackClassName }: AvatarProps) {
   const { theme } = useTheme();
 
   const imageSrc =
@@ -26,9 +26,9 @@ export function Avatar({ className, skeletonClassName }: AvatarProps) {
         'h-28 w-28 rounded-full border-2 border-white object-cover md:h-40 md:w-40',
         className,
       )}
-      skeletonClassName={clsx(
+      fallbackClassName={clsx(
         'h-28 w-28 rounded-full md:h-40 md:w-40',
-        skeletonClassName,
+        fallbackClassName,
       )}
       lazyLoading={false}
     />

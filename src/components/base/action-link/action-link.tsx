@@ -2,7 +2,7 @@ import { ReactElement, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
-export type TActionLinkVariant = 'primary' | 'secondary' | 'text';
+export type TActionLinkVariant = 'primary' | 'secondary' | 'tertiary';
 export type TActionLinkSize = 'small' | 'medium' | 'large';
 
 interface IActionLinkBaseProps {
@@ -33,10 +33,11 @@ export type TActionLinkProps =
 
 const variantStyles: Record<TActionLinkVariant, string> = {
   primary:
-    'bg-content text-content-inverse shadow-sm hover:-translate-y-0.5 hover:bg-content/90',
+    'bg-content text-content-inverse shadow-sm hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-elevated active:translate-y-0 active:shadow-sm',
   secondary:
-    'border border-line/80 bg-surface/75 text-content shadow-sm backdrop-blur hover:bg-surface-elevated dark:border-line/10',
-  text: 'text-content-muted hover:text-content',
+    'border border-line/80 bg-surface/75 text-content shadow-sm backdrop-blur hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/10 hover:shadow-surface active:translate-y-0 active:shadow-sm dark:border-line/10',
+  tertiary:
+    'border border-accent/15 bg-accent/10 text-content shadow-sm hover:-translate-y-0.5 hover:border-accent/35 hover:bg-accent/20 hover:shadow-surface active:translate-y-0 active:shadow-sm',
 };
 
 const sizeStyles: Record<TActionLinkSize, string> = {
@@ -54,7 +55,7 @@ export function ActionLink(props: TActionLinkProps): ReactElement {
     ariaLabel,
   } = props;
   const styles = cn(
-    'inline-flex items-center justify-center gap-3 rounded-control font-semibold transition duration-300',
+    'inline-flex items-center justify-center gap-3 rounded-control font-semibold transition duration-200',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas',
     variantStyles[variant],
     sizeStyles[size],

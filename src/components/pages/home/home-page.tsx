@@ -50,8 +50,8 @@ export function HomePageView(): ReactElement {
 
                 <PageIntro
                   eyebrow="Dzmitry Dziamidovich"
-                  title="I build polished product experiences that feel clear, fast, and ready to trust."
-                  description="I help teams turn complex interface requirements into responsive frontend experiences with stronger hierarchy, cleaner interactions, and the kind of detail that makes a product feel finished."
+                  title="I build frontend experiences that make complex products feel clear and dependable."
+                  description="I help product teams turn demanding requirements into responsive, maintainable interfaces with strong hierarchy and thoughtful interaction."
                   actions={
                     <>
                       <ActionLink to="/contact" variant="primary" size="large">
@@ -67,8 +67,13 @@ export function HomePageView(): ReactElement {
                         <FaDownload className="h-4 w-4" />
                         Download CV
                       </ActionLink>
-                      <ActionLink to="/projects" variant="text" size="large">
+                      <ActionLink
+                        to="/projects"
+                        variant="tertiary"
+                        size="large"
+                      >
                         View selected work
+                        <FaArrowRight className="h-3.5 w-3.5" />
                       </ActionLink>
                     </>
                   }
@@ -100,7 +105,7 @@ export function HomePageView(): ReactElement {
                   <div className="mt-6 flex justify-center">
                     <Avatar
                       className="h-44 w-44 border-4 border-surface shadow-elevated sm:h-52 sm:w-52 md:h-72 md:w-72 md:border-8"
-                      skeletonClassName="h-44 w-44 sm:h-52 sm:w-52 md:h-72 md:w-72"
+                      fallbackClassName="h-44 w-44 sm:h-52 sm:w-52 md:h-72 md:w-72"
                     />
                   </div>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -148,8 +153,8 @@ export function HomePageView(): ReactElement {
         <section className="space-y-9">
           <SectionHeading
             eyebrow="What I bring"
-            title="Frontend work that improves how the product is understood and trusted."
-            description="The value is not only in building screens. It is in helping the product feel clearer, more deliberate, and easier to use under real-world complexity."
+            title="From product requirements to production-ready UI."
+            description="I work across implementation, interface polish, and frontend structure—wherever the product needs more clarity or the team needs a stronger foundation."
           />
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -172,8 +177,8 @@ export function HomePageView(): ReactElement {
         <section className="space-y-9">
           <SectionHeading
             eyebrow="Selected work"
-            title="A quick look at the kind of product complexity I enjoy working on."
-            description="Selected work from product environments where search, comparison, and decision-heavy flows needed to feel clearer, faster, and easier to trust."
+            title="Product work where clarity matters."
+            description="A representative travel platform with dense search, comparison, and booking decisions."
           />
 
           <Reveal variant="featured">
@@ -183,14 +188,14 @@ export function HomePageView(): ReactElement {
               className="overflow-hidden"
             >
               <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:p-6">
-                <div className="overflow-hidden bg-surface-subtle lg:rounded-card">
+                <div className="self-start overflow-hidden bg-surface-subtle lg:rounded-card">
                   <Image
                     imageSrc={featuredWorkTeaser.image}
                     alt={`${featuredWorkTeaser.title} project interface`}
                     width={featuredWorkTeaser.imageWidth}
                     height={featuredWorkTeaser.imageHeight}
-                    className="aspect-[16/10] object-cover"
-                    skeletonClassName="aspect-[16/10]"
+                    className="aspect-video object-cover"
+                    fallbackClassName="aspect-video"
                   />
                 </div>
 
@@ -256,8 +261,8 @@ export function HomePageView(): ReactElement {
         <section className="space-y-9">
           <SectionHeading
             eyebrow="How I work"
-            title="The collaboration is meant to feel as clear as the interface."
-            description="I work best when the process stays practical: understand the product pressure, make the UI calmer, and keep delivery disciplined enough that the quality holds up."
+            title="A practical path from problem to polished interface."
+            description="Understand the workflow, simplify the decisions, build the right structure, and finish the details that shape the experience."
           />
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -287,8 +292,8 @@ export function HomePageView(): ReactElement {
             <div className="relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
               <SectionHeading
                 eyebrow="Start the conversation"
-                title="If the product needs sharper frontend thinking and stronger UI polish, I can help."
-                description="Whether the work is a redesign, a high-value frontend build, or a product experience that needs to feel more trustworthy, I aim to bring both execution and taste to the table."
+                title="Need experienced frontend help on a complex interface?"
+                description="I can help with a redesign, a focused product build, or frontend work that needs stronger structure and polish."
               />
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
@@ -305,8 +310,9 @@ export function HomePageView(): ReactElement {
                   <FaDownload className="h-4 w-4" />
                   Download CV
                 </ActionLink>
-                <ActionLink to="/projects" variant="text" size="large">
+                <ActionLink to="/projects" variant="tertiary" size="large">
                   Review projects
+                  <FaArrowRight className="h-3.5 w-3.5" />
                 </ActionLink>
               </div>
             </div>
