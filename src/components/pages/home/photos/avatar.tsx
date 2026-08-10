@@ -19,7 +19,7 @@ export function Avatar({ className, fallbackClassName }: AvatarProps) {
   return (
     <Image
       imageSrc={imageSrc}
-      alt="Portrait of Dzmitry Dziamidovich"
+      alt="Portrait of Dmitry Demidovich"
       width={1254}
       height={1254}
       className={clsx(

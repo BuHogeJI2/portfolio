@@ -126,7 +126,7 @@ export function Footer(): ReactElement {
           <div className="mt-8 border-t border-line/70 pt-6 text-sm text-content-subtle dark:border-line/10 md:col-span-2">
             <div className="space-y-2">
               <p className="text-sm">
-                &copy; {currentYear} Dzmitry Dziamidovich. All rights reserved.
+                &copy; {currentYear} Dmitry Demidovich. All rights reserved.
               </p>
               <BuiltWith />
             </div>

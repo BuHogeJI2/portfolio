@@ -46,7 +46,7 @@ function Brand() {
         Frontend Engineer
       </span>
       <span className="truncate text-sm font-semibold tracking-[0.01em] text-content md:text-base">
-        Dzmitry Dziamidovich
+        Dmitry Demidovich
       </span>
     </NavLink>
   );

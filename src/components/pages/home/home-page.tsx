@@ -49,7 +49,7 @@ export function HomePageView(): ReactElement {
                 </Tag>
 
                 <PageIntro
-                  eyebrow="Dzmitry Dziamidovich"
+                  eyebrow="Dmitry Demidovich"
                   title="I build frontend experiences that make complex products feel clear and dependable."
                   description="I help product teams turn demanding requirements into responsive, maintainable interfaces with strong hierarchy and thoughtful interaction."
                   actions={

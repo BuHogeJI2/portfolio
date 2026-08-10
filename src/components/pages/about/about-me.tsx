@@ -43,7 +43,7 @@ export function AboutMe(): ReactElement {
         <Surface padding="none" variant="elevated" className="overflow-hidden">
           <Image
             imageSrc="/images/photos/d_demidovich_profile.webp"
-            alt="Studio portrait of Dzmitry Dziamidovich"
+            alt="Studio portrait of Dmitry Demidovich"
             width={1122}
             height={1402}
             className="aspect-[4/5] h-full w-full object-cover"

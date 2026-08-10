@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for Dzmitry Dziamidovich.
+Personal portfolio site for Dmitry Demidovich.
 
 [Visit the live portfolio](https://buhogeji.me)
 
